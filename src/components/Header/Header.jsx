@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import "./styles.scss";
-// todo: border on top of header and footer `5px solid $orange`
 import logo from "assets/citba-logo.png";
 import Dropdown from 'components/Dropdown';
 

@@ -3,9 +3,24 @@ import "./styles.scss";
 import Header from "components/Header"
 import Footer from "components/Footer"
 import BannerBg from "assets/man-with-papers.jpg";
+document.querySelectorAll('button[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function(e) {
+    e.preventDefault();
+    console.log("hi");
 
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth"
+    });
+  });
+});
 class Policy extends Component {
     state = {};
+
+    scroll = event => {
+      document.querySelector(event.target.getAttribute("href")).scrollIntoView({
+        behavior: "smooth"
+      });
+    }
 
     render() {
         return (
@@ -18,12 +33,16 @@ class Policy extends Component {
               <div className="overlay" />
               <h1>Policy</h1>
               <div className="links">
-                {/* todo: smooth scrolling to links here */}
-                <button href="#amicus-briefs">The Filing of Amicus Briefs</button>
-                <button href="#comments">
+                <button href="#amicus-briefs" onClick={this.scroll}>
+                  The Filing of Amicus Briefs
+                </button>
+                <button href="#comments" onClick={this.scroll}>
                   The Filing of Comments with an Adminsitrative Agency
                 </button>
-                <button href="#trade-adjustment-assistance">
+                <button
+                  href="#trade-adjustment-assistance"
+                  onClick={this.scroll}
+                >
                   CITBA and Trade Adjustment Assistance
                 </button>
               </div>

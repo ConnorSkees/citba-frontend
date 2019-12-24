@@ -4,6 +4,7 @@ import Header from "components/Header";
 import Footer from "components/Footer";
 import Banner from "components/Banner";
 import BannerBg from "assets/carousel-image-1.jpg";
+import { Link } from "react-router-dom";
 
 const ANNOUNCEMENTS = [
   {
@@ -82,10 +83,12 @@ const ANNOUNCEMENTS = [
         practitioner and public servant. Entrants must be currently enrolled in
         a JD or LLM program at any of the nation’s law schools. Additional
         information and instructions for participation in this competition is
-        forth in this link (<em>you will need a program that reads .pdf files such
-        as Adobe Acrobat Reader</em>).{" "}
-        <a href="/awards">Click here to view winners since 1999</a>
-        {/* todo: make this a `Link` */}
+        forth in this link (
+        <em>
+          you will need a program that reads .pdf files such as Adobe Acrobat
+          Reader
+        </em>
+        ). <Link to="/awards/#andrew-p-vance">Click here to view winners since 1999</Link>
       </p>
     )
   }
