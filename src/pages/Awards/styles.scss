@@ -51,6 +51,7 @@
 #andrew-p-vance {
     grid-template-columns: 66% 30%;
     background-color: rgba(248, 178, 38, 0.06);
+    border-bottom: 5px solid $orange;
 
     & .donation {
         font: 600 18px/1.3em $open-sans;

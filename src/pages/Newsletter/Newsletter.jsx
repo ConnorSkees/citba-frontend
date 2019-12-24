@@ -107,6 +107,7 @@ class Newsletter extends Component {
                 ))}
               </ul>
             </div>
+            <div className="bottom" />
             <Footer />
           </React.Fragment>
         );

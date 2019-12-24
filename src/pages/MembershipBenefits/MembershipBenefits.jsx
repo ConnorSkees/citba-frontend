@@ -23,7 +23,7 @@ function Benefit(props) {
     );
 }
 
-class Membership extends Component {
+class MembershipBenefits extends Component {
     state = {};
 
     render() {
@@ -92,4 +92,4 @@ class Membership extends Component {
     }
 }
 
-export default Membership;
+export default MembershipBenefits;

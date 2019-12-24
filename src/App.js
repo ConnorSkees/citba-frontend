@@ -7,7 +7,7 @@ import BoardOfDirectors from 'pages/BoardOfDirectors';
 import Committees from 'pages/Committees';
 import ByLaws from 'pages/ByLaws';
 
-import Membership from "pages/Membership";
+import Membership from "pages/MembershipBenefits";
 import Join from "pages/Join";
 import RenewMembership from "pages/RenewMembership";
 
