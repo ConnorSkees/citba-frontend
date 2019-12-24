@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ca6bd1c20120d6a6cd9c86fadcd7b6fd",
+    "revision": "ec843b0f89c311eac68b3f4aa6242c29",
     "url": "/citba-frontend/index.html"
   },
   {
