@@ -1,0 +1,82 @@
+@import "../../components/variables";
+
+#barbara-s-williams {
+    grid-template-columns: 30% 66%;
+    background-color: rgba(16, 44, 99, 0.03);
+
+    & .recipients {
+        text-transform: uppercase;
+        color: $blue;
+
+        & h2 {
+            font: 700 18px/1.7em $open-sans;
+            letter-spacing: 5.3px;
+            color: $blue;
+            margin: 0;
+        }
+
+        & p {
+            font: 600 1rem/1.7em $open-sans;
+            letter-spacing: .2rem;
+            margin: 0;
+        }
+    }
+
+    & .recipient-container {
+        background-color: $orange;
+        display: block;
+        position: relative;
+        padding: 10px;
+
+        display: flex;
+        flex-direction: row;
+
+        & .text {
+            padding: 10px;
+
+            & h3 {
+                font: 600 24px/1.5em $open-sans;
+                color: $blue;
+            }
+        }
+
+        & img {
+            display: inline-block;
+            height: auto;
+            width: 250px;
+        }
+    }
+}
+
+#andrew-p-vance {
+    grid-template-columns: 66% 30%;
+    background-color: rgba(248, 178, 38, 0.06);
+
+    & .donation {
+        font: 600 18px/1.3em $open-sans;
+        text-align: center;
+        border-top: 1px solid $orange;
+        color: $orange;
+        text-transform: uppercase;
+        letter-spacing: 2.4px;
+        padding-top: 15px;
+
+        & input {
+            font: bold 13px/13px $open-sans;
+            cursor: pointer;
+            background-color: $orange;
+            border: none;
+            outline: none;
+            text-transform: uppercase;
+            color: #1E4657;
+            background-color: #92dbf6;
+            text-decoration: none;
+            padding: 8px 15px;
+            margin-top: 15px;
+            height: 32px;
+            border-radius: 4px;
+            vertical-align: middle;
+            border: 0;
+        }
+    }
+}

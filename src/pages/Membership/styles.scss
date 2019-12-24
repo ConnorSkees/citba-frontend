@@ -1,0 +1,53 @@
+@import "../../components/variables";
+@import "../../components/mixins";
+
+.membership-benefits {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $blue;
+    padding: 50px 0;
+
+    & h1 {
+        font: 600 1.75rem/1 $open-sans;
+    }
+
+    & .benefits {
+        display: grid;
+        grid-template-columns: repeat(3, calc(100% / 3));
+        grid-template-rows: repeat(2, 50%);
+        color: $blue;
+        font-family: $open-sans;
+        width: 80%;
+
+        & .benefit {
+            text-align: center;
+            padding: 20px;
+            
+            
+            & svg {
+                @include transition(.3s);
+                height: 60px;
+                fill: $blue;
+                cursor: pointer;
+
+                &:hover {
+                    fill: $orange;
+                    height: 65px;
+                }
+            }
+
+            & h2 {
+                font: 600 1.5rem/1 $open-sans;
+            }
+            
+            & p {
+                font: 400 1rem/1.7 $open-sans;
+                color: $gray;
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+}

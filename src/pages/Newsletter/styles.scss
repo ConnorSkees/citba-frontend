@@ -1,0 +1,66 @@
+@import "../../components/variables";
+
+$medium: 860px;
+$small: 600px;
+
+.current-issue {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+    & svg {
+        fill: #ad1a1a;
+        height: 60px;
+        padding: 10px;
+    }
+
+    & a {
+        font: 600 28px/1 $open-sans;
+        text-decoration: none;
+        color: $blue;
+    }
+}
+
+.past-issues {
+    position: relative;
+    margin: 20px 20%;
+    border-top: 1px solid black;
+    font-family: $open-sans;
+
+    @media screen and (max-width: $small) {
+        margin: 20px 10%;
+    }
+
+    & h2 {
+        font-weight: 600;
+        color: $blue;
+    }
+
+    & ul {
+        columns: 4;
+
+        @media screen and (max-width: $medium) {
+            columns: 2;
+        }
+
+        & li {
+            padding: 1px;
+        }
+
+        & a {
+            color: #253a64;
+            text-decoration: none;
+            font-weight: 400;
+
+            @media screen and (max-width: $small) {
+                font-size: .8rem;
+            }
+
+            &:hover {
+                color: #5e5e5e;
+            }
+        }
+    }
+}

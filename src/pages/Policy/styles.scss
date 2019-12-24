@@ -1,0 +1,144 @@
+@import "../../components/variables";
+@import "../../components/mixins";
+
+.policy-banner,
+.membership-banner,
+.award-banner {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 270px;
+    text-align: center;
+    font-family: $open-sans;
+
+    & .overlay {
+        position: absolute;
+        background-color: #172959;
+        opacity: 0.7;
+        top: 0; bottom: 0; left: 0; right: 0;
+    }
+
+    & h1 {
+        font: 900 40px/1 $open-sans;
+        text-transform: uppercase;
+        position: relative;
+        z-index: 1;
+    }
+
+    & .links {
+        display: flex;
+        justify-content: space-evenly;
+
+        & button {
+            @include transition(.3s);
+            font-family: $open-sans;
+            color: white;
+            text-decoration: none;
+            position: relative;
+            z-index: 1;
+            border: 1px solid white;
+            border-radius: 5px;
+            padding: 7px 5px;
+            font-size: .8rem;
+            font-weight: 100;
+            margin: 10px;
+            width: 33%;
+            word-wrap: break-word;
+            display: block;
+            background-color: rgba(0,0,0,0);
+            cursor: pointer;
+            outline: none;
+
+            &:hover {
+                background-color: $orange;
+                border: 1px solid $orange;
+            }
+        }
+    }
+}
+
+.award-banner {
+    & p {
+        font-size: 18px;
+        position: relative;
+        z-index: 1;
+        margin-top: 0;
+    }
+
+    & .links {
+        & button {
+            width: 50%;
+        }
+    }
+}
+
+.membership-banner {
+    padding: 80px 0 50px;
+
+    & p {
+        font-size: 19px;
+        position: relative;
+        z-index: 1;
+        margin-top: 0;
+        width: 80%;
+    }
+
+    & h1 {
+        margin-bottom: 0;
+    }
+
+    & h3 {
+        font-size: 28px;
+        position: relative;
+        z-index: 1;
+        width: 80%;
+    }
+}
+
+.policy-section,
+.award-section {
+    display: grid;
+    grid-column-gap: 4%;
+    font-family: $open-sans;
+    position: relative;
+    padding: 100px 10% 100px 10%;
+
+    & h1 {
+        text-transform: uppercase;
+        color: $blue;
+        font-size: 30px;
+        font-weight: 600;
+        text-transform: uppercase;
+        line-height: 1.3em;
+        letter-spacing: 5px;
+        border-top: 1px solid $orange;
+        padding-top: 5%;
+    }
+
+    & p,
+    & li {
+        color: #000000;
+        font-family: $open-sans;
+        font-size: 1rem;
+        font-weight: 300;
+        line-height: 2em;
+    }
+}
+
+#amicus-briefs,
+#trade-adjustment-assistance {
+    grid-template-columns: 30% 66%;
+    background-color: rgba(16, 44, 99, 0.03);
+}
+
+#comments {
+    grid-template-columns: 66% 30%;
+    background-color: rgba(248, 178, 38, 0.06);
+}

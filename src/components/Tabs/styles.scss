@@ -1,0 +1,62 @@
+@import "../variables";
+@import "../mixins";
+
+.tabs-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    margin: 50px 20%;
+}
+
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+
+    & .tab {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 30px;
+        background-color: rgba(122, 122, 122, 0.23);
+        cursor: pointer;
+        outline: none;
+
+        &:hover, &.active {
+            background-color: $orange;
+        }
+
+        & svg {
+            height: 36px;
+            width: 36px;
+            display: block;
+            fill: $blue;
+        }
+
+        & span {
+            font: 600 1.1875rem/1 $open-sans;
+            color: $blue;
+        }
+    }
+
+}
+
+.tab-content {
+    padding: 50px;
+    border-radius: 0 5px 5px 5px;
+    border: 1px solid #e8e8f6;
+
+    & ul, & li, & a {
+        color: #0c0c0c;
+        font-size: 1rem;
+        font-family: $open-sans;
+        text-decoration: none;
+    }
+
+    & .inner-tab-content {
+        @include transition(.3s);
+        overflow: hidden;
+        height: auto;
+    }
+}

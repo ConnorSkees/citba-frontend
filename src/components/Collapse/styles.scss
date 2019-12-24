@@ -1,0 +1,73 @@
+@import "../variables";
+@import "../mixins";
+
+.collapse {
+    width: 100%;
+    margin-bottom: 20px;
+
+    & .title {
+        @include transition(.3s);
+        background-color: rgba(122, 122, 122, 0.16);
+        padding: 15px 20px;
+        font-size: 21px;
+        font-family: $open-sans;
+        color: $blue;
+        font-weight: 600;
+        cursor: pointer;
+
+        .icon {
+            display: inline-flex;
+            align-self: center;
+
+            & svg {
+                height: 1em;
+                width: 1em;
+                fill: currentColor;
+                top: .125em;
+                position: relative;
+            }
+        }
+
+        &:hover {
+            color: white;
+            background-color: $blue;
+        }
+
+        &.active {
+            background-color: $orange;
+            color: $blue;
+        }
+    }
+
+    & .content {
+        @include transition(.3s); 
+        overflow: hidden;
+        height: auto;
+        border: 1px solid #e8e8f6;
+        border-top: none;
+        border-radius: 0 5px;
+
+        & .text {
+            padding: 30px;
+        }
+
+        & h1, & a {
+            font-family: $open-sans;
+            font-weight: 700;
+            color: #3e4349;
+            font-size: 20px;
+            margin: 0 0 20px;
+            text-decoration: none;
+        }
+
+        & p {
+            font-family: $open-sans;
+            color: #0c0c0c;
+        }
+
+        &.collapsed {
+            border: none;
+            max-height: 0;
+        }
+    }
+}

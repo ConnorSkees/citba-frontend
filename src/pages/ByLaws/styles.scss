@@ -1,0 +1,47 @@
+@import "../../components/variables";
+
+.by-laws {
+    font-family: $open-sans;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 40px 0;
+
+    & h1, & h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 0 0 20px 0;
+        color: #3e4349;
+    }
+
+    & p {
+        width: 80%;
+        margin: 0 0 20px 0;
+        color: $gray;
+    }
+
+    & ul {
+        list-style: none;
+        color: $gray;
+        margin: 0 0 20px 0;
+        padding: 0;
+    }
+
+    & .divider-small {
+        width: 50%;
+        height: 0;
+        border-bottom: 1px solid $gray;
+        margin: 20px 0 40px 0;
+    }
+
+    & .footnote {
+        margin: 0;
+        width: 80%;
+        text-align: center;
+
+        & p {
+            width: 100%;
+        }
+    }
+}

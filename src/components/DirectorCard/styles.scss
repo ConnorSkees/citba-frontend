@@ -1,0 +1,42 @@
+@import "../variables";
+@import "../mixins";
+
+.director-card {
+    position: relative;
+
+    .head-shot {
+        width: 100%;
+        height: auto;
+    }
+
+    svg {
+        @include transition(.3s);
+        position: absolute;
+        bottom: 0;
+        height: 2rem;
+        fill: #102C63;
+
+        &:hover {
+            fill: $orange;
+        }
+    }
+
+    h2 {
+        font-size: 30px;
+        font-family: $open-sans;
+        margin: 5px 0;
+        color: #102C63;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    h4 {
+        color: #7A7A7A;
+        font-family: $playfair-display;
+        text-transform: uppercase;
+        margin: 5px 0px 10px;
+        font-weight: 400;
+        letter-spacing: 1.3px;
+        margin-bottom: 2.3rem;
+    }
+}

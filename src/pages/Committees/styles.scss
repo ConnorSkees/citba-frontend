@@ -1,0 +1,14 @@
+@import "../../components/variables";
+
+.committees {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    & .collapses {
+        width: 80%;
+    }
+}
