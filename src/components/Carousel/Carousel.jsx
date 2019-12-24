@@ -63,19 +63,29 @@ const SLIDES = [
   }
 ];
 
+const directions = {
+  INCREMENT: 1,
+  NONE: 0,
+  DECREMENT: -1,
+}
+
 class Carousel extends Component {
     state = {
         currentSlide: 0,
+        direction: directions.NONE,
     };
 
     incrementSlide = () => {
         let { currentSlide } = this.state;
-        if (currentSlide === SLIDES.length-1) {
-            currentSlide = 0;
+        if (currentSlide === SLIDES.length - 1) {
+          currentSlide = 0;
         } else {
-            currentSlide++;
+          currentSlide++;
         }
-        this.setState({ currentSlide });
+        this.setState({
+          currentSlide,
+          direction: directions.INCREMENT
+        });
     }
 
     decrementSlide = () => {
@@ -85,7 +95,7 @@ class Carousel extends Component {
         } else {
             currentSlide--;
         }
-        this.setState({ currentSlide });
+        this.setState({ currentSlide, direction: directions.DECREMENT });
     }
 
     prevSlideIdx = () => {
@@ -112,18 +122,32 @@ class Carousel extends Component {
         const prevSlideIdx = this.prevSlideIdx();
         const currentSlideIdx = this.state.currentSlide;
         const nextSlideIdx = this.nextSlideIdx();
-        console.log(prevSlideIdx, currentSlideIdx, nextSlideIdx)
-        console.log(this.state.currentSlide);
+        const { direction } = this.state;
+
         return (
           <div className="carousel">
             {SLIDES.map((s, idx) => {
               switch (idx) {
                 case prevSlideIdx:
-                  return <Slide slide={s} carousel={this} className="prev" />;
+                  return (
+                    <Slide
+                      slide={s}
+                      carousel={this}
+                      className={`prev${direction === directions.DECREMENT ? " moving" : ""}`}
+                    />
+                  );
                 case currentSlideIdx:
                   return <Slide slide={s} carousel={this} />;
                 case nextSlideIdx:
-                  return <Slide slide={s} carousel={this} className="next" />;
+                  return (
+                    <Slide
+                      slide={s}
+                      carousel={this}
+                      className={`next${
+                        direction === directions.INCREMENT ? " moving" : ""
+                      }`}
+                    />
+                  );
                 default:
                   return "";
               }

@@ -4,12 +4,11 @@
 $medium: 1000px;
 $small: 600px;
 
-$timing: cubic-bezier(.4, 0, .2, 1);
-
 .carousel {
     overflow: hidden;
     max-width: 100vw;
     position: relative;
+    height: 80vh;
 
     & .slide {
         // parallax background
@@ -18,7 +17,7 @@ $timing: cubic-bezier(.4, 0, .2, 1);
         background-repeat: no-repeat;
         background-size: cover;
 
-        position: relative;
+        position: absolute;
         color: white;
         display: flex;
         justify-content: center;
@@ -28,28 +27,22 @@ $timing: cubic-bezier(.4, 0, .2, 1);
         width: 100%;
 
         transform: translateX(0%);
-
-        $dur2: .4s;
-
-        transition: transform $timing $dur2 0s,
-        position $timing $dur2 0s;
+        transition: transform 1500ms ease 0s;
 
         &.prev, &.next {
-            // transition: transform $timing $dur2 .1s,
-            // position $timing $dur2 .1s,
-            // opacity $timing $dur1 0s;
             position: absolute;
-            // width: 0;
-            // width: 0%;
-            // opacity: 0;
         }
-        
+
         &.prev {
             transform: translateX(-100%);
         }
         
         &.next {
             transform: translateX(100%);
+        }
+
+        &.moving {
+            z-index: -1;
         }
 
         // arrows live inside the slide to stay centered
