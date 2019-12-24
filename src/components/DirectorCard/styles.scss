@@ -22,20 +22,17 @@
     }
 
     h2 {
-        font-size: 30px;
-        font-family: $open-sans;
-        margin: 5px 0;
+        font: 700 30px/1.2 $open-sans;
         color: #102C63;
         text-transform: uppercase;
-        font-weight: 700;
+        margin: 5px 0;
     }
 
     h4 {
+        font: 400 17px/1rem $playfair-display;
         color: #7A7A7A;
-        font-family: $playfair-display;
         text-transform: uppercase;
         margin: 5px 0px 10px;
-        font-weight: 400;
         letter-spacing: 1.3px;
         margin-bottom: 2.3rem;
     }

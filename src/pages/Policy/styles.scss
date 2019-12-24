@@ -5,18 +5,20 @@
 .membership-banner,
 .award-banner {
     color: white;
+    position: relative;
+    min-height: 270px;
+    text-align: center;
+    font-family: $open-sans;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
+    
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    min-height: 270px;
-    text-align: center;
-    font-family: $open-sans;
 
     & .overlay {
         position: absolute;
@@ -29,7 +31,6 @@
         font: 900 40px/1 $open-sans;
         text-transform: uppercase;
         position: relative;
-        z-index: 1;
     }
 
     & .links {
@@ -38,21 +39,16 @@
 
         & button {
             @include transition(.3s);
-            font-family: $open-sans;
+            font: 100 .8rem/1 $open-sans;
             color: white;
             text-decoration: none;
             position: relative;
-            z-index: 1;
             border: 1px solid white;
             border-radius: 5px;
             padding: 7px 5px;
-            font-size: .8rem;
-            font-weight: 100;
             margin: 10px;
             width: 33%;
-            word-wrap: break-word;
-            display: block;
-            background-color: rgba(0,0,0,0);
+            background: none;
             cursor: pointer;
             outline: none;
 
@@ -68,7 +64,6 @@
     & p {
         font-size: 18px;
         position: relative;
-        z-index: 1;
         margin-top: 0;
     }
 
@@ -85,7 +80,6 @@
     & p {
         font-size: 19px;
         position: relative;
-        z-index: 1;
         margin-top: 0;
         width: 80%;
     }
@@ -97,7 +91,6 @@
     & h3 {
         font-size: 28px;
         position: relative;
-        z-index: 1;
         width: 80%;
     }
 }
@@ -106,17 +99,13 @@
 .award-section {
     display: grid;
     grid-column-gap: 4%;
-    font-family: $open-sans;
     position: relative;
-    padding: 100px 10% 100px 10%;
+    padding: 100px 10%;
 
     & h1 {
+        font: 600 30px/1.3em $open-sans;
         text-transform: uppercase;
         color: $blue;
-        font-size: 30px;
-        font-weight: 600;
-        text-transform: uppercase;
-        line-height: 1.3em;
         letter-spacing: 5px;
         border-top: 1px solid $orange;
         padding-top: 5%;
@@ -124,11 +113,8 @@
 
     & p,
     & li {
-        color: #000000;
-        font-family: $open-sans;
-        font-size: 1rem;
-        font-weight: 300;
-        line-height: 2em;
+        font: 300 1rem/2em $open-sans;
+        color: #000;
     }
 }
 
