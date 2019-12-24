@@ -64,12 +64,11 @@ class Dropdown extends Component {
 
   render() {
     let { cursorPos, showItems } = this.state;
-    let { text, path, items } = this.props;
+    let { text, items } = this.props;
     let height = items.length*36;
     return (
       <div className={`dropdown-wrapper ${this.props.className || ""}`}>
-        <Link
-          to={path.toLowerCase()}
+        <div
           key={text}
           tabIndex={0}
           ref={this.display}
@@ -85,7 +84,7 @@ class Dropdown extends Component {
           <div className="icon">
             <SVG src={ArrowDown} />
           </div>
-        </Link>
+        </div>
         <div
           style={{ height: `${height}px`, ...this.props.style }}
           className={`item-container ${showItems ? "" : "hide"}`}

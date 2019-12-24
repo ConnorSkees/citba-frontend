@@ -8,8 +8,11 @@ import Dropdown from 'components/Dropdown';
 const NAV_ITEMS = [
   {
     text: "About CITBA",
-    path: "/about/",
     els: [
+      {
+        text: "What We Do",
+        path: "/about/"
+      },
       {
         text: "Board of Directors",
         path: "/board-of-directors/"
@@ -26,8 +29,11 @@ const NAV_ITEMS = [
   },
   {
     text: "Membership",
-    path: "/membership/",
     els: [
+      {
+        text: "Benefits",
+        path: "/benefits/"
+      },
       {
         text: "Join CITBA",
         path: "/join/"
@@ -48,8 +54,11 @@ const NAV_ITEMS = [
   },
   {
     text: "News & Events",
-    path: "/news-events/",
     els: [
+      {
+        text: "Announcements",
+        path: "/announcements/"
+      },
       {
         text: "Calendar",
         path: "/calendar/"
@@ -105,7 +114,6 @@ class Header extends Component {
                       <Dropdown
                         items={el.els}
                         text={el.text}
-                        path={el.path}
                         els={el.els}
                       />
                     );

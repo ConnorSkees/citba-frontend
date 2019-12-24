@@ -5,13 +5,14 @@
   cursor: pointer;
   display: inline-block;
   background-color: #fff;
-
+  
   font-size: 1rem;
   font-family: $open-sans;
   color: $blue;
-
+  
   & .display {
     @include transition(.28s);
+    outline: none;
     display: block;
     position: relative;
     padding: 20px;
@@ -55,6 +56,7 @@
       position: relative;
       padding: 8px 10px;
       min-width: 10rem;
+      outline: none;
 
       text-decoration: none;
       font-size: .875rem;

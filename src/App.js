@@ -31,7 +31,7 @@ function App() {
         <Route path="/committees/" component={Committees} />
         <Route path="/by-laws/" component={ByLaws} />
 
-        <Route path="/membership/" component={Membership} />
+        <Route path="/benefits/" component={Membership} />
         <Route path="/join/" component={Join} />
         <Route path="/renew-membership/" component={RenewMembership} />
 
@@ -39,7 +39,7 @@ function App() {
 
         <Route path="/policy/" component={Policy} />
 
-        <Route path="/news-events/" component={Announcements} />
+        <Route path="/announcements/" component={Announcements} />
         <Route path="/events/" component={Events} />
         <Route path="/meetings/" component={Meetings} />
         <Route path="/newsletter/" component={Newsletter} />
