@@ -43,11 +43,9 @@ function Slide(props) {
 
 const SLIDES = [
   {
-    image_path: slidebg1,
-    title: "Join CITBA",
-    text:
-      "Membership is open to all attorneys admitted to practice in any country and law students",
-    extra: <button>Join Today!</button>
+    image_path: slidebg3,
+    title: "Customs and International Trade Bar Association",
+    text: "Customs law, international trade law, and related matters since 1926.",
   },
   {
     image_path: slidebg2,
@@ -57,10 +55,12 @@ const SLIDES = [
     extra: <button>Read More</button>
   },
   {
-    image_path: slidebg3,
-    title: "Customs and International Trade Bar Association",
-    text: "Customs law, international trade law, and related matters since 1926.",
-  }
+    image_path: slidebg1,
+    title: "Join CITBA",
+    text:
+      "Membership is open to all attorneys admitted to practice in any country and law students",
+    extra: <button>Join Today!</button>
+  },
 ];
 
 const directions = {
