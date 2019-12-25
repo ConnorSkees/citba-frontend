@@ -74,8 +74,8 @@ class Dropdown extends Component {
           ref={this.display}
           title={text}
           onKeyDown={e => this.handleKeyDown(e)}
-          onMouseOver={this.toggleShowItems}
-          onBlur={this.toggleShowItems}
+          onMouseEnter={this.toggleShowItems}
+          onClick={this.toggleShowItems}
           className={`display ${showItems ? "showing" : ""}`}
           value={text}
           name={"client"}
