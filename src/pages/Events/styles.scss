@@ -3,7 +3,6 @@
 .upcoming-events,
 .past-events {
     padding: 5% 10%;
-    border-bottom: 5px solid $orange;
 
     & .main-header {
         text-transform: uppercase;
@@ -32,4 +31,8 @@
         font: 400 1rem/1.7 $open-sans;
         color: #000000;
     }
+}
+
+.past-events {
+    border-bottom: 5px solid $orange;
 }
