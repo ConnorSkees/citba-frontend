@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/citba-frontend/static/css/main.c9721afa.chunk.css",
-    "main.js": "/citba-frontend/static/js/main.c3791526.chunk.js",
-    "main.js.map": "/citba-frontend/static/js/main.c3791526.chunk.js.map",
+    "main.js": "/citba-frontend/static/js/main.ace12a2e.chunk.js",
+    "main.js.map": "/citba-frontend/static/js/main.ace12a2e.chunk.js.map",
     "runtime-main.js": "/citba-frontend/static/js/runtime-main.3c7ddfc4.js",
     "runtime-main.js.map": "/citba-frontend/static/js/runtime-main.3c7ddfc4.js.map",
     "static/css/2.b90ce945.chunk.css": "/citba-frontend/static/css/2.b90ce945.chunk.css",
     "static/js/2.dff78d88.chunk.js": "/citba-frontend/static/js/2.dff78d88.chunk.js",
     "static/js/2.dff78d88.chunk.js.map": "/citba-frontend/static/js/2.dff78d88.chunk.js.map",
     "index.html": "/citba-frontend/index.html",
-    "precache-manifest.f61eee1d5354ebedd483a0c239693458.js": "/citba-frontend/precache-manifest.f61eee1d5354ebedd483a0c239693458.js",
+    "precache-manifest.a0704a0348e277d020e75ddc373f1733.js": "/citba-frontend/precache-manifest.a0704a0348e277d020e75ddc373f1733.js",
     "service-worker.js": "/citba-frontend/service-worker.js",
     "static/css/2.b90ce945.chunk.css.map": "/citba-frontend/static/css/2.b90ce945.chunk.css.map",
     "static/css/main.c9721afa.chunk.css.map": "/citba-frontend/static/css/main.c9721afa.chunk.css.map",
@@ -49,6 +49,6 @@
     "static/css/2.b90ce945.chunk.css",
     "static/js/2.dff78d88.chunk.js",
     "static/css/main.c9721afa.chunk.css",
-    "static/js/main.c3791526.chunk.js"
+    "static/js/main.ace12a2e.chunk.js"
   ]
 }
