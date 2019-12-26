@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "52f7f00e6c31a3427ed34ea105edf204",
+    "revision": "ae04c81d909bd2cca645540518491cdc",
     "url": "/citba-frontend/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/citba-frontend/static/css/2.b90ce945.chunk.css"
   },
   {
-    "revision": "f1b75f95e7fb26f221bf",
-    "url": "/citba-frontend/static/css/main.594bdd57.chunk.css"
+    "revision": "a808acf5f2d327f982a2",
+    "url": "/citba-frontend/static/css/main.37ce64ac.chunk.css"
   },
   {
     "revision": "85ecf61b03225cce86c3",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/citba-frontend/static/js/2.275b7d22.chunk.js.LICENSE"
   },
   {
-    "revision": "f1b75f95e7fb26f221bf",
-    "url": "/citba-frontend/static/js/main.d4aaa210.chunk.js"
+    "revision": "a808acf5f2d327f982a2",
+    "url": "/citba-frontend/static/js/main.db06a792.chunk.js"
   },
   {
     "revision": "5663842b9cabad79e343",
