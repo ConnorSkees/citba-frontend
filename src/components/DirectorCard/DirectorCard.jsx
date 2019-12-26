@@ -8,13 +8,15 @@ class DirectorCard extends Component {
     state = {};
 
     render() {
-        const { src, name, position, email } = this.props;
+        const { src, name, position, email, major } = this.props;
         return (
           <section className="director-card">
-            <img src={src} alt={name} className="head-shot"/>
+            <img src={src} alt={name} className="head-shot" />
             <h2>{name}</h2>
-            <h4>{position}</h4>
-            <a href={`mailto:${email}`}><SVG src={EmailIcon} /></a>
+            <h4 className={`${major ? "major" : ""}`}>{position}</h4>
+            <a href={`mailto:${email}`}>
+              <SVG src={EmailIcon} />
+            </a>
           </section>
         );
     }

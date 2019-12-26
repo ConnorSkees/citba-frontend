@@ -29,11 +29,15 @@
     }
 
     h4 {
-        font: 400 17px/1rem $playfair-display;
+        font: 400 15px/1rem $playfair-display;
         color: #7A7A7A;
-        text-transform: uppercase;
         margin: 5px 0px 10px;
         letter-spacing: 1.3px;
         margin-bottom: 2.3rem;
+
+        &.major {
+            text-transform: uppercase;
+            font-size: 17px;
+        }
     }
 }

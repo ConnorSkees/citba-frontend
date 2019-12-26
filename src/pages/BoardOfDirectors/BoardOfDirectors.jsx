@@ -11,24 +11,28 @@ const DIRECTORS = [
   {
     name: "KATHLEEN W. CANNON",
     position: "president",
+    major: true,
     src: placeholder,
     email: ""
   },
   {
     name: "MATTHEW R. NICELY",
     position: "vice president",
+    major: true,
     src: placeholder,
     email: ""
   },
   {
     name: "MICHELE LYNCH",
     position: "secretary",
+    major: true,
     src: placeholder,
     email: ""
   },
   {
     name: "JOHN M. PETERSON",
     position: "treasurer",
+    major: true,
     src: placeholder,
     email: ""
   },
@@ -162,6 +166,7 @@ class BoardOfDirectors extends Component {
                 <DirectorCard
                   name={dir.name}
                   position={dir.position}
+                  major={dir.major}
                   email={dir.email}
                   src={dir.src}
                 />
