@@ -3,19 +3,9 @@ import "./styles.scss";
 import Header from 'components/Header/Header';
 import Footer from 'components/Footer/Footer';
 import Banner from "components/Banner/Banner";
+import Input from "components/Input";
 import BannerBg from "assets/man-writing.jpg";
 
-function Input(props) {
-  const { field, required } = props;
-  return (
-    <React.Fragment>
-      <label htmlFor={field}>
-        {field} {required ? <span className="red">*</span> : ""}
-      </label>
-      <input id={field} type="text" placeholder={field} />
-    </React.Fragment>
-  );
-}
 
 class RenewMembership extends Component {
   state = {
