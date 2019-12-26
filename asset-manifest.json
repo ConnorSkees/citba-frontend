@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/citba-frontend/static/css/main.c9721afa.chunk.css",
-    "main.js": "/citba-frontend/static/js/main.ace12a2e.chunk.js",
-    "main.js.map": "/citba-frontend/static/js/main.ace12a2e.chunk.js.map",
+    "main.css": "/citba-frontend/static/css/main.3cc02ec9.chunk.css",
+    "main.js": "/citba-frontend/static/js/main.1f6cffa0.chunk.js",
+    "main.js.map": "/citba-frontend/static/js/main.1f6cffa0.chunk.js.map",
     "runtime-main.js": "/citba-frontend/static/js/runtime-main.3c7ddfc4.js",
     "runtime-main.js.map": "/citba-frontend/static/js/runtime-main.3c7ddfc4.js.map",
     "static/css/2.b90ce945.chunk.css": "/citba-frontend/static/css/2.b90ce945.chunk.css",
-    "static/js/2.dff78d88.chunk.js": "/citba-frontend/static/js/2.dff78d88.chunk.js",
-    "static/js/2.dff78d88.chunk.js.map": "/citba-frontend/static/js/2.dff78d88.chunk.js.map",
+    "static/js/2.275b7d22.chunk.js": "/citba-frontend/static/js/2.275b7d22.chunk.js",
+    "static/js/2.275b7d22.chunk.js.map": "/citba-frontend/static/js/2.275b7d22.chunk.js.map",
     "index.html": "/citba-frontend/index.html",
-    "precache-manifest.a0704a0348e277d020e75ddc373f1733.js": "/citba-frontend/precache-manifest.a0704a0348e277d020e75ddc373f1733.js",
+    "precache-manifest.8656fd2939e6c5bd29b417ab345223fb.js": "/citba-frontend/precache-manifest.8656fd2939e6c5bd29b417ab345223fb.js",
     "service-worker.js": "/citba-frontend/service-worker.js",
     "static/css/2.b90ce945.chunk.css.map": "/citba-frontend/static/css/2.b90ce945.chunk.css.map",
-    "static/css/main.c9721afa.chunk.css.map": "/citba-frontend/static/css/main.c9721afa.chunk.css.map",
-    "static/js/2.dff78d88.chunk.js.LICENSE": "/citba-frontend/static/js/2.dff78d88.chunk.js.LICENSE",
+    "static/css/main.3cc02ec9.chunk.css.map": "/citba-frontend/static/css/main.3cc02ec9.chunk.css.map",
+    "static/js/2.275b7d22.chunk.js.LICENSE": "/citba-frontend/static/js/2.275b7d22.chunk.js.LICENSE",
     "static/media/arrow-down.svg": "/citba-frontend/static/media/arrow-down.3883931a.svg",
     "static/media/arrow-left.svg": "/citba-frontend/static/media/arrow-left.2436f681.svg",
     "static/media/arrow-right.svg": "/citba-frontend/static/media/arrow-right.d9e9084c.svg",
@@ -47,8 +47,8 @@
   "entrypoints": [
     "static/js/runtime-main.3c7ddfc4.js",
     "static/css/2.b90ce945.chunk.css",
-    "static/js/2.dff78d88.chunk.js",
-    "static/css/main.c9721afa.chunk.css",
-    "static/js/main.ace12a2e.chunk.js"
+    "static/js/2.275b7d22.chunk.js",
+    "static/css/main.3cc02ec9.chunk.css",
+    "static/js/main.1f6cffa0.chunk.js"
   ]
 }
