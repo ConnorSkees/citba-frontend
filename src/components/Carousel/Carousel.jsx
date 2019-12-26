@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
 import "./styles.scss";
 
 import slidebg1 from "assets/carousel-image-1.jpg";
@@ -45,22 +46,27 @@ const SLIDES = [
   {
     image_path: slidebg3,
     title: "Customs and International Trade Bar Association",
-    text: "Customs law, international trade law, and related matters since 1926.",
+    text:
+      "Customs law, international trade law, and related matters since 1926."
   },
   {
     image_path: slidebg2,
     title: "Interview with Incoming President Kathleen Cannon",
     text:
       "Incoming President Kathleen Cannon recently sat down with Alex Lawson and Law360 to discuss the prominent role that trade has had in the headlines recently and what her plans are for CITBA during her tenure.",
-    extra: <button>Read More</button>
+    extra: (
+      <a href="https://www.law360.com/articles/1048428/new-citba-head-eager-to-lead-with-trade-in-spotlight">
+        Read More
+      </a>
+    )
   },
   {
     image_path: slidebg1,
     title: "Join CITBA",
     text:
       "Membership is open to all attorneys admitted to practice in any country and law students",
-    extra: <button>Join Today!</button>
-  },
+    extra: <Link to="/benefits/">Join Today!</Link>
+  }
 ];
 
 const directions = {

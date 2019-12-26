@@ -107,9 +107,11 @@ $small: 600px;
             }
         }
 
-        & button {
+        & a {
             @include transition(.3s);
             font: 500 1rem/1 $open-sans;
+            display: inline-block;
+            text-decoration: none;
             text-transform: uppercase;
             color: $blue;
             background-color: $orange;
