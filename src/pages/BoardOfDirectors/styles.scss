@@ -2,6 +2,7 @@
 
 @mixin grid-columns($num) {
     grid-template-columns: repeat(#{$num}, calc(100% / #{$num}));
+    padding-right: calc(30px * (#{$num} - 1));
 }
 
 .board {
@@ -10,11 +11,7 @@
     grid-column-gap: 30px;
     grid-row-gap: 30px;
     position: relative;
-    width: 70vw;
-    margin: 50px 0 10% 10%;
-    padding-bottom: 20px;
-    padding-top: 10px;
-    margin-top: 50px;
+    margin: 5% 10%;
 
     @media screen and (max-width: 1300px) {
         @include grid-columns(3);

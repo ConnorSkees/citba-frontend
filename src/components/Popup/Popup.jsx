@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import Input from "components/Input";
 import "./styles.scss";
 import CountrySelect from 'components/CountrySelect/CountrySelect';
 import SVG from "react-inlinesvg";
@@ -17,7 +16,6 @@ function Input(props) {
             name={field}
             required
             pattern={"[^<>/'\"]*"}
-            autoComplete={field}
           />
         </label>
       </React.Fragment>
@@ -51,7 +49,6 @@ class Popup extends Component {
               onClick={this.hide}
               className={`backdrop ${visible ? "" : "hidden"}`}
             />
-            {/* todo: popup header */}
             <form className={`popup-form ${visible ? "" : "hidden"}`}>
               <div className="header">
                 <SVG src={CloseSVG} onClick={this.props.onHide} />
