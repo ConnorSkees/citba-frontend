@@ -1,0 +1,26 @@
+@import "../variables";
+
+.backdrop {
+    transition: opacity .5s cubic-bezier(.4, 0, .2, 1), visibility .6s;
+    position: fixed;
+    background: rgba(0, 0, 0, .3);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 98;
+}
+
+.hidden {
+    transition: opacity .5s cubic-bezier(.4, 0, .2, 1), visibility .6s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.popup-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+}

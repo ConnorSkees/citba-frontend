@@ -48,7 +48,7 @@ class RenewMembership extends Component {
           ]}
           src={BannerBg}
         />
-        <form>
+        <form className="membership-form">
           <div className="form-container">
             <Input required={true} field="Name" />
             <Input required={true} field="Email" />

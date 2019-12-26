@@ -126,7 +126,7 @@ class Join extends Component {
           ]}
           src={BannerBg}
         />
-        <form className="join">
+        <form className="join membership-form">
           <div className="form-container">
             <Input required={true} field="Name" />
             <Input required={true} field="Firm or Organization" />

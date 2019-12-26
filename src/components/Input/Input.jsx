@@ -11,7 +11,14 @@ class Input extends Component {
             <label htmlFor={field}>
               {field} {required ? <span className="red">*</span> : ""}
             </label>
-            <input id={field} type="text" name={field} placeholder={field} />
+            <input
+              id={field}
+              autoComplete={field.toLowerCase()}
+              type="text"
+              name={field}
+              placeholder={field}
+              pattern={"[^<>/'\"]*"}
+            />
           </React.Fragment>
         );
     }

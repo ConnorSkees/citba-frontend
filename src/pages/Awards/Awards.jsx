@@ -4,15 +4,26 @@ import Header from 'components/Header/Header';
 import Footer from 'components/Footer/Footer';
 import Recipient from "assets/richard-belanger-2019.jpg";
 import BannerBg from "assets/awards.jpg";
+import Popup from 'components/Popup';
 
 class Awards extends Component {
-  state = {};
+  state = {
+    showing: false
+  };
 
   scroll = event => {
     document.querySelector(event.target.getAttribute("href")).scrollIntoView({
       behavior: "smooth"
     });
   };
+
+  showPopup = () => {
+    this.setState({ showing: true })
+  }
+  
+  hidePopup = () => {
+    this.setState({ showing: false })
+  }
 
   render() {
     return (
@@ -319,9 +330,11 @@ class Awards extends Component {
           <div>
             <h1>Andrew P. Vance Memorial Writing Competition</h1>
             <div className="donation">
-              ANDREW P. VANCE DONATION
-              {/* todo: donation pop-up */}
-              <input type="button" value="Donate" />
+              <span className="title">ANDREW P. VANCE DONATION</span>
+              <button type="button" onClick={this.showPopup}>
+                Donate
+              </button>
+              <Popup visible={this.state.showing} onHide={this.hidePopup} />
             </div>
           </div>
         </section>
