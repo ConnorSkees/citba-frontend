@@ -15,21 +15,21 @@
     & #about-text {
         color: white;
         background-color: #001C38;
-        margin: 0px 0px 0px 0px;
+        margin: 0;
 
         .text {
             max-width: 70%;
             padding: 10%;
 
             & h1 {
-                font: 900 3rem/1 $oswald;
+                font: 900 3rem/1 $open-sans;
                 letter-spacing: .5rem;
                 margin-bottom: 20px;
                 padding: 0 0 30px;
             }
     
             & p {
-                font: 300 1rem/1.8rem $roboto;
+                font: 300 1rem/1.8rem $open-sans;
                 margin: 0 0 20px;
             }
         }

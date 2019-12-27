@@ -7,7 +7,6 @@
     background-size: cover;
     min-height: 270px;
     width: 100%;
-    line-height: 1.7;
     position: relative;
 
     display: flex;
@@ -18,20 +17,18 @@
         height: 100%;
         width: 100%;
         position: absolute;
-        top: 0; left: 0; right: 0; bottom: 0;
         background-color: #172959;
         opacity: .7;
     }
 
     & .text {
-        color: white;
+        color: #fff;
         position: relative;
         text-align: center;
         max-width: 80%;
-        line-height: 1;
 
         & .title {
-            font: 900 2.5rem/1.7 $open-sans;
+            font: 700 2.5rem/1.7 $open-sans;
             text-transform: uppercase;
             @media screen and (max-width: 450px) {
                 font-size: 2rem;
@@ -42,8 +39,7 @@
         }
 
         & .subtitle {
-            font-size: 19px;
-            font-family: $playfair-display;
+            font: 400 19px/1 $playfair-display;
         }
     }
 }

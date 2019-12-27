@@ -22,9 +22,6 @@
         & .red {
             color: red;
             font-size: 75%;
-            line-height: 0;
-            position: relative;
-            vertical-align: baseline;
         }
 
         & .address {
@@ -48,7 +45,6 @@
             min-height: 36px;
             height: auto;
             outline: none;
-            box-sizing: border-box;
             width: 100%;
         }
 
@@ -79,14 +75,12 @@
         width: 100%;
 
         & .price {
+            font: 400 19px/60px $open-sans;
             width: 60%;
-            line-height: 60px;
             background-color: rgba(150, 150, 150, 0.1);
             margin: 10px 0;
             text-align: center;
             padding: 5px 0;
-            font-size: 19px;
-            font-family: $open-sans;
             color: $gray;
         }
 
@@ -103,7 +97,6 @@
             outline: none;
             border: none;
             color: #6d7680;
-            box-sizing: border-box;
             width: auto;
             min-width: 150px;
             min-height: 50px;
