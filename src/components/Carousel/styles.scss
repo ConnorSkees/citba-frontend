@@ -2,7 +2,7 @@
 @import "../mixins";
 
 $medium: 1000px;
-$small: 600px;
+$small: 750px;
 
 .carousel {
     overflow: hidden;
@@ -78,6 +78,7 @@ $small: 600px;
 
             @media screen and (max-width: $small) {
                 padding: 40px 50px;
+                width: 90%;
             }
 
             & h1 {

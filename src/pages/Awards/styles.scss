@@ -1,15 +1,24 @@
 @import "../../components/variables";
 
+$large: 1000px;
+$medium: 600px;
+$small: 400px;
+
 #barbara-s-williams {
     grid-template-columns: 30% 66%;
     background-color: rgba(16, 44, 99, 0.03);
+
+    @media screen and (max-width: $large) {
+        grid-template-columns: 100%;
+        grid-row-gap: 2%;
+    }
 
     & .recipients {
         text-transform: uppercase;
         color: $blue;
 
         & h2 {
-            font: 700 18px/1.7em $open-sans;
+            font: 700 1.125rem/1.7em $open-sans;
             letter-spacing: 5.3px;
             color: $blue;
             margin: 0;
@@ -35,8 +44,14 @@
             padding: 10px;
 
             & h3 {
-                font: 600 24px/1.5em $open-sans;
+                font: 600 1.5rem/1.5em $open-sans;
                 color: $blue;
+                @media screen and (max-width: $medium) {
+                    font-size: 1rem;
+                }
+                @media screen and (max-width: $small) {
+                    font-size: .7rem;
+                }
             }
         }
 
@@ -44,6 +59,9 @@
             display: inline-block;
             height: auto;
             width: 250px;
+            @media screen and (max-width: $medium) {
+                width: 150px;
+            }
         }
     }
 }
@@ -53,13 +71,24 @@
     background-color: rgba(248, 178, 38, 0.06);
     border-bottom: 5px solid $orange;
 
+    @media screen and (max-width: $large) {
+        grid-template-columns: 100%;
+        grid-row-gap: 2%;
+    }
+
+    .donation-container {
+        @media screen and (max-width: $large) {
+            grid-row: 1;
+        }
+    }
+
     .donation {
         text-align: center;
         border-top: 1px solid $orange;
         padding-top: 15px;
 
         & .title {
-            font: 600 18px/1.3em $open-sans;
+            font: 600 1.125rem/1.3em $open-sans;
             color: $orange;
             text-transform: uppercase;
             letter-spacing: 2.4px;

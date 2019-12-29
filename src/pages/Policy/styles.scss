@@ -1,6 +1,8 @@
 @import "../../components/variables";
 @import "../../components/mixins";
 
+$large: 1000px;
+
 .policy-banner,
 .membership-banner,
 .award-banner {
@@ -109,6 +111,9 @@
         letter-spacing: 5px;
         border-top: 1px solid $orange;
         padding-top: 5%;
+        @media screen and (max-width: $large) {
+            grid-row: 1;
+        }
     }
 
     & p,
@@ -122,6 +127,9 @@
 #trade-adjustment-assistance {
     grid-template-columns: 30% 66%;
     background-color: rgba(16, 44, 99, 0.03);
+    @media screen and (max-width: $large) {
+        grid-template-columns: 100%;
+    }
 }
 
 #trade-adjustment-assistance {
@@ -131,4 +139,7 @@
 #comments {
     grid-template-columns: 66% 30%;
     background-color: rgba(248, 178, 38, 0.06);
+    @media screen and (max-width: $large) {
+        grid-template-columns: 100%;
+    }
 }

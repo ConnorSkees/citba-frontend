@@ -327,10 +327,11 @@ class Awards extends Component {
               639 (1999).
             </p>
           </div>
-          <div>
+          <div className="donation-container">
             <h1>Andrew P. Vance Memorial Writing Competition</h1>
             <div className="donation">
               <span className="title">ANDREW P. VANCE DONATION</span>
+              <br />
               <button type="button" onClick={this.showPopup}>
                 Donate
               </button>

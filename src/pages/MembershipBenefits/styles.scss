@@ -1,6 +1,9 @@
 @import "../../components/variables";
 @import "../../components/mixins";
 
+
+$large: 1000px;
+
 .membership-benefits {
     display: flex;
     flex-direction: column;
@@ -12,20 +15,27 @@
 
     & h1 {
         font: 600 1.75rem/1 $open-sans;
+        text-align: center;
     }
 
     & .benefits {
         display: grid;
         grid-template-columns: repeat(3, calc(100% / 3));
-        grid-template-rows: repeat(2, 50%);
         color: $blue;
         font-family: $open-sans;
         width: 80%;
+        max-width: 1400px;
+
+        @media screen and (max-width: 600px) {
+            grid-template-columns: repeat(2, calc(100% / 2));
+        }
+        @media screen and (max-width: 450px) {
+            grid-template-columns: 100%;
+        }
 
         & .benefit {
             text-align: center;
-            padding: 20px;
-            
+            padding: 5px;
             
             & svg {
                 @include transition(.3s);
@@ -37,10 +47,20 @@
                     fill: $orange;
                     height: 65px;
                 }
+                @media screen and (max-width: $large) {
+                    height: 45px;
+                    &:hover {
+                        height: 50px;
+                    }
+                }
             }
 
             & h2 {
                 font: 600 1.5rem/1 $open-sans;
+
+                @media screen and (max-width: $large) {
+                    font-size: 1.2rem;
+                }
             }
             
             & p {
