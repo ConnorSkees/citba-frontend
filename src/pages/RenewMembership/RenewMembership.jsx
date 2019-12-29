@@ -50,8 +50,8 @@ class RenewMembership extends Component {
         />
         <form className="membership-form">
           <div className="form-container">
-            <Input required={true} field="Name" />
-            <Input required={true} field="Email" />
+            <Input required field="Name" />
+            <Input required field="Email" />
 
             <label>
               Check here if your membership information has changed from last
@@ -67,12 +67,12 @@ class RenewMembership extends Component {
 
             {hasNewMembershipInfo ? (
               <React.Fragment>
-                <Input required={true} field="Firm or Organization" />
-                <Input required={true} field="Street Address" />
-                <Input required={true} field="City" />
-                <Input required={true} field="State" />
-                <Input required={true} field="Zip code" />
-                <Input required={true} field="Telephone" />
+                <Input required field="Firm or Organization" />
+                <Input required field="Street Address" />
+                <Input required field="City" />
+                <Input required field="State" />
+                <Input required field="Zip code" />
+                <Input required field="Telephone" />
               </React.Fragment>
             ) : (
               ""
@@ -98,7 +98,7 @@ class RenewMembership extends Component {
               <option value="Student">Student</option>
             </select>
 
-            <Input field="Electronic Signature" required={true} />
+            <Input field="Electronic Signature" required />
             <Input field="Card Number" />
             <Input field="CVC/CVV" />
             <label>Month</label>

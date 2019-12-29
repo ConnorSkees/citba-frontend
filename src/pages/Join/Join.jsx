@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import "./styles.scss";
-import Header from 'components/Header/Header';
-import Footer from 'components/Footer/Footer';
-import Banner from 'components/Banner/Banner';
+import Header from 'components/Header';
+import Footer from 'components/Footer';
+import Banner from 'components/Banner';
 import CountrySelect from "components/CountrySelect";
 import Input from "components/Input";
 import BannerBg from "assets/man-writing.jpg";
@@ -11,10 +11,10 @@ import "react-datepicker/dist/react-datepicker.css";
 
 
 function CheckBox(props) {
-    const { text } = props;
+    const { text, onChange } = props;
     return (
       <label htmlFor={text} style={{ cursor: "pointer" }}>
-        <input id={text} type="checkbox" />
+        <input id={text} type="checkbox" onChange={onChange} />
         {text}
       </label>
     );
@@ -22,21 +22,104 @@ function CheckBox(props) {
 
 class Join extends Component {
   state = {
+    name: "",
+    firm: "",
+    address_line: "",
+    city: "",
+    state: "",
+    country: "",
+    zip: "",
+    telephone: "",
+    email: "",
+    referrer: "",
+
     membership: "unset",
-    date: null,
-    country: ""
+
+    // active
+    states: "",
+
+    // foreign lawyer
+    foreign_country: "",
+    qualification_details: "",
+
+    // retired
+    prior_membership: "",
+
+    // student
+    law_school: "",
+
+    committeesSet: new Set(),
+    committees: [],
+    electronic_signature: "",
+    card_number: "",
+    cvc: "",
+    month: "",
+    year: "",
+
+    date: "",
+    date_admitted: "",
+    date_retired: "",
+    graduation_date: ""
   };
 
   changeMembership = event => {
     this.setState({ membership: event.target.value });
   };
 
+  changeName = event => {
+    this.setState({ name: event.target.value });
+  };
+
+  changeFirm = event => {
+    this.setState({ firm: event.target.value });
+  };
+
+  changeCity = event => {
+    this.setState({ city: event.target.value });
+  };
+
+  changeState = event => {
+    this.setState({ state: event.target.value });
+  };
+
+  changeZip = event => {
+    this.setState({ zip: event.target.value });
+  };
+
+  changeTelephone = event => {
+    this.setState({ telephone: event.target.value });
+  };
+
+  changeEmail = event => {
+    this.setState({ email: event.target.value });
+  };
+
+  changeReferrer = event => {
+    this.setState({ referrer: event.target.value });
+  };
+
+  toggleCommittee = event => {
+    let { committeesSet } = this.state;
+    const { id } = event.target;
+    if (committeesSet.has(id)) {
+      committeesSet.delete(id);
+    } else {
+      committeesSet.add(id);
+    }
+    this.setState({ committeesSet, committees: Array.from(committeesSet) });
+  };
+
   changeDate = date => {
-    this.setState({ date });
+    this.setState({
+      date,
+      date_admitted: date,
+      date_retired: date,
+      graduation_date: date
+    });
   };
 
   changeCountry = country => {
-    this.setState({ country })
+    this.setState({ country });
   };
 
   getPrice() {
@@ -67,8 +150,8 @@ class Join extends Component {
         return (
           <React.Fragment>
             <Input
-              required={false}
               field="State(s) Where Admitted to the Bar"
+              onChange={event => this.setState({ states: event.target.value })}
             />
             <label htmlFor="">
               Date Admitted to the Bar <span className="red">*</span>
@@ -81,12 +164,14 @@ class Join extends Component {
       case "Foreign Lawyer":
         return (
           <React.Fragment>
-            <Input required={false} field="Foreign Country" />
+            <Input field="Foreign Country" />
             <label htmlFor="">Date Admitted</label>
             <DatePicker selected={this.state.date} onChange={this.changeDate} />
             <Input
-              required={false}
               field="Foreign Country Qualification Details"
+              onChange={event =>
+                this.setState({ foreign_country: event.target.value })
+              }
             />
           </React.Fragment>
         );
@@ -96,7 +181,9 @@ class Join extends Component {
             <label htmlFor="">Date of Retirement</label>
             <DatePicker selected={this.state.date} onChange={this.changeDate} />
             <Input
-              required={false}
+              onChange={event =>
+                this.setState({ prior_membership: event.target.value })
+              }
               field="For retirees, please provide specifics regarding prior membership in CITBA"
             />
           </React.Fragment>
@@ -104,7 +191,12 @@ class Join extends Component {
       case "Student":
         return (
           <React.Fragment>
-            <Input required={false} field="What Law School do you attend?" />
+            <Input
+              field="What Law School do you attend?"
+              onChange={event =>
+                this.setState({ law_school: event.target.value })
+              }
+            />
             <label htmlFor="">Anticipated Graduation Date</label>
             <DatePicker selected={this.state.date} onChange={this.changeDate} />
           </React.Fragment>
@@ -112,6 +204,22 @@ class Join extends Component {
       default:
         break;
     }
+  };
+
+  handleSubmit = event => {
+    event.preventDefault();
+    let state = JSON.stringify(this.state);
+    console.log(state);
+    fetch("/api/join", {
+      method: "POST",
+      mode: "same-origin",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: state
+    }).then(res => {
+      console.log(res);
+    });
   };
 
   render() {
@@ -126,10 +234,14 @@ class Join extends Component {
           ]}
           src={BannerBg}
         />
-        <form className="join membership-form">
+        <form className="join membership-form" onSubmit={this.handleSubmit}>
           <div className="form-container">
-            <Input required={true} field="Name" />
-            <Input required={true} field="Firm or Organization" />
+            <Input /*required*/ field="Name" onChange={this.changeName} />
+            <Input
+              /*required*/
+              field="Firm or Organization"
+              onChange={this.changeFirm}
+            />
 
             <label>
               Address <span className="red">*</span>
@@ -139,20 +251,44 @@ class Join extends Component {
                 type="text"
                 className="address-line"
                 placeholder="Address Line 1"
+                onChange={event =>
+                  this.setState({ address_line: event.target.value })
+                }
+                /*required*/
               />
-              <input type="text" className="city" placeholder="City" />
+              <input
+                type="text"
+                className="city"
+                placeholder="City"
+                onChange={this.changeCity}
+                /*required*/
+              />
               <input
                 type="text"
                 className="state-region"
                 placeholder="State or Region"
+                onChange={this.changeState}
+                /*required*/
               />
               <CountrySelect value={country} onChange={this.changeCountry} />
-              <input type="text" className="zip" placeholder="Zip" />
+              <input
+                type="text"
+                className="zip"
+                placeholder="Zip"
+                onChange={this.changeZip}
+                /*required*/
+              />
             </div>
 
-            <Input required={true} field="Telephone" />
-            <Input required={true} field="Email" />
-            <Input required={true} field="How did you hear about CITBA?" />
+            <Input
+              /*required*/ field="Telephone"
+              onChange={this.changeTelephone}
+            />
+            <Input /*required*/ field="Email" onChange={this.changeEmail} />
+            <Input
+              /*required*/ field="How did you hear about CITBA?"
+              onChange={this.changeReferrer}
+            />
 
             <div className="form-divider" />
 
@@ -185,23 +321,41 @@ class Join extends Component {
               observer)
             </label>
             <div style={{ display: "grid" }}>
-              <CheckBox text="Continuing Legal Education and Professional Responsibilities" />
-              <CheckBox text="Customs" />
-              <CheckBox text="Judicial Selection" />
-              <CheckBox text="Membership" />
-              <CheckBox text="Meetings and Special Events" />
-              <CheckBox text="Export Control" />
-              <CheckBox text="Liaison with Other Bar Associations" />
-              <CheckBox text="Publications" />
-              <CheckBox text="Technology" />
-              <CheckBox text="Trial and Appellate Practice" />
-              <CheckBox text="International Trade" />
-              <CheckBox text="Young Lawyers" />
+              <CheckBox
+                onChange={this.toggleCommittee}
+                text="Continuing Legal Education and Professional Responsibilities"
+              />
+              <CheckBox onChange={this.toggleCommittee} text="Customs" />
+              <CheckBox
+                onChange={this.toggleCommittee}
+                text="Judicial Selection"
+              />
+              <CheckBox onChange={this.toggleCommittee} text="Membership" />
+              <CheckBox
+                onChange={this.toggleCommittee}
+                text="Meetings and Special Events"
+              />
+              <CheckBox onChange={this.toggleCommittee} text="Export Control" />
+              <CheckBox
+                onChange={this.toggleCommittee}
+                text="Liaison with Other Bar Associations"
+              />
+              <CheckBox onChange={this.toggleCommittee} text="Publications" />
+              <CheckBox onChange={this.toggleCommittee} text="Technology" />
+              <CheckBox
+                onChange={this.toggleCommittee}
+                text="Trial and Appellate Practice"
+              />
+              <CheckBox
+                onChange={this.toggleCommittee}
+                text="International Trade"
+              />
+              <CheckBox onChange={this.toggleCommittee} text="Young Lawyers" />
             </div>
 
-            <Input field="Electronic Signature" required={true} />
-            <Input field="Card Number" required={true} />
-            <Input field="CVC/CVV" required={true} />
+            <Input field="Electronic Signature" /*required*/ />
+            <Input field="Card Number" /*required*/ />
+            <Input field="CVC/CVV" /*required*/ />
             <label>
               Month <span className="red">*</span>
             </label>
