@@ -102,7 +102,7 @@ class Header extends Component {
                     return (
                       <Link
                         to={el.path.toLowerCase()}
-                        key={el.value}
+                        key={el.text}
                         className={"nav-item"}
                       >
                         {el.text}
@@ -114,6 +114,7 @@ class Header extends Component {
                         items={el.els}
                         text={el.text}
                         els={el.els}
+                        key={el.text}
                       />
                     );
                   }

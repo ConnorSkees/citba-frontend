@@ -15,6 +15,7 @@ class Input extends Component {
               id={field}
               autoComplete={field.toLowerCase()}
               type="text"
+              onChange={this.props.onChange}
               name={field}
               placeholder={field}
               pattern={"[^<>/'\"]*"}

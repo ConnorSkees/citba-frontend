@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Item from './Item';
-import { Link } from "react-router-dom";
 import ArrowDown from "assets/arrow-down.svg";
 import SVG from "react-inlinesvg";
 import "./styles.scss"
