@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9c2ea544cd631be489cf78ebff8c815c",
+    "revision": "0e0802e1f5f1c45e6798722a7cbb771f",
     "url": "/citba-frontend/index.html"
   },
   {
-    "revision": "85ecf61b03225cce86c3",
+    "revision": "ea4326e2349fd497f6c3",
     "url": "/citba-frontend/static/css/2.b90ce945.chunk.css"
   },
   {
-    "revision": "8795eb44482ac5a08040",
-    "url": "/citba-frontend/static/css/main.37c98c95.chunk.css"
+    "revision": "8db3f3a4c8e358672518",
+    "url": "/citba-frontend/static/css/main.e63f8fdb.chunk.css"
   },
   {
-    "revision": "85ecf61b03225cce86c3",
-    "url": "/citba-frontend/static/js/2.275b7d22.chunk.js"
+    "revision": "ea4326e2349fd497f6c3",
+    "url": "/citba-frontend/static/js/2.15f82b34.chunk.js"
   },
   {
     "revision": "0fdce6425be199f2fc7d2b26422d5b99",
-    "url": "/citba-frontend/static/js/2.275b7d22.chunk.js.LICENSE"
+    "url": "/citba-frontend/static/js/2.15f82b34.chunk.js.LICENSE"
   },
   {
-    "revision": "8795eb44482ac5a08040",
-    "url": "/citba-frontend/static/js/main.db06a792.chunk.js"
+    "revision": "8db3f3a4c8e358672518",
+    "url": "/citba-frontend/static/js/main.cd07b521.chunk.js"
   },
   {
     "revision": "5663842b9cabad79e343",
@@ -56,8 +56,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/citba-frontend/static/media/board-room.2b5c529e.jpg"
   },
   {
-    "revision": "2349d5fed79e765aaa85a509f35d6479",
-    "url": "/citba-frontend/static/media/book.2349d5fe.svg"
+    "revision": "01264b134a79caa2fb200eba2d0b4367",
+    "url": "/citba-frontend/static/media/book.01264b13.svg"
   },
   {
     "revision": "591a8bd8c246004f63da9cf0341c328d",
@@ -80,8 +80,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/citba-frontend/static/media/citba-footer.874ca3cd.png"
   },
   {
-    "revision": "e18baee82f76d7247a343e5182bd19c8",
-    "url": "/citba-frontend/static/media/committees.e18baee8.svg"
+    "revision": "a640c391678206298194d3e96e7c9820",
+    "url": "/citba-frontend/static/media/committees.a640c391.svg"
   },
   {
     "revision": "b6f24e602edf98183f5fae8375ab51b3",
@@ -136,8 +136,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/citba-frontend/static/media/scales.692fd169.jpg"
   },
   {
-    "revision": "ed9c63ff5988c423fde738dd7101f878",
-    "url": "/citba-frontend/static/media/twitter-logo.ed9c63ff.svg"
+    "revision": "67a8b95c2ad66e90ab795a51a9953263",
+    "url": "/citba-frontend/static/media/twitter-logo.67a8b95c.svg"
   },
   {
     "revision": "2fe2dffd9293fad0260696a34cc8d40b",
