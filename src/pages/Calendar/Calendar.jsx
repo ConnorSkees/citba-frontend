@@ -5,7 +5,6 @@ import Footer from 'components/Footer';
 import SVG from "react-inlinesvg";
 import ArrowRight from "assets/arrow-right.svg";
 import ArrowLeft from "assets/arrow-left.svg";
-// todo: calendar
 
 const WEEKDAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
@@ -13,7 +12,7 @@ class Weekday extends Component {
   render() {
     const { day, events } = this.props;
     return (
-      <div className="day" style={{ opacity: day==="" ? 0 : 1 }}>
+      <div className="day">
         <span className="number">{day}</span>
         {events.map(event => <a href="#">
           {event}
@@ -28,7 +27,7 @@ class Calendar extends Component {
     year: 2019,
     month: 2,
     days: [],
-    events: []
+    events: {},
   };
 
   monthAsString = () => {
@@ -107,9 +106,14 @@ class Calendar extends Component {
 
   getEvents = () => {
     const { year } = this.state;
+    let events = {};
     fetch(`/api/events/${year}`).then(res => res.json).then(data => {
       // todo: process events into hashmap `{ "2019-01-01": { title, .. } }`
+      data.map(el => {
+        events[el.day] = el;
+      })
     });
+    this.setState({ events });
   }
 
   componentDidMount() {
@@ -154,12 +158,18 @@ class Calendar extends Component {
                 type="number"
                 className="year-input"
                 value={year}
-                onChange={event => this.setState({ year: event.target.value })}
+                onChange={event =>
+                  this.setState({ year: parseInt(event.target.value) })
+                }
               />
               <select
                 className="month-input"
                 value={month}
-                onChange={event => {this.setState({ month: event.target.value })}}
+                onChange={event => {
+                  this.setState({
+                    month: parseInt(event.target.value)
+                  });
+                }}
               >
                 <option value={0}>January</option>
                 <option value={1}>February</option>
@@ -169,8 +179,8 @@ class Calendar extends Component {
                 <option value={5}>June</option>
                 <option value={6}>July</option>
                 <option value={7}>August</option>
-                <option value={9}>September</option>
-                <option value={8}>October</option>
+                <option value={8}>September</option>
+                <option value={9}>October</option>
                 <option value={10}>November</option>
                 <option value={11}>December</option>
               </select>
