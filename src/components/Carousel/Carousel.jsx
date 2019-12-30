@@ -138,17 +138,19 @@ class Carousel extends Component {
                   return (
                     <Slide
                       slide={s}
+                      key={`${idx}`}
                       carousel={this}
                       className={`prev${direction === directions.DECREMENT ? " moving" : ""}`}
                     />
                   );
                 case currentSlideIdx:
-                  return <Slide slide={s} carousel={this} />;
+                  return <Slide slide={s} carousel={this} key={`${idx}`} />;
                 case nextSlideIdx:
                   return (
                     <Slide
                       slide={s}
                       carousel={this}
+                      key={`${idx}`}
                       className={`next${
                         direction === directions.INCREMENT ? " moving" : ""
                       }`}
