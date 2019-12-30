@@ -244,17 +244,19 @@ class Calendar extends Component {
                 <option value={11}>December</option>
               </select>
             </div>
+            <div className="month-picker">
             <SVG
               src={ArrowLeft}
               className="left"
               onClick={this.decrementMonth}
             />
-            {this.monthAsString()} {year}
+            <p>{monthAsString(month)} {year}</p>
             <SVG
               src={ArrowRight}
               className="right"
               onClick={this.incrementMonth}
             />
+            </div>
           </div>
           <div className="calendar-days">
             <div className="weekdays">

@@ -10,31 +10,56 @@ $border: 1px solid #ccc;
         position: relative;
         margin: 3% 30% 0;
         text-align: center;
-
-        .inputs {
-            display: flex;
-            & input {
-                border: none;
-                border-bottom: 1px dashed #ccc;
+        .calendar-nav-inputs {
+            margin-bottom: 7.5%;
+        }
+        .month-input,
+        .year-input {
+            background-color: #666;
+            color: #eee;
+            font: 700 1rem/1 $open-sans;
+            cursor: pointer;
+            padding: 9px;
+            border: 3px solid #666;
+            &:hover {
+                background-color: #707070;
+                border-color: #555;
             }
         }
-
-        font: 700 1rem/1 $open-sans;
+        .year-input {
+            width: 101px;
+            margin-right: 6.5%;
+            @media only screen and (max-width: 600px) {
+                margin: 0 auto 10px;
+            }
+        } 
+        .month-picker{
+            align-items: center;
+            display: flex;
+        }
+        p {
+            font-size: 1.75rem;
+            @media only screen and (max-width: 600px) {
+                font-size: 1rem;
+            }
+        }
         svg {
             @include transition(.3s);
             height: 36px;
             cursor: pointer;
             border-radius: 50%;
+            @media only screen and (max-device-width: 600px) {
+                margin: 0;
+            }
             &:hover {
                 background-color: #eee;
             }
         }
-            
         & .left {
-            float: left;
+            margin-right: auto;
         }
         & .right {
-            float: right;
+            margin-left: auto;
         }
     }
 
