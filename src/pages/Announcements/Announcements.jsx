@@ -94,7 +94,6 @@ const ANNOUNCEMENTS = [
   }
 ];
 
-
 function Announcement(props) {
     const { title, content } = props;
     return <div className="announcement">
@@ -103,7 +102,7 @@ function Announcement(props) {
             {content}
         </div>
     </div>;
-} 
+}
 
 class Announcements extends Component {
     state = {};
@@ -115,7 +114,7 @@ class Announcements extends Component {
             <Banner src={BannerBg} text="Announcements" subtitle={[]} />
             <div className="announcements">
               {ANNOUNCEMENTS.map(a => (
-                <Announcement title={a.title} content={a.content} />
+                <Announcement key={a.title} title={a.title} content={a.content} />
               ))}
             </div>
             <Footer />

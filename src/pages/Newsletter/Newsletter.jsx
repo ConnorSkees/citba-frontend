@@ -40,7 +40,7 @@ const NEWSLETTERS = [
     [2019, 2],
 ]
 
-function cleanDate(date) {
+const season = date => {
     let season;
     switch (date[1]) {
         case 1:
@@ -71,9 +71,6 @@ class Newsletter extends Component {
         let newsletters = NEWSLETTERS.sort();
         // most recent newsletter
         let r = newsletters.pop();
-        console.log(
-          process.env.PUBLIC_URL + `/newsletters/${r[0]}-${r[1]}.pdf`
-        );
         newsletters = newsletters.reverse();
 
         return (
@@ -82,11 +79,7 @@ class Newsletter extends Component {
             <Banner src={BannerBg} text="CITBA NEWSLETTER" subtitle={[]} />
             <div className="current-issue">
               <SVG src={PDF} />
-              <a
-                href={
-                  process.env.PUBLIC_URL + `/newsletters/${r[0]}-${r[1]}.pdf`
-                }
-              >
+              <a href={`/newsletters/${r[0]}-${r[1]}.pdf`}>
                 Download the current CITBA Newsletter: Summer 2019
               </a>
             </div>
@@ -94,15 +87,8 @@ class Newsletter extends Component {
               <h2>Past Issues</h2>
               <ul>
                 {newsletters.map(n => (
-                  <li>
-                    <a
-                      href={
-                        process.env.PUBLIC_URL +
-                        `/newsletters/${n[0]}-${n[1]}.pdf`
-                      }
-                    >
-                      {cleanDate(n)}
-                    </a>
+                  <li key={`${n[0]}-${n[1]}`}>
+                    <a href={`/newsletters/${n[0]}-${n[1]}.pdf`}>{season(n)}</a>
                   </li>
                 ))}
               </ul>

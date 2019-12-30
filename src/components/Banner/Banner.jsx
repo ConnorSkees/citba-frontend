@@ -12,7 +12,7 @@ class Banner extends Component {
             <div className="text">
               <p className="title">{text}</p>
               {subtitle.map(s => (
-                <p className="subtitle">{s}</p>
+                <p className="subtitle" key={s}>{s}</p>
               ))}
             </div>
           </div>

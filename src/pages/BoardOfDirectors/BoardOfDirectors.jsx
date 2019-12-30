@@ -169,6 +169,7 @@ class BoardOfDirectors extends Component {
                   major={dir.major}
                   email={dir.email}
                   src={dir.src}
+                  key={dir.name+dir.position}
                 />
               ))}
             </div>
