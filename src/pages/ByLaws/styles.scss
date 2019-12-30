@@ -8,6 +8,8 @@
     width: 100%;
     padding: 40px 0;
     border-bottom: 5px solid $orange;
+    max-width: 1200px;
+    margin: auto;
 
     & h1, & h2 {
         font: 700 1.5rem/1.2 $open-sans;
