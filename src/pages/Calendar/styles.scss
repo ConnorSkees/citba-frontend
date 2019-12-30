@@ -1,18 +1,57 @@
 @import "../../components/variables";
+@import "../../components/mixins";
 
 $border: 1px solid #ccc;
 
 .calendar {
     &-nav {
+        // style the inputs here!
+        position: relative;
+        margin: 3% 30% 0;
+        text-align: center;
 
+        .inputs {
+            display: flex;
+            & input {
+                border: none;
+                border-bottom: 1px dashed #ccc;
+            }
+        }
+
+        font: 700 1rem/1 $open-sans;
+        svg {
+            @include transition(.3s);
+            height: 36px;
+            cursor: pointer;
+            border-radius: 50%;
+            &:hover {
+                background-color: #eee;
+            }
+        }
+            
+        & .left {
+            float: left;
+        }
+        & .right {
+            float: right;
+        }
     }
 
     &-days {
-        margin: 10%;
+        margin: 5% 10%;
 
         .weekdays {
+            font: 700 12px/1 $open-sans;
             display: grid;
             grid-template-columns: repeat(7, calc(100% / 7));
+            text-align: center;
+            text-transform: uppercase;
+            background-color: #666;
+            color: #fff;
+            padding: 1em 0;
+            white-space: nowrap;
+            border-left: 1px solid #666;
+            border-right: 1px solid #666;
         }
 
         .days {
@@ -20,12 +59,20 @@ $border: 1px solid #ccc;
             grid-template-columns: repeat(7, calc(100% / 7));
             border-bottom: $border;
             border-left: $border;
-
+            
             .day {
-                min-height: 100px;
+                border-top: $border;
+                @include transition(.3s);
+                min-height: 150px;
                 position: relative;
                 border-right: $border;
                 cursor: pointer;
+
+                &:hover {
+                    background-color: #f7f7f7;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+
+                }
 
                 & span {
                     font: 700 .8rem/1.2 $open-sans;
