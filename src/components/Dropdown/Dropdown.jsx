@@ -3,7 +3,6 @@ import Item from './Item';
 import ArrowDown from "assets/arrow-down.svg";
 import SVG from "react-inlinesvg";
 import "./styles.scss"
-const uuidv4 = require('uuid/v4');
 
 class Dropdown extends Component {
   constructor(props) {
@@ -92,7 +91,7 @@ class Dropdown extends Component {
             <Item
               path={val.path}
               text={val.text}
-              key={uuidv4()}
+              key={val.path}
               index={idx}
               cursorPos={cursorPos}
             />
