@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/citba-frontend/precache-manifest.bdb4aa0b445955052f1f72ba3c383ef1.js"
+  "/citba-frontend/precache-manifest.fa2b4e02aac28e85080d98cae4bc555a.js"
 );
 
 self.addEventListener('message', (event) => {
