@@ -114,6 +114,7 @@ class Committees extends Component {
                         emails={el.emails}
                         cochairs={el.cochairs}
                         description={el.description}
+                        key={el.title}
                     />)}
                 </div>
             </div>

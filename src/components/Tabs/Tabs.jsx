@@ -36,6 +36,7 @@ class Tabs extends Component {
             <div
               className={`tab${idx === activeTab ? " active" : ""}`}
               onClick={() => this.changeTab(idx)}
+              key={`tab-header${idx}`}
             >
               <SVG src={tab.icon} />
               <span>{tab.title}</span>
@@ -43,14 +44,15 @@ class Tabs extends Component {
           ))}
         </div>
         <div className="tab-content">
-        {tabs.map((tab, idx) => (
+          {tabs.map((tab, idx) => (
             <div
               className="inner-tab-content"
               id={`tab${idx}`}
+              key={`tab${idx}`}
             >
               {tab.content}
             </div>
-        ))}
+          ))}
         </div>
       </div>
     );
