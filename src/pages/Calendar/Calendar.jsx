@@ -99,14 +99,17 @@ class Calendar extends Component {
     year: 2019,
     month: 11,
     days: [],
-    events: {},
+    events: {}
   };
 
+  minYear = 2015;
+  maxYear = new Date().getFullYear() + 3;
+
   getKey = date => {
-    let month = `${date.getMonth()+1}`.padStart(2, "0");
+    let month = `${date.getMonth() + 1}`.padStart(2, "0");
     let day = `${date.getDate()}`.padStart(2, "0");
     return `${date.getFullYear()}-${month}-${day}`;
-  }
+  };
 
   getDays = () => {
     const { year, month, events } = this.state;
@@ -136,7 +139,14 @@ class Calendar extends Component {
     // iterate over days in this month
     while (thisMonth.getMonth() === month) {
       const key = this.getKey(thisMonth);
-      days.push(<Weekday key={key} month={thisMonth.getMonth()} day={thisMonth.getDate()} events={events[key]} />);
+      days.push(
+        <Weekday
+          key={key}
+          month={thisMonth.getMonth()}
+          day={thisMonth.getDate()}
+          events={events[key]}
+        />
+      );
       thisMonth.setDate(thisMonth.getDate() + 1);
     }
 
@@ -184,6 +194,7 @@ class Calendar extends Component {
     let { year, month } = this.state;
     if (month === 11) {
       year += 1;
+      if (year > this.maxYear) return;
       month = 0;
     } else {
       month += 1;
@@ -195,12 +206,19 @@ class Calendar extends Component {
     let { year, month } = this.state;
     if (month === 0) {
       year -= 1;
+      if (year < this.minYear) return;
       month = 11;
     } else {
       month -= 1;
     }
     this.setState({ year, month }, this.getDays);
   };
+
+  setYear = event => {
+    const year = parseInt(event.target.value);
+    if (year > this.maxYear || year < this.minYear) return;
+    this.setState({ year });
+  }
 
   render() {
     const { year, month, days } = this.state;
@@ -215,11 +233,9 @@ class Calendar extends Component {
                 type="number"
                 className="year-input"
                 value={year}
-                min={2016}
-                max={new Date().getFullYear()+3}
-                onChange={event =>
-                  this.setState({ year: parseInt(event.target.value) })
-                }
+                min={this.minYear}
+                max={this.maxYear}
+                onChange={this.setYear}
               />
               <select
                 className="month-input"
@@ -259,7 +275,9 @@ class Calendar extends Component {
           <div className="calendar-days">
             <div className="weekdays">
               {WEEKDAYS.map(day => (
-                <div key={day} className="weekday">{day}</div>
+                <div key={day} className="weekday">
+                  {day}
+                </div>
               ))}
             </div>
             <div className="days">{days}</div>
