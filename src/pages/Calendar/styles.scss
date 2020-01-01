@@ -6,10 +6,23 @@ $border: 1px solid #ccc;
 .calendar {
     &-nav {
         font: 700 1rem/1 $open-sans;
-        // style the inputs here!
         position: relative;
         margin: 3% 30% 0;
         text-align: center;
+
+        .year-input,
+        .month-input {
+            font: inherit;
+            color: #fff;
+            background-color: #666;
+            border: none;
+            padding: .5rem;
+            margin-bottom: 10px;
+        }
+
+        .year-input {
+            margin-right: 10px;
+        }
 
         svg {
             @include transition(.3s);

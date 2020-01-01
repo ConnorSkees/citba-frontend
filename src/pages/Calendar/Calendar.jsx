@@ -96,8 +96,8 @@ class Weekday extends Component {
 
 class Calendar extends Component {
   state = {
-    year: 2019,
-    month: 11,
+    year: new Date().getFullYear(),
+    month: new Date().getMonth(),
     days: [],
     events: {}
   };
@@ -218,7 +218,7 @@ class Calendar extends Component {
     const year = parseInt(event.target.value);
     if (year > this.maxYear || year < this.minYear) return;
     this.setState({ year });
-  }
+  };
 
   render() {
     const { year, month, days } = this.state;
