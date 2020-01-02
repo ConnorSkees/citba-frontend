@@ -24,7 +24,7 @@ import Resources from "pages/Resources";
 function App() {
   return (
     <div className="App">
-      <Router basename="/citba-frontend/">
+      <Router basename="/">
         <Route path="/" exact component={Home} />
         <Route path="/about/" component={About} />
         <Route path="/board-of-directors/" component={BoardOfDirectors} />
