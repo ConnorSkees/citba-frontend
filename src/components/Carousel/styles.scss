@@ -53,12 +53,10 @@ $small: 750px;
 
         & .left, & .right {
             @include transition(.3s);
-            position: absolute;
             cursor: pointer;
             fill: white;
             opacity: .75;
             height: 40px;
-            z-index: 1;
 
             &:hover {
                 opacity: 1;
@@ -66,10 +64,7 @@ $small: 750px;
         }
 
         & .left {
-            left: 5%;
-        }
-        & .right {
-            right: 5%;
+            float: right;
         }
 
         .carousel-content {
