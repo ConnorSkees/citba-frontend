@@ -9,9 +9,9 @@
         background-size: cover;
         min-height: 500px;
         position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+
+        display: table;
+        width: 100%;
 
         & .overlay {
             background-color: #172959;
@@ -26,6 +26,11 @@
             position: relative;
             z-index: 1;
             color: #fff;
+
+            display: table-cell;
+            vertical-align: middle;
+            margin-left: auto;
+            margin-right: auto;
 
             & h2 {
                 font: 900 40px/1.2 $open-sans;

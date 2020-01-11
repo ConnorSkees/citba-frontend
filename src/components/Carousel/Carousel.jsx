@@ -27,17 +27,25 @@ function Slide(props) {
       className={`slide ${className}`}
       style={{ backgroundImage: `url(${image_path})` }}
     >
-      <SVG src={ArrowLeft} className="left" onClick={carousel.decrementSlide} />
+      <div className="arrow-container">
+        <SVG
+          src={ArrowLeft}
+          className="left"
+          onClick={carousel.decrementSlide}
+        />
+      </div>
       <div className="carousel-content">
         <h1>{title}</h1>
         <p>{text}</p>
         {extra}
       </div>
-      <SVG
-        src={ArrowRight}
-        className="right"
-        onClick={carousel.incrementSlide}
-      />
+      <div className="arrow-container">
+        <SVG
+          src={ArrowRight}
+          className="right"
+          onClick={carousel.incrementSlide}
+        />
+      </div>
     </div>
   );
 }
