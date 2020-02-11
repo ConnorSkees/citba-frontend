@@ -4,6 +4,7 @@ import "./styles.scss";
 import Footer from 'components/Footer/Footer';
 import DirectorCard from 'components/DirectorCard/DirectorCard';
 import placeholder from "assets/board-of-directors/placeholder.png";
+import Dan_Pickard from "assets/board-of-directors/Pickard-Dan-Hero-1140px.jpg";
 import BoardRoom from "assets/board-room.jpg";
 import Banner from 'components/Banner/Banner';
 
@@ -39,7 +40,7 @@ const DIRECTORS = [
   {
     name: "CLAUDIA BURKE",
     position:
-      "Chair, Continuing Legal Education And Professional Responsibilities Committee",
+      "Chair, Continuing Legal Education And Professional Responsibility Committee",
     src: placeholder,
     email: ""
   },
@@ -58,7 +59,7 @@ const DIRECTORS = [
   {
     name: "DANIEL B. PICKARD",
     position: "Co-Chair, International Trade Committee",
-    src: placeholder,
+    src: Dan_Pickard,
     email: ""
   },
   {
