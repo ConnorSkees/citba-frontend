@@ -39,10 +39,8 @@ function App() {
 
         <Route path="/policy/" component={Policy} />
 
-        <Route path="/announcements/" component={Announcements} />
         <Route path="/calendar/" component={Calendar} />
         <Route path="/events/" component={Events} />
-        <Route path="/meetings/" component={Meetings} />
         <Route path="/newsletter/" component={Newsletter} />
 
         <Route path="/resources/" component={Resources} />
