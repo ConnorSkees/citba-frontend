@@ -60,10 +60,10 @@ class Weekday extends Component {
 
   render() {
     const { poppedOut } = this.state;
-    let { month, day, events, not } = this.props;
+    let { month, day, events, not, row, col } = this.props;
     events = events || [];
     return (
-      <div className={`day${poppedOut ? " popped" : ""}${not ? " not-this-month" : "" }`}>
+      <div style={{ msGridColumn: col, msGridRow: row }} className={`day${poppedOut ? " popped" : ""}${not ? " not-this-month" : "" }`}>
         {poppedOut ? (
           <SVG
             src={Close}
@@ -94,6 +94,20 @@ class Weekday extends Component {
   }
 }
 
+class Pos {
+  col = 1;
+  row = 1;
+
+  nextPos = () => {
+    if (this.col >= 7) {
+      this.col = 1;
+      this.row += 1;
+    } else {
+      this.col += 1;
+    }
+  }
+}
+
 class Calendar extends Component {
   state = {
     year: new Date().getFullYear(),
@@ -119,6 +133,8 @@ class Calendar extends Component {
     let days = [];
     let prevMonthDays = [];
 
+    let pos = new Pos();
+
     // add the days of the previous month
     // (this is done in reverse)
     for (let i = thisMonth.getDay(); i > 0; i--) {
@@ -130,9 +146,12 @@ class Calendar extends Component {
           month={prevMonth.getMonth()}
           day={prevMonth.getDate()}
           events={events[key]}
+          col={pos.col}
+          row={pos.row}
         />
       );
       prevMonth.setDate(prevMonth.getDate() - 1);
+      pos.nextPos();
     }
     days.push(...prevMonthDays.reverse());
 
@@ -145,8 +164,11 @@ class Calendar extends Component {
           month={thisMonth.getMonth()}
           day={thisMonth.getDate()}
           events={events[key]}
+          col={pos.col}
+          row={pos.row}
         />
       );
+      pos.nextPos();
       thisMonth.setDate(thisMonth.getDate() + 1);
     }
 
@@ -160,8 +182,11 @@ class Calendar extends Component {
             month={nextMonth.getMonth()}
             day={nextMonth.getDate()}
             events={events[key]}
+            col={pos.col}
+            row={pos.row}
           />
         );
+        pos.nextPos();
         nextMonth.setDate(nextMonth.getDate() + 1);
       }
     }
@@ -274,8 +299,9 @@ class Calendar extends Component {
           </div>
           <div className="calendar-days">
             <div className="weekdays">
-              {WEEKDAYS.map(day => (
-                <div key={day} className="weekday">
+              {WEEKDAYS.map((day, idx) => (
+                // we must set `msGridColumn` here for compatibility with ie11
+                <div key={day} className="weekday" style={{ msGridColumn: `${idx+1}` }}>
                   {day}
                 </div>
               ))}
