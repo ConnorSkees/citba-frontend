@@ -52,15 +52,15 @@ class Awards extends Component {
           <div className="recipients">
             <h1>Barbara S. Williams Lifetime Achievement Award</h1>
             <h2>Past Winners</h2>
-            <p>RICHARD M. BELANGER (2019)</p>
-            <p>DONALD B. CAMERON, JR. (2018)</p>
-            <p>JEANNE E. DAVIDSON (2018)</p>
-            <p>TINA P. KIMBLE (2017)</p>
-            <p>DAVID M. COHEN (2016)</p>
-            <p>GAIL T. CUMINS (2016)</p>
-            <p>WILLIAM D. OUTMAN III (2016)</p>
-            <p>VALERIE A. SLATER (2016)</p>
-            <p>TERENCE P. STEWART (2016)</p>
+            <p>RICHARD M. BELANGER <span>2019</span></p>
+            <p>DONALD B. CAMERON, JR. <span>2018</span></p>
+            <p>JEANNE E. DAVIDSON <span>2018</span></p>
+            <p>TINA P. KIMBLE <span>2017</span></p>
+            <p>DAVID M. COHEN <span>2016</span></p>
+            <p>GAIL T. CUMINS <span>2016</span></p>
+            <p>WILLIAM D. OUTMAN III <span>2016</span></p>
+            <p>VALERIE A. SLATER <span>2016</span></p>
+            <p>TERENCE P. STEWART <span>2016</span></p>
           </div>
           <div className="content">
             <div className="recipient-container">

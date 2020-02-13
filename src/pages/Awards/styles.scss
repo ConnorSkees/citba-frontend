@@ -28,6 +28,12 @@ $small: 400px;
             font: 600 1rem/1.7em $open-sans;
             letter-spacing: .2rem;
             margin: 0;
+
+            & span {
+                float: right;
+                font-weight: 500;
+                letter-spacing: normal;
+            }
         }
     }
 

@@ -252,7 +252,6 @@ class Calendar extends Component {
         <Header />
         <div className="calendar">
           <div className="calendar-nav">
-            {/* todo: inputs to jump to day/year */}
             <div className="calendar-nav-inputs">
               <input
                 type="number"
