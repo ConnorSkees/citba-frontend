@@ -4,6 +4,12 @@ import "./styles.scss";
 import Footer from 'components/Footer/Footer';
 import DirectorCard from 'components/DirectorCard/DirectorCard';
 import placeholder from "assets/board-of-directors/placeholder.png";
+import Frances_Hadfield from "assets/board-of-directors/Frances Hadfield.jpg";
+import Deanna_Okun from "assets/board-of-directors/Okun - Color Photo for Print.jpg";
+import Joshua_Kurland from "assets/board-of-directors/J Kurland.jpg";
+import Rishi_Gupta from "assets/board-of-directors/Gupta_Rishi.jpg";
+import Emily_Beline from "assets/board-of-directors/E Beline.jpg";
+import Kathleen_Cannon from "assets/board-of-directors/cannon_k.jpg";
 import Dan_Pickard from "assets/board-of-directors/Pickard-Dan-Hero-1140px.jpg";
 import BoardRoom from "assets/board-room.jpg";
 import Banner from 'components/Banner/Banner';
@@ -13,7 +19,7 @@ const DIRECTORS = [
     name: "KATHLEEN W. CANNON",
     position: "president",
     major: true,
-    src: placeholder,
+    src: Kathleen_Cannon,
     email: ""
   },
   {
@@ -65,7 +71,7 @@ const DIRECTORS = [
   {
     name: "DEANNA OKUN",
     position: "Co-Chair, International Trade Committee",
-    src: placeholder,
+    src: Deanna_Okun,
     email: ""
   },
   {
@@ -89,7 +95,7 @@ const DIRECTORS = [
   {
     name: "JOSHUA E. KURLAND",
     position: "Chair, Liaison With Other Bar Associations Committee",
-    src: placeholder,
+    src: Joshua_Kurland,
     email: ""
   },
   {
@@ -119,7 +125,7 @@ const DIRECTORS = [
   {
     name: "FRANCES P. HADFIELD",
     position: "Co-Chair, Trial And Appellate Practice Committee",
-    src: placeholder,
+    src: Frances_Hadfield,
     email: ""
   },
   {
@@ -131,13 +137,13 @@ const DIRECTORS = [
   {
     name: "EMILY BELINE",
     position: "Co-Chair, Young Lawyers Committee",
-    src: placeholder,
+    src: Emily_Beline,
     email: ""
   },
   {
     name: "RISHI GUPTA",
     position: "Co-Chair, Young Lawyers Committee",
-    src: placeholder,
+    src: Rishi_Gupta,
     email: ""
   },
   {
