@@ -47,7 +47,9 @@ $border: 1px solid #ccc;
 
         .weekdays {
             font: 700 12px/1 $open-sans;
+            display: -ms-grid;
             display: grid;
+            -ms-grid-columns: calc(100% / 7) calc(100% / 7) calc(100% / 7) calc(100% / 7) calc(100% / 7) calc(100% / 7) calc(100% / 7);
             grid-template-columns: repeat(7, calc(100% / 7));
             text-align: center;
             text-transform: uppercase;
@@ -60,11 +62,13 @@ $border: 1px solid #ccc;
         }
 
         .days {
+            display: -ms-grid;
             display: grid;
+            -ms-grid-columns: calc(100% / 7) calc(100% / 7) calc(100% / 7) calc(100% / 7) calc(100% / 7) calc(100% / 7) calc(100% / 7);
             grid-template-columns: repeat(7, calc(100% / 7));
             border-bottom: $border;
             border-left: $border;
-            
+
             .day {
                 @include transition(.3s);
                 min-height: 150px;

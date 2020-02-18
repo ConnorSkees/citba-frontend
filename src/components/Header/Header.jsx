@@ -55,20 +55,12 @@ const NAV_ITEMS = [
     text: "News & Events",
     els: [
       {
-        text: "Announcements",
-        path: "/announcements/"
-      },
-      {
         text: "Calendar",
         path: "/calendar/"
       },
       {
         text: "Events",
         path: "/events/"
-      },
-      {
-        text: "Meetings",
-        path: "/meetings/"
       },
       {
         text: "CITBA Newsletter",

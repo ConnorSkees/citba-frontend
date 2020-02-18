@@ -1,31 +1,35 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ac971aa8bb6d6b781e50dbcda89791bc",
+    "revision": "44ebe3966c85564fd1fd50bda2770ac8",
     "url": "/citba-frontend/index.html"
   },
   {
-    "revision": "dc3a68a07132edf73609",
+    "revision": "8e424a707d28aca9110f",
     "url": "/citba-frontend/static/css/2.b90ce945.chunk.css"
   },
   {
-    "revision": "ab610fa4d7c4bbf73bc3",
-    "url": "/citba-frontend/static/css/main.7ccf75b2.chunk.css"
+    "revision": "8d6b7b69c53018eb04fa",
+    "url": "/citba-frontend/static/css/main.c666b215.chunk.css"
   },
   {
-    "revision": "dc3a68a07132edf73609",
-    "url": "/citba-frontend/static/js/2.f20104e4.chunk.js"
+    "revision": "8e424a707d28aca9110f",
+    "url": "/citba-frontend/static/js/2.4523a788.chunk.js"
   },
   {
     "revision": "f7f57e15adb49fa84a9bb61b0175bc6a",
-    "url": "/citba-frontend/static/js/2.f20104e4.chunk.js.LICENSE"
+    "url": "/citba-frontend/static/js/2.4523a788.chunk.js.LICENSE"
   },
   {
-    "revision": "ab610fa4d7c4bbf73bc3",
-    "url": "/citba-frontend/static/js/main.edb358c5.chunk.js"
+    "revision": "8d6b7b69c53018eb04fa",
+    "url": "/citba-frontend/static/js/main.afefc71c.chunk.js"
   },
   {
     "revision": "9a0b6538b05dec51e7f9",
     "url": "/citba-frontend/static/js/runtime-main.e0fec004.js"
+  },
+  {
+    "revision": "5ddc734158d2356d6919f75939668401",
+    "url": "/citba-frontend/static/media/Pickard-Dan-Hero-1140px.5ddc7341.jpg"
   },
   {
     "revision": "3883931ac4e3321c2c7fad356126bbc9",
