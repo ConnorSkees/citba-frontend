@@ -4,7 +4,7 @@ import "./styles.scss";
 import Footer from 'components/Footer/Footer';
 import DirectorCard from 'components/DirectorCard/DirectorCard';
 import placeholder from "assets/board-of-directors/placeholder.png";
-import Frances_Hadfield from "assets/board-of-directors/Frances Hadfield.jpg";
+import Frances_Hadfield from "assets/board-of-directors/Frances Hadfield.JPG";
 import Deanna_Okun from "assets/board-of-directors/Okun - Color Photo for Print.jpg";
 import Joshua_Kurland from "assets/board-of-directors/J Kurland.jpg";
 import Rishi_Gupta from "assets/board-of-directors/Gupta_Rishi.jpg";
