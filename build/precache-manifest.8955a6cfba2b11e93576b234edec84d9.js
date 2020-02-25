@@ -1,31 +1,51 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "44ebe3966c85564fd1fd50bda2770ac8",
+    "revision": "9ac03b3a31d87a9b525a1912391a6042",
     "url": "/citba-frontend/index.html"
   },
   {
-    "revision": "8e424a707d28aca9110f",
+    "revision": "f8119b876ac917444d69",
     "url": "/citba-frontend/static/css/2.b90ce945.chunk.css"
   },
   {
-    "revision": "8d6b7b69c53018eb04fa",
-    "url": "/citba-frontend/static/css/main.c666b215.chunk.css"
+    "revision": "69416763f6f1dc94e61e",
+    "url": "/citba-frontend/static/css/main.c19b9d22.chunk.css"
   },
   {
-    "revision": "8e424a707d28aca9110f",
-    "url": "/citba-frontend/static/js/2.4523a788.chunk.js"
+    "revision": "f8119b876ac917444d69",
+    "url": "/citba-frontend/static/js/2.6af34a83.chunk.js"
   },
   {
     "revision": "f7f57e15adb49fa84a9bb61b0175bc6a",
-    "url": "/citba-frontend/static/js/2.4523a788.chunk.js.LICENSE"
+    "url": "/citba-frontend/static/js/2.6af34a83.chunk.js.LICENSE"
   },
   {
-    "revision": "8d6b7b69c53018eb04fa",
-    "url": "/citba-frontend/static/js/main.afefc71c.chunk.js"
+    "revision": "69416763f6f1dc94e61e",
+    "url": "/citba-frontend/static/js/main.17092ab8.chunk.js"
   },
   {
     "revision": "9a0b6538b05dec51e7f9",
     "url": "/citba-frontend/static/js/runtime-main.e0fec004.js"
+  },
+  {
+    "revision": "fb90aa14697fed73936f2579da90c516",
+    "url": "/citba-frontend/static/media/E Beline.fb90aa14.jpg"
+  },
+  {
+    "revision": "036a4498d6c51ea37131f733af6a621c",
+    "url": "/citba-frontend/static/media/Frances Hadfield.036a4498.JPG"
+  },
+  {
+    "revision": "4b5b4cad33c006c5f06a0d48f9e9a7b8",
+    "url": "/citba-frontend/static/media/Gupta_Rishi.4b5b4cad.jpg"
+  },
+  {
+    "revision": "f946f601ecb6086e954cd909025bda3a",
+    "url": "/citba-frontend/static/media/J Kurland.f946f601.jpg"
+  },
+  {
+    "revision": "c1a2fa66ef1300b0c47977b100df201b",
+    "url": "/citba-frontend/static/media/Okun - Color Photo for Print.c1a2fa66.jpg"
   },
   {
     "revision": "5ddc734158d2356d6919f75939668401",
@@ -66,6 +86,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "591a8bd8c246004f63da9cf0341c328d",
     "url": "/citba-frontend/static/media/briefcase.591a8bd8.svg"
+  },
+  {
+    "revision": "a15ebb606fb8c853a3b19396a3707abe",
+    "url": "/citba-frontend/static/media/cannon_k.a15ebb60.jpg"
   },
   {
     "revision": "c0b21d6b3e39236fe968e96deedf65f6",

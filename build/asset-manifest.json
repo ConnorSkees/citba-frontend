@@ -1,19 +1,24 @@
 {
   "files": {
-    "main.css": "/citba-frontend/static/css/main.c666b215.chunk.css",
-    "main.js": "/citba-frontend/static/js/main.afefc71c.chunk.js",
-    "main.js.map": "/citba-frontend/static/js/main.afefc71c.chunk.js.map",
+    "main.css": "/citba-frontend/static/css/main.c19b9d22.chunk.css",
+    "main.js": "/citba-frontend/static/js/main.17092ab8.chunk.js",
+    "main.js.map": "/citba-frontend/static/js/main.17092ab8.chunk.js.map",
     "runtime-main.js": "/citba-frontend/static/js/runtime-main.e0fec004.js",
     "runtime-main.js.map": "/citba-frontend/static/js/runtime-main.e0fec004.js.map",
     "static/css/2.b90ce945.chunk.css": "/citba-frontend/static/css/2.b90ce945.chunk.css",
-    "static/js/2.4523a788.chunk.js": "/citba-frontend/static/js/2.4523a788.chunk.js",
-    "static/js/2.4523a788.chunk.js.map": "/citba-frontend/static/js/2.4523a788.chunk.js.map",
+    "static/js/2.6af34a83.chunk.js": "/citba-frontend/static/js/2.6af34a83.chunk.js",
+    "static/js/2.6af34a83.chunk.js.map": "/citba-frontend/static/js/2.6af34a83.chunk.js.map",
     "index.html": "/citba-frontend/index.html",
-    "precache-manifest.043e39a3c27ea171de814a94faf10064.js": "/citba-frontend/precache-manifest.043e39a3c27ea171de814a94faf10064.js",
+    "precache-manifest.8955a6cfba2b11e93576b234edec84d9.js": "/citba-frontend/precache-manifest.8955a6cfba2b11e93576b234edec84d9.js",
     "service-worker.js": "/citba-frontend/service-worker.js",
     "static/css/2.b90ce945.chunk.css.map": "/citba-frontend/static/css/2.b90ce945.chunk.css.map",
-    "static/css/main.c666b215.chunk.css.map": "/citba-frontend/static/css/main.c666b215.chunk.css.map",
-    "static/js/2.4523a788.chunk.js.LICENSE": "/citba-frontend/static/js/2.4523a788.chunk.js.LICENSE",
+    "static/css/main.c19b9d22.chunk.css.map": "/citba-frontend/static/css/main.c19b9d22.chunk.css.map",
+    "static/js/2.6af34a83.chunk.js.LICENSE": "/citba-frontend/static/js/2.6af34a83.chunk.js.LICENSE",
+    "static/media/E Beline.jpg": "/citba-frontend/static/media/E Beline.fb90aa14.jpg",
+    "static/media/Frances Hadfield.JPG": "/citba-frontend/static/media/Frances Hadfield.036a4498.JPG",
+    "static/media/Gupta_Rishi.jpg": "/citba-frontend/static/media/Gupta_Rishi.4b5b4cad.jpg",
+    "static/media/J Kurland.jpg": "/citba-frontend/static/media/J Kurland.f946f601.jpg",
+    "static/media/Okun - Color Photo for Print.jpg": "/citba-frontend/static/media/Okun - Color Photo for Print.c1a2fa66.jpg",
     "static/media/Pickard-Dan-Hero-1140px.jpg": "/citba-frontend/static/media/Pickard-Dan-Hero-1140px.5ddc7341.jpg",
     "static/media/arrow-down.svg": "/citba-frontend/static/media/arrow-down.3883931a.svg",
     "static/media/arrow-left.svg": "/citba-frontend/static/media/arrow-left.2436f681.svg",
@@ -24,6 +29,7 @@
     "static/media/board-room.jpg": "/citba-frontend/static/media/board-room.2b5c529e.jpg",
     "static/media/book.svg": "/citba-frontend/static/media/book.01264b13.svg",
     "static/media/briefcase.svg": "/citba-frontend/static/media/briefcase.591a8bd8.svg",
+    "static/media/cannon_k.jpg": "/citba-frontend/static/media/cannon_k.a15ebb60.jpg",
     "static/media/carousel-image-1.jpg": "/citba-frontend/static/media/carousel-image-1.c0b21d6b.jpg",
     "static/media/carousel-image-2.jpg": "/citba-frontend/static/media/carousel-image-2.dc53d0f6.jpg",
     "static/media/carousel-image-3.jpg": "/citba-frontend/static/media/carousel-image-3.f5bf9f79.jpg",
@@ -48,8 +54,8 @@
   "entrypoints": [
     "static/js/runtime-main.e0fec004.js",
     "static/css/2.b90ce945.chunk.css",
-    "static/js/2.4523a788.chunk.js",
-    "static/css/main.c666b215.chunk.css",
-    "static/js/main.afefc71c.chunk.js"
+    "static/js/2.6af34a83.chunk.js",
+    "static/css/main.c19b9d22.chunk.css",
+    "static/js/main.17092ab8.chunk.js"
   ]
 }
