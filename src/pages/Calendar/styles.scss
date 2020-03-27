@@ -29,6 +29,7 @@ $border: 1px solid #ccc;
             height: 36px;
             cursor: pointer;
             border-radius: 50%;
+            max-width: 40px;
             &:hover {
                 background-color: #eee;
             }

@@ -193,10 +193,10 @@ class Calendar extends Component {
     this.setState({ days });
   };
 
-  getEvents = () => {
+  getEvents = async () => {
     const { year } = this.state;
     let events = {};
-    fetch(`/api/events/year/${year}`)
+    await fetch(`/api/events/year/${year}`)
       .then(res => res.json())
       .then(data => {
         data = data || [];
@@ -224,7 +224,7 @@ class Calendar extends Component {
     } else {
       month += 1;
     }
-    this.setState({ year, month }, this.getDays);
+    this.setState({ year, month }, this.getEvents);
   };
 
   decrementMonth = () => {
@@ -236,13 +236,13 @@ class Calendar extends Component {
     } else {
       month -= 1;
     }
-    this.setState({ year, month }, this.getDays);
+    this.setState({ year, month }, this.getEvents);
   };
 
   setYear = event => {
     const year = parseInt(event.target.value);
     if (year > this.maxYear || year < this.minYear) return;
-    this.setState({ year });
+    this.setState({ year }, this.getEvents);
   };
 
   render() {
