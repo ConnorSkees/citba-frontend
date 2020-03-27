@@ -18,7 +18,6 @@ class Input extends Component {
               onChange={this.props.onChange}
               name={field}
               placeholder={field}
-              pattern={"[^<>/'\"]*"}
             />
           </React.Fragment>
         );

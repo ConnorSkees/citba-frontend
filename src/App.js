@@ -21,31 +21,38 @@ import Policy from "pages/Policy";
 import Awards from "pages/Awards";
 import Resources from "pages/Resources";
 
+import { Elements } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
+
+const stripePromise = loadStripe("pk_test_Tu9HB2rgbQ1oroTpXx9oT9na");
+
 function App() {
   return (
-    <div className="App">
-      <Router basename="/">
-        <Route path="/" exact component={Home} />
-        <Route path="/about/" component={About} />
-        <Route path="/board-of-directors/" component={BoardOfDirectors} />
-        <Route path="/committees/" component={Committees} />
-        <Route path="/by-laws/" component={ByLaws} />
+    <Elements stripe={stripePromise}>
+      <div className="App">
+        <Router basename="/">
+          <Route path="/" exact component={Home} />
+          <Route path="/about/" component={About} />
+          <Route path="/board-of-directors/" component={BoardOfDirectors} />
+          <Route path="/committees/" component={Committees} />
+          <Route path="/by-laws/" component={ByLaws} />
 
-        <Route path="/benefits/" component={Membership} />
-        <Route path="/join/" component={Join} />
-        <Route path="/renew-membership/" component={RenewMembership} />
+          <Route path="/benefits/" component={Membership} />
+          <Route path="/join/" component={Join} />
+          <Route path="/renew-membership/" component={RenewMembership} />
 
-        <Route path="/awards/" component={Awards} />
+          <Route path="/awards/" component={Awards} />
 
-        <Route path="/policy/" component={Policy} />
+          <Route path="/policy/" component={Policy} />
 
-        <Route path="/calendar/" component={Calendar} />
-        <Route path="/events/" component={Events} />
-        <Route path="/newsletter/" component={Newsletter} />
+          <Route path="/calendar/" component={Calendar} />
+          <Route path="/events/" component={Events} />
+          <Route path="/newsletter/" component={Newsletter} />
 
-        <Route path="/resources/" component={Resources} />
-      </Router>
-    </div>
+          <Route path="/resources/" component={Resources} />
+        </Router>
+      </div>
+    </Elements>
   );
 }
 

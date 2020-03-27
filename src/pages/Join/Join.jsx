@@ -8,6 +8,21 @@ import Input from "components/Input";
 import BannerBg from "assets/man-writing.jpg";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { ElementsConsumer, CardElement } from "@stripe/react-stripe-js";
+
+const CARD_ELEMENT_OPTIONS = {
+  style: {
+    base: {
+      color: "#32325d",
+      fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+      fontSmoothing: "antialiased",
+      fontSize: "16px",
+      "::placeholder": {
+        color: "#aab7c4"
+      }
+    },
+  }
+};
 
 
 function CheckBox(props) {
@@ -50,11 +65,6 @@ class Join extends Component {
 
     committeesSet: new Set(),
     committees: [],
-    electronic_signature: "",
-    card_number: "",
-    cvc: "",
-    month: "",
-    year: "",
 
     date: "",
     date_admitted: "",
@@ -206,19 +216,42 @@ class Join extends Component {
     }
   };
 
-  handleSubmit = event => {
+  handleSubmit = async event => {
     event.preventDefault();
     let state = JSON.stringify(this.state);
-    console.log(state);
-    fetch("/api/join", {
+    const { stripe, elements } = this.props;
+
+    if (!stripe || !elements) {
+      return;
+    }
+
+    await fetch("/api/join", {
       method: "POST",
       mode: "same-origin",
       headers: {
         "Content-Type": "application/json"
       },
       body: state
-    }).then(res => {
-      console.log(res);
+    }).then(async res => {
+      if (res.ok) {
+        const result = await stripe.confirmCardPayment(await res.text(), {
+          payment_method: {
+            card: elements.getElement(CardElement),
+            billing_details: {
+              name: this.state.name
+            }
+          }
+        });
+
+        if (result.error) {
+          alert(result.error.message);
+          return;
+        } else if (result.paymentIntent.status === "succeeded") {
+          alert("Transaction successful");
+        }
+      } else {
+        alert("Failed to process request");
+      }
     });
   };
 
@@ -236,13 +269,12 @@ class Join extends Component {
         />
         <form className="join membership-form" onSubmit={this.handleSubmit}>
           <div className="form-container">
-            <Input /*required*/ field="Name" onChange={this.changeName} />
+            <Input required field="Name" onChange={this.changeName} />
             <Input
-              /*required*/
+              required
               field="Firm or Organization"
               onChange={this.changeFirm}
             />
-
             <label>
               Address <span className="red">*</span>
             </label>
@@ -254,21 +286,21 @@ class Join extends Component {
                 onChange={event =>
                   this.setState({ address_line: event.target.value })
                 }
-                /*required*/
+                required
               />
               <input
                 type="text"
                 className="city"
                 placeholder="City"
                 onChange={this.changeCity}
-                /*required*/
+                required
               />
               <input
                 type="text"
                 className="state-region"
                 placeholder="State or Region"
                 onChange={this.changeState}
-                /*required*/
+                required
               />
               <CountrySelect value={country} onChange={this.changeCountry} />
               <input
@@ -276,26 +308,20 @@ class Join extends Component {
                 className="zip"
                 placeholder="Zip"
                 onChange={this.changeZip}
-                /*required*/
+                required
               />
             </div>
-
+            <Input required field="Telephone" onChange={this.changeTelephone} />
+            <Input required field="Email" onChange={this.changeEmail} />
             <Input
-              /*required*/ field="Telephone"
-              onChange={this.changeTelephone}
-            />
-            <Input /*required*/ field="Email" onChange={this.changeEmail} />
-            <Input
-              /*required*/ field="How did you hear about CITBA?"
+              required
+              field="How did you hear about CITBA?"
               onChange={this.changeReferrer}
             />
-
             <div className="form-divider" />
-
             <label htmlFor="membership">
               Class of Membership Applying for <span className="red">*</span>
             </label>
-
             <select
               id="membership"
               onChange={this.changeMembership}
@@ -310,11 +336,8 @@ class Join extends Component {
               <option value="Retired">Retired</option>
               <option value="Student">Student</option>
             </select>
-
             {this.renderMembership()}
-
             <div className="form-divider" />
-
             <label>
               Please check any CITBA committees of which you are interested in
               becoming a member (or, if applying for student membership, an
@@ -352,18 +375,8 @@ class Join extends Component {
               />
               <CheckBox onChange={this.toggleCommittee} text="Young Lawyers" />
             </div>
-
-            <Input field="Electronic Signature" /*required*/ />
-            <Input field="Card Number" /*required*/ />
-            <Input field="CVC/CVV" /*required*/ />
-            <label>
-              Month <span className="red">*</span>
-            </label>
-            <input type="number" min={1} max={12} />
-            <label>
-              Year <span className="red">*</span>
-            </label>
-            <input type="number" min={2019} max={2026} />
+            <label>Card information</label>
+            <CardElement options={CARD_ELEMENT_OPTIONS} />
           </div>
           <div className="checkout">
             {/* todo: recaptcha */}
@@ -377,4 +390,12 @@ class Join extends Component {
   }
 }
 
-export default Join;
+export default function InjectedJoin() {
+  return (
+    <ElementsConsumer>
+      {({ stripe, elements }) => (
+        <Join stripe={stripe} elements={elements} />
+      )}
+    </ElementsConsumer>
+  );
+};
