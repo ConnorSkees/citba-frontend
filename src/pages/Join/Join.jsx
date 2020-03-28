@@ -174,13 +174,18 @@ class Join extends Component {
       case "Foreign Lawyer":
         return (
           <React.Fragment>
-            <Input field="Foreign Country" />
+            <Input
+              field="Foreign Country"
+              onChange={event =>
+                this.setState({ foreign_country: event.target.value })
+              }
+            />
             <label htmlFor="">Date Admitted</label>
             <DatePicker selected={this.state.date} onChange={this.changeDate} />
             <Input
               field="Foreign Country Qualification Details"
               onChange={event =>
-                this.setState({ foreign_country: event.target.value })
+                this.setState({ qualification_details: event.target.value })
               }
             />
           </React.Fragment>

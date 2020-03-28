@@ -38,7 +38,6 @@ function Input(props) {
 class Popup extends Component {
   state = {
     visible: false,
-    country: ""
   };
 
   show = () => {
@@ -94,14 +93,16 @@ class Popup extends Component {
 
   render() {
     const { visible } = this.props;
-    const { country } = this.state;
     return (
       <React.Fragment>
         <div
           onClick={this.hide}
           className={`backdrop ${visible ? "" : "hidden"}`}
         />
-        <form className={`popup-form ${visible ? "" : "hidden"}`}>
+        <form
+          className={`popup-form ${visible ? "" : "hidden"}`}
+          onSubmit={this.handleSubmit}
+        >
           <div className="header">
             <SVG src={CloseSVG} onClick={this.props.onHide} />
             <h1>Donate</h1>
@@ -125,4 +126,12 @@ class Popup extends Component {
   }
 }
 
-export default Popup;
+export default function InjectedPopup() {
+  return (
+    <ElementsConsumer>
+      {({ stripe, elements }) => (
+        <Popup stripe={stripe} elements={elements} />
+      )}
+    </ElementsConsumer>
+  );
+};
