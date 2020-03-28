@@ -11,10 +11,8 @@ import Membership from "pages/MembershipBenefits";
 import Join from "pages/Join";
 import RenewMembership from "pages/RenewMembership";
 
-import Announcements from 'pages/Announcements';
 import Calendar from 'pages/Calendar';
 import Events from 'pages/Events';
-import Meetings from "pages/Meetings";
 import Newsletter from "pages/Newsletter";
 
 import Policy from "pages/Policy";
