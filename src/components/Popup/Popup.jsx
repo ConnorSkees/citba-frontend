@@ -19,15 +19,19 @@ const CARD_ELEMENT_OPTIONS = {
 
 
 function Input(props) {
-    const { field } = props;
+    const { field, onChange } = props;
+    let type = props.type || "text";
+    let pattern = props.pattern || ".*";
     return (
       <React.Fragment>
         <label htmlFor={field}>
           <span>{field}</span>
           <input
-            type="text"
+            type={type}
             id={field}
             name={field}
+            pattern={pattern}
+            onChange={onChange}
             required
           />
         </label>
@@ -38,6 +42,9 @@ function Input(props) {
 class Popup extends Component {
   state = {
     visible: false,
+    amount: "$",
+    name: "",
+    email: ""
   };
 
   show = () => {
@@ -48,13 +55,30 @@ class Popup extends Component {
     this.setState({ visible: false });
   };
 
-  changeCountry = country => {
-    this.setState({ country });
+  changeAmount = event => {
+    let amount = `$${event.target.value.replace(/\D/g, "")}`;
+    this.setState({ amount });
+  };
+
+  changeName = event => {
+    this.setState({ name: event.target.value });
+  };
+
+  changeEmail = event => {
+    this.setState({ email: event.target.value });
   };
 
   handleSubmit = async event => {
     event.preventDefault();
-    let state = JSON.stringify(this.state);
+    const { name, email, amount } = this.state;
+    if (amount === "$") {
+      return;
+    }
+    let state = JSON.stringify({
+      name,
+      email,
+      amount: amount.substr(1),
+    });
     const { stripe, elements } = this.props;
 
     if (!stripe || !elements) {
@@ -83,16 +107,17 @@ class Popup extends Component {
           alert(result.error.message);
           return;
         } else if (result.paymentIntent.status === "succeeded") {
-          alert("Transaction successful");
+          alert("Transaction successful. Thank you for your donation.");
         }
       } else {
-        alert("Failed to process request");
+        alert("Failed to connect to server");
       }
     });
   };
 
   render() {
-    const { visible } = this.props;
+    const { visible, onHide } = this.props;
+    const { amount } = this.state;
     return (
       <React.Fragment>
         <div
@@ -104,15 +129,18 @@ class Popup extends Component {
           onSubmit={this.handleSubmit}
         >
           <div className="header">
-            <SVG src={CloseSVG} onClick={this.props.onHide} />
+            <SVG src={CloseSVG} onClick={onHide} />
             <h1>Donate</h1>
             <p>Andrew P. Vance Donation</p>
           </div>
           <div className="content">
-            <Input field="Enter amount" />
+            <label>
+              <span>Amount</span>
+              <input type="text" onChange={this.changeAmount} value={amount} />
+            </label>
             <div className="row">
-              <Input field="Name" />
-              <Input field="Email" />
+              <Input field="Name" onChange={this.changeName} />
+              <Input field="Email" onChange={this.changeEmail} />
             </div>
             <p className="section-heading">Billing Info</p>
             <CardElement options={CARD_ELEMENT_OPTIONS} />
@@ -126,11 +154,17 @@ class Popup extends Component {
   }
 }
 
-export default function InjectedPopup() {
+export default function InjectedPopup(props) {
+  const { visible, onHide } = props;
   return (
     <ElementsConsumer>
       {({ stripe, elements }) => (
-        <Popup stripe={stripe} elements={elements} />
+        <Popup
+          stripe={stripe}
+          visible={visible}
+          onHide={onHide}
+          elements={elements}
+        />
       )}
     </ElementsConsumer>
   );
