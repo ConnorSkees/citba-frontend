@@ -324,7 +324,7 @@ class Join extends Component {
             </label>
             <select
               id="membership"
-              onChange={this.changeMembership}
+              onChange={event => this.setState({ membership: event.target.value })}
               value={this.state.membership}
             >
               <option value="unset">Select an option</option>

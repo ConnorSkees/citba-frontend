@@ -5,16 +5,41 @@ import Footer from 'components/Footer/Footer';
 import Banner from "components/Banner/Banner";
 import Input from "components/Input";
 import BannerBg from "assets/man-writing.jpg";
+import { ElementsConsumer, CardElement } from "@stripe/react-stripe-js";
 
+const CARD_ELEMENT_OPTIONS = {
+  style: {
+    base: {
+      color: "#32325d",
+      fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+      fontSmoothing: "antialiased",
+      fontSize: "16px",
+      "::placeholder": {
+        color: "#aab7c4"
+      }
+    }
+  }
+};
 
 class RenewMembership extends Component {
   state = {
-    hasNewMembershipInfo: false
+    membership_has_changed: false,
+    name: "",
+    firm: "",
+    address_line: "",
+    city: "",
+    state: "",
+    country: "",
+    zip: "",
+    telephone: "",
+    email: "",
+
+    membership: "unset"
   };
 
-  toggleHasNewMembershipInfo = () => {
-    const { hasNewMembershipInfo } = this.state;
-    this.setState({ hasNewMembershipInfo: !hasNewMembershipInfo });
+  togglemembership_has_changed = () => {
+    const { membership_has_changed } = this.state;
+    this.setState({ membership_has_changed: !membership_has_changed });
   };
 
   getPrice() {
@@ -36,8 +61,48 @@ class RenewMembership extends Component {
     }
   }
 
+  handleSubmit = async event => {
+    event.preventDefault();
+    let state = JSON.stringify(this.state);
+    console.log(state);
+    const { stripe, elements } = this.props;
+
+    if (!stripe || !elements) {
+      return;
+    }
+
+    await fetch("/api/renew", {
+      method: "POST",
+      mode: "same-origin",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: state
+    }).then(async res => {
+      if (res.ok) {
+        const result = await stripe.confirmCardPayment(await res.text(), {
+          payment_method: {
+            card: elements.getElement(CardElement),
+            billing_details: {
+              name: this.state.name
+            }
+          }
+        });
+
+        if (result.error) {
+          alert(result.error.message);
+          return;
+        } else if (result.paymentIntent.status === "succeeded") {
+          alert("Transaction successful");
+        }
+      } else {
+        alert("Failed to process request");
+      }
+    });
+  };
+
   render() {
-    const { hasNewMembershipInfo } = this.state;
+    const { membership_has_changed } = this.state;
     return (
       <React.Fragment>
         <Header />
@@ -48,31 +113,67 @@ class RenewMembership extends Component {
           ]}
           src={BannerBg}
         />
-        <form className="membership-form">
+        <form onSubmit={this.handleSubmit} className="membership-form">
           <div className="form-container">
-            <Input required field="Name" />
-            <Input required field="Email" />
+            <Input
+              required
+              field="Name"
+              onChange={event => this.setState({ name: event.target.value })}
+            />
+            <Input
+              required
+              field="Email"
+              onChange={event => this.setState({ email: event.target.value })}
+            />
 
             <label>
               Check here if your membership information has changed from last
               year
             </label>
             <label
-              onClick={this.toggleHasNewMembershipInfo}
+              onChange={this.togglemembership_has_changed}
               style={{ cursor: "pointer" }}
             >
               <input type="checkbox" />
               Yes, my membership information has changed
             </label>
 
-            {hasNewMembershipInfo ? (
+            {membership_has_changed ? (
               <React.Fragment>
-                <Input required field="Firm or Organization" />
-                <Input required field="Street Address" />
-                <Input required field="City" />
-                <Input required field="State" />
-                <Input required field="Zip code" />
-                <Input required field="Telephone" />
+                <Input
+                  onChange={event =>
+                    this.setState({ firm: event.target.value })
+                  }
+                  field="Firm or Organization"
+                />
+                <Input
+                  onChange={event =>
+                    this.setState({ address_line: event.target.value })
+                  }
+                  field="Street Address"
+                />
+                <Input
+                  onChange={event =>
+                    this.setState({ city: event.target.value })
+                  }
+                  field="City"
+                />
+                <Input
+                  onChange={event =>
+                    this.setState({ state: event.target.value })
+                  }
+                  field="State"
+                />
+                <Input
+                  onChange={event => this.setState({ zip: event.target.value })}
+                  field="Zip code"
+                />
+                <Input
+                  onChange={event =>
+                    this.setState({ telephone: event.target.value })
+                  }
+                  field="Telephone"
+                />
               </React.Fragment>
             ) : (
               ""
@@ -81,11 +182,14 @@ class RenewMembership extends Component {
             <div className="form-divider" />
 
             <label htmlFor="membership">
-              Please select payment <span className="red">*</span>
+              Please select membership <span className="red">*</span>
             </label>
             <select
               id="membership"
-              onChange={this.changeMembership}
+              required
+              onChange={event =>
+                this.setState({ membership: event.target.value })
+              }
               value={this.state.membership}
             >
               <option value="unset">Select an option</option>
@@ -98,13 +202,8 @@ class RenewMembership extends Component {
               <option value="Student">Student</option>
             </select>
 
-            <Input field="Electronic Signature" required />
-            <Input field="Card Number" />
-            <Input field="CVC/CVV" />
-            <label>Month</label>
-            <input type="number" min={1} max={12} />
-            <label>Year</label>
-            <input type="number" min={2019} max={2026} />
+            <label>Card information</label>
+            <CardElement options={CARD_ELEMENT_OPTIONS} />
           </div>
           <div className="checkout">
             {/* todo: recaptcha */}
@@ -118,4 +217,12 @@ class RenewMembership extends Component {
   }
 }
 
-export default RenewMembership;
+export default function InjectedJoin() {
+  return (
+    <ElementsConsumer>
+      {({ stripe, elements }) => (
+        <RenewMembership stripe={stripe} elements={elements} />
+      )}
+    </ElementsConsumer>
+  );
+};
