@@ -311,7 +311,7 @@ class Join extends Component {
                 required
               />
             </div>
-            <Input required field="Telephone" onChange={this.changeTelephone} />
+            <Input required field="Telephone" type="tel" onChange={this.changeTelephone} />
             <Input required field="Email" onChange={this.changeEmail} />
             <Input
               required

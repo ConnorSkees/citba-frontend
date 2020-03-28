@@ -6,6 +6,7 @@ class Input extends Component {
 
     render() {
         const { field, required } = this.props;
+        const type = this.props.type || "text";
         return (
           <React.Fragment>
             <label htmlFor={field}>
@@ -14,9 +15,9 @@ class Input extends Component {
             <input
               id={field}
               autoComplete={field.toLowerCase()}
-              type="text"
               onChange={this.props.onChange}
               name={field}
+              type={type}
               placeholder={field}
             />
           </React.Fragment>
