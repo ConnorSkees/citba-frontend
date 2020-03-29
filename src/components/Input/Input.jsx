@@ -19,6 +19,7 @@ class Input extends Component {
               name={field}
               type={type}
               placeholder={field}
+              required={required}
             />
           </React.Fragment>
         );

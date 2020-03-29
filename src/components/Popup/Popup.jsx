@@ -139,7 +139,7 @@ class Popup extends Component {
           <div className="content">
             <label>
               <span>Amount</span>
-              <input type="text" onChange={this.changeAmount} value={amount} />
+              <input type="text" onChange={this.changeAmount} value={amount} required />
             </label>
             <div className="row">
               <Input field="Name" onChange={this.changeName} />

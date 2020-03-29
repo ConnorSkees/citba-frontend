@@ -273,7 +273,11 @@ class Join extends Component {
           ]}
           src={BannerBg}
         />
-        <form className="join membership-form" id="join-form" onSubmit={this.handleSubmit}>
+        <form
+          className="join membership-form"
+          id="join-form"
+          onSubmit={this.handleSubmit}
+        >
           <div className="form-container">
             <Input required field="Name" onChange={this.changeName} />
             <Input
@@ -317,7 +321,12 @@ class Join extends Component {
                 required
               />
             </div>
-            <Input required field="Telephone" type="tel" onChange={this.changeTelephone} />
+            <Input
+              required
+              field="Telephone"
+              type="tel"
+              onChange={this.changeTelephone}
+            />
             <Input required field="Email" onChange={this.changeEmail} />
             <Input
               required
@@ -330,8 +339,11 @@ class Join extends Component {
             </label>
             <select
               id="membership"
-              onChange={event => this.setState({ membership: event.target.value })}
+              onChange={event =>
+                this.setState({ membership: event.target.value })
+              }
               value={this.state.membership}
+              required
             >
               <option value="unset">Select an option</option>
               <option value="Active">Active</option>
@@ -381,7 +393,9 @@ class Join extends Component {
               />
               <CheckBox onChange={this.toggleCommittee} text="Young Lawyers" />
             </div>
-            <label>Card information</label>
+            <label>
+              Card information <span className="red">*</span>
+            </label>
             <CardElement options={CARD_ELEMENT_OPTIONS} />
           </div>
           <div className="checkout">
