@@ -112,6 +112,8 @@ class Popup extends Component {
       } else {
         alert("Failed to connect to server");
       }
+      document.getElementById("donation-form").reset();
+      this.props.onHide();
     });
   };
 
@@ -125,6 +127,7 @@ class Popup extends Component {
           className={`backdrop ${visible ? "" : "hidden"}`}
         />
         <form
+          id="donation-form"
           className={`popup-form ${visible ? "" : "hidden"}`}
           onSubmit={this.handleSubmit}
         >

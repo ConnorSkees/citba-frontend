@@ -98,6 +98,7 @@ class RenewMembership extends Component {
       } else {
         alert("Failed to process request");
       }
+      document.getElementById("renew-form").reset();
     });
   };
 
@@ -113,7 +114,7 @@ class RenewMembership extends Component {
           ]}
           src={BannerBg}
         />
-        <form onSubmit={this.handleSubmit} className="membership-form">
+        <form onSubmit={this.handleSubmit} id="renew-form" className="membership-form">
           <div className="form-container">
             <Input
               required

@@ -257,6 +257,7 @@ class Join extends Component {
       } else {
         alert("Failed to process request");
       }
+      document.getElementById("join-form").reset();
     });
   };
 
@@ -272,7 +273,7 @@ class Join extends Component {
           ]}
           src={BannerBg}
         />
-        <form className="join membership-form" onSubmit={this.handleSubmit}>
+        <form className="join membership-form" id="join-form" onSubmit={this.handleSubmit}>
           <div className="form-container">
             <Input required field="Name" onChange={this.changeName} />
             <Input
