@@ -22,7 +22,7 @@ import Resources from "pages/Resources";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 
-const stripePromise = loadStripe("pk_test_Tu9HB2rgbQ1oroTpXx9oT9na");
+const stripePromise = loadStripe("pk_live_kQNljkSzU24bpQzZDOPa41JE");
 
 function App() {
   return (
