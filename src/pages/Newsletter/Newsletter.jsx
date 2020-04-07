@@ -7,6 +7,16 @@ import BannerBg from "assets/carousel-image-1.jpg"
 import SVG from "react-inlinesvg";
 import PDF from "assets/file-pdf.svg";
 
+// We must explicitly enumerate newsletters here because
+// some years are missing newsletters. It is not necessary 
+// to worry about the order in which they appear in *this* list
+// as they are automatically sorted to be in chronological order.
+// However, for readability they *are* currently sorted with the
+// oldest being at the top and the most recent at the bottom.
+//
+// CITBA releases 4 newletters in a year, one in spring (1),
+// summer (2), fall (3), and winter (4). The newletters in this list
+// are in the form of `[YEAR, SEASON]`
 const NEWSLETTERS = [
     [2008, 1],
     [2008, 2],
@@ -67,14 +77,13 @@ class Newsletter extends Component {
     state = {};
 
     render() {
-
         let newsletters = NEWSLETTERS.sort();
         // most recent newsletter
         let r = newsletters.pop();
         newsletters = newsletters.reverse();
 
         return (
-          <React.Fragment>
+          <>
             <Header />
             <Banner src={BannerBg} text="CITBA NEWSLETTER" subtitle={[]} />
             <div className="current-issue">
@@ -95,7 +104,7 @@ class Newsletter extends Component {
             </div>
             <div className="bottom" />
             <Footer />
-          </React.Fragment>
+          </>
         );
     }
 }
