@@ -243,7 +243,10 @@ class Join extends Component {
           payment_method: {
             card: elements.getElement(CardElement),
             billing_details: {
-              name: this.state.name
+              name: this.state.name,
+              email: this.state.email,
+              phone: this.state.telephone,
+              description: this.state.membership,
             }
           }
         });
