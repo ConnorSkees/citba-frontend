@@ -29,6 +29,10 @@ $small: 400px;
             letter-spacing: .2rem;
             margin: 0;
 
+            @media (min-width: $large) and (max-width: 1300px) {
+                letter-spacing: normal;
+            }
+
             & span {
                 float: right;
                 font-weight: 500;
