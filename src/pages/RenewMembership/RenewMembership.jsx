@@ -34,8 +34,10 @@ class RenewMembership extends Component {
     telephone: "",
     email: "",
 
-    membership: "unset"
+    membership: "unset",
   };
+
+  _element = null;
 
   togglemembership_has_changed = () => {
     const { membership_has_changed } = this.state;
@@ -61,8 +63,10 @@ class RenewMembership extends Component {
     }
   }
 
-  handleSubmit = async event => {
+  handleSubmit = async (event) => {
     event.preventDefault();
+
+    document.getElementById("renew-form-submit").disabled = true;
     let state = JSON.stringify(this.state);
     console.log(state);
     const { stripe, elements } = this.props;
@@ -75,10 +79,10 @@ class RenewMembership extends Component {
       method: "POST",
       mode: "same-origin",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
-      body: state
-    }).then(async res => {
+      body: state,
+    }).then(async (res) => {
       if (res.ok) {
         const result = await stripe.confirmCardPayment(await res.text(), {
           payment_method: {
@@ -92,17 +96,21 @@ class RenewMembership extends Component {
           },
         });
 
+        
         if (result.error) {
           alert(result.error.message);
           return;
         } else if (result.paymentIntent.status === "succeeded") {
           alert("Transaction successful");
+          document.getElementById("renew-form").reset();
+          this._element.clear();
         }
       } else {
         alert("Failed to process request");
       }
-      document.getElementById("renew-form").reset();
+      document.getElementById("renew-form-submit").disabled = false;
     });
+    document.getElementById("renew-form-submit").disabled = false;
   };
 
   render() {
@@ -113,21 +121,25 @@ class RenewMembership extends Component {
         <Banner
           text="RENEW YOUR MEMBERSHIP"
           subtitle={[
-            "CITBA membership is open to all attorneys admitted to practice in any country and to law students."
+            "CITBA membership is open to all attorneys admitted to practice in any country and to law students.",
           ]}
           src={BannerBg}
         />
-        <form onSubmit={this.handleSubmit} id="renew-form" className="membership-form">
+        <form
+          onSubmit={this.handleSubmit}
+          id="renew-form"
+          className="membership-form"
+        >
           <div className="form-container">
             <Input
               required
               field="Name"
-              onChange={event => this.setState({ name: event.target.value })}
+              onChange={(event) => this.setState({ name: event.target.value })}
             />
             <Input
               required
               field="Email"
-              onChange={event => this.setState({ email: event.target.value })}
+              onChange={(event) => this.setState({ email: event.target.value })}
             />
 
             <label>
@@ -145,35 +157,37 @@ class RenewMembership extends Component {
             {membership_has_changed ? (
               <React.Fragment>
                 <Input
-                  onChange={event =>
+                  onChange={(event) =>
                     this.setState({ firm: event.target.value })
                   }
                   field="Firm or Organization"
                 />
                 <Input
-                  onChange={event =>
+                  onChange={(event) =>
                     this.setState({ address_line: event.target.value })
                   }
                   field="Street Address"
                 />
                 <Input
-                  onChange={event =>
+                  onChange={(event) =>
                     this.setState({ city: event.target.value })
                   }
                   field="City"
                 />
                 <Input
-                  onChange={event =>
+                  onChange={(event) =>
                     this.setState({ state: event.target.value })
                   }
                   field="State"
                 />
                 <Input
-                  onChange={event => this.setState({ zip: event.target.value })}
+                  onChange={(event) =>
+                    this.setState({ zip: event.target.value })
+                  }
                   field="Zip code"
                 />
                 <Input
-                  onChange={event =>
+                  onChange={(event) =>
                     this.setState({ telephone: event.target.value })
                   }
                   field="Telephone"
@@ -191,7 +205,7 @@ class RenewMembership extends Component {
             <select
               id="membership"
               required
-              onChange={event =>
+              onChange={(event) =>
                 this.setState({ membership: event.target.value })
               }
               value={this.state.membership}
@@ -207,12 +221,15 @@ class RenewMembership extends Component {
             </select>
 
             <label>Card information</label>
-            <CardElement options={CARD_ELEMENT_OPTIONS} />
+            <CardElement
+              onReady={(c) => (this._element = c)}
+              options={CARD_ELEMENT_OPTIONS}
+            />
           </div>
           <div className="checkout">
             {/* todo: recaptcha */}
             <div className="price">Total Price: {this.getPrice()}</div>
-            <input type="submit" value="Submit" className="submit" />
+            <input type="submit" value="Submit" id="renew-form-submit" className="submit" />
           </div>
         </form>
         <Footer />

@@ -256,11 +256,11 @@ class Join extends Component {
           return;
         } else if (result.paymentIntent.status === "succeeded") {
           alert("Transaction successful");
+          document.getElementById("join-form").reset();
         }
       } else {
         alert("Failed to process request");
       }
-      document.getElementById("join-form").reset();
     });
   };
 
