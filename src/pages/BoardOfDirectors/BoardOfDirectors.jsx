@@ -20,143 +20,120 @@ const DIRECTORS = [
     position: "president",
     major: true,
     src: Kathleen_Cannon,
-    email: ""
   },
   {
     name: "MATTHEW R. NICELY",
     position: "vice president",
     major: true,
     src: placeholder,
-    email: ""
   },
   {
     name: "MICHELE LYNCH",
     position: "secretary",
     major: true,
     src: placeholder,
-    email: ""
   },
   {
     name: "JOHN M. PETERSON",
     position: "treasurer",
     major: true,
     src: placeholder,
-    email: ""
   },
   {
     name: "CLAUDIA BURKE",
     position:
       "Chair, Continuing Legal Education And Professional Responsibility Committee",
     src: placeholder,
-    email: ""
   },
   {
     name: "LARRY HANSON",
     position: "Co-Chair, Customs Committee",
     src: placeholder,
-    email: ""
   },
   {
     name: "ALEXANDRA HESS",
     position: "Co-Chair, Customs Committee",
     src: placeholder,
-    email: ""
   },
   {
     name: "DANIEL B. PICKARD",
     position: "Co-Chair, International Trade Committee",
     src: Dan_Pickard,
-    email: ""
   },
   {
     name: "DEANNA OKUN",
     position: "Co-Chair, International Trade Committee",
     src: Deanna_Okun,
-    email: ""
   },
   {
     name: "ROBERT SHAPIRO",
     position: "Co-Chair, Export Committee",
     src: placeholder,
-    email: ""
   },
   {
     name: "SHAMA K. PATARI",
     position: "Co-Chair, Export Committee",
     src: placeholder,
-    email: ""
   },
   {
     name: "WILLIAM C. SJOBERG",
     position: "Chair, Judicial Selection Committee",
     src: placeholder,
-    email: ""
   },
   {
     name: "JOSHUA E. KURLAND",
     position: "Chair, Liaison With Other Bar Associations Committee",
     src: Joshua_Kurland,
-    email: ""
   },
   {
     name: "MARK LUDWIKOWSKI",
     position: "Chair, Meetings And Special Events Committee",
     src: placeholder,
-    email: ""
   },
   {
     name: "WILLIAM J. MALONEY",
     position: "Chair, Membership Committee",
     src: placeholder,
-    email: ""
   },
   {
     name: "CHRISTINE MARTINEZ",
     position: "Chair, Publications Committee",
     src: placeholder,
-    email: ""
   },
   {
     name: "ALICE A. KIPEL",
     position: "Chair, Technology Committee",
     src: placeholder,
-    email: ""
   },
   {
     name: "FRANCES P. HADFIELD",
     position: "Co-Chair, Trial And Appellate Practice Committee",
     src: Frances_Hadfield,
-    email: ""
   },
   {
     name: "JUSTIN R. MILLER",
     position: "Co-Chair, Trial And Appellate Practice Committee",
     src: placeholder,
-    email: ""
   },
   {
     name: "EMILY BELINE",
     position: "Co-Chair, Young Lawyers Committee",
     src: Emily_Beline,
-    email: ""
   },
   {
     name: "RISHI GUPTA",
     position: "Co-Chair, Young Lawyers Committee",
     src: Rishi_Gupta,
-    email: ""
   },
   {
     name: "VACANT",
     position: "At Large Member",
     src: placeholder,
-    email: ""
   },
   {
     name: "LAWRENCE M. FRIEDMAN",
     position: "Past President",
     src: placeholder,
-    email: ""
   }
 ];
 
@@ -174,7 +151,6 @@ class BoardOfDirectors extends Component {
                   name={dir.name}
                   position={dir.position}
                   major={dir.major}
-                  email={dir.email}
                   src={dir.src}
                   key={dir.name+dir.position}
                 />
