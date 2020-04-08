@@ -24,7 +24,7 @@ class Policy extends Component {
 
     render() {
         return (
-          <React.Fragment>
+          <>
             <Header />
             <section
               style={{ backgroundImage: `url(${BannerBg})` }}
@@ -316,7 +316,7 @@ class Policy extends Component {
               </div>
             </section>
             <Footer />
-          </React.Fragment>
+          </>
         );
     }
 }

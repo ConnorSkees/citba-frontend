@@ -9,7 +9,7 @@ class Footer extends Component {
 
     render() {
         return (
-          <React.Fragment>
+          <>
             <JoinCitba />
             <footer>
               <img src={FooterImg} alt="logo" />
@@ -18,7 +18,7 @@ class Footer extends Component {
                 1926.
               </em>
             </footer>
-          </React.Fragment>
+          </>
         );
     }
 }

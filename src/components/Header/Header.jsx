@@ -79,7 +79,7 @@ class Header extends Component {
 
     render() {
       return (
-        <React.Fragment>
+        <>
           <header>
             <nav id="header">
               <Link
@@ -114,7 +114,7 @@ class Header extends Component {
               </div>
             </nav>
           </header>
-        </React.Fragment>
+        </>
       );
     }
 }

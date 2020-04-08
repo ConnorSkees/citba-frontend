@@ -158,7 +158,7 @@ class Join extends Component {
         break;
       case "Active":
         return (
-          <React.Fragment>
+          <>
             <Input
               field="State(s) Where Admitted to the Bar"
               onChange={event => this.setState({ states: event.target.value })}
@@ -167,13 +167,13 @@ class Join extends Component {
               Date Admitted to the Bar <span className="red">*</span>
             </label>
             <DatePicker selected={this.state.date} onChange={this.changeDate} />
-          </React.Fragment>
+          </>
         );
       case "Active / Government Employee":
         break;
       case "Foreign Lawyer":
         return (
-          <React.Fragment>
+          <>
             <Input
               field="Foreign Country"
               onChange={event =>
@@ -188,11 +188,11 @@ class Join extends Component {
                 this.setState({ qualification_details: event.target.value })
               }
             />
-          </React.Fragment>
+          </>
         );
       case "Retired":
         return (
-          <React.Fragment>
+          <>
             <label htmlFor="">Date of Retirement</label>
             <DatePicker selected={this.state.date} onChange={this.changeDate} />
             <Input
@@ -201,11 +201,11 @@ class Join extends Component {
               }
               field="For retirees, please provide specifics regarding prior membership in CITBA"
             />
-          </React.Fragment>
+          </>
         );
       case "Student":
         return (
-          <React.Fragment>
+          <>
             <Input
               field="What Law School do you attend?"
               onChange={event =>
@@ -214,7 +214,7 @@ class Join extends Component {
             />
             <label htmlFor="">Anticipated Graduation Date</label>
             <DatePicker selected={this.state.date} onChange={this.changeDate} />
-          </React.Fragment>
+          </>
         );
       default:
         break;
@@ -266,7 +266,7 @@ class Join extends Component {
   render() {
     const { country } = this.state;
     return (
-      <React.Fragment>
+      <>
         <Header />
         <Banner
           text="JOIN CITBA"
@@ -407,7 +407,7 @@ class Join extends Component {
           </div>
         </form>
         <Footer />
-      </React.Fragment>
+      </>
     );
   }
 }

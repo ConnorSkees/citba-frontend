@@ -23,7 +23,7 @@ function Input(props) {
     let type = props.type || "text";
     let pattern = props.pattern || ".*";
     return (
-      <React.Fragment>
+      <>
         <label htmlFor={field}>
           <span>{field}</span>
           <input
@@ -35,7 +35,7 @@ function Input(props) {
             required
           />
         </label>
-      </React.Fragment>
+      </>
     );
 }
 
@@ -121,7 +121,7 @@ class Popup extends Component {
     const { visible, onHide } = this.props;
     const { amount } = this.state;
     return (
-      <React.Fragment>
+      <>
         <div
           onClick={this.hide}
           className={`backdrop ${visible ? "" : "hidden"}`}
@@ -152,7 +152,7 @@ class Popup extends Component {
             </label>
           </div>
         </form>
-      </React.Fragment>
+      </>
     );
   }
 }

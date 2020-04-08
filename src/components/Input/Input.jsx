@@ -8,7 +8,7 @@ class Input extends Component {
         const { field, required } = this.props;
         const type = this.props.type || "text";
         return (
-          <React.Fragment>
+          <>
             <label htmlFor={field}>
               {field} {required ? <span className="red">*</span> : ""}
             </label>
@@ -21,7 +21,7 @@ class Input extends Component {
               placeholder={field}
               required={required}
             />
-          </React.Fragment>
+          </>
         );
     }
 }

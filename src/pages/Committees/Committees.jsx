@@ -69,7 +69,7 @@ const COMMITTEES = [
     emails: ["Christine_Henry@msn.com"],
     chair: "Christine Martinez",
     description:
-      <React.Fragment><p>The Publications Committee is charged with the distribution, circulation, and marketing of CITBA brochures, circulars, and other publications, which CITBA may publish from time to time.  This Committee also prepares and edits the quarterly CITBA Newsletter.  The primary purpose of the newsletter is to review, discuss, and advise CITBA’s membership regarding recent customs and international trade issues.  The newsletter and other circulars are also intended to provide topical information from the United States Court of International Trade and the United States Court of Appeals for the Federal Circuit as well as upcoming events of interest.  To this end, the Publications Committee coordinates with other CITBA committees that may be involved with preparing, contributing, or disseminating information to members.</p><p>The Committee is continually working to improve the newsletter’s quality.  If you have any ideas or contributions that you would like to make to the quarterly CITBA newsletter, please do not hesitate to contact the Chair.</p></React.Fragment>
+      <><p>The Publications Committee is charged with the distribution, circulation, and marketing of CITBA brochures, circulars, and other publications, which CITBA may publish from time to time.  This Committee also prepares and edits the quarterly CITBA Newsletter.  The primary purpose of the newsletter is to review, discuss, and advise CITBA’s membership regarding recent customs and international trade issues.  The newsletter and other circulars are also intended to provide topical information from the United States Court of International Trade and the United States Court of Appeals for the Federal Circuit as well as upcoming events of interest.  To this end, the Publications Committee coordinates with other CITBA committees that may be involved with preparing, contributing, or disseminating information to members.</p><p>The Committee is continually working to improve the newsletter’s quality.  If you have any ideas or contributions that you would like to make to the quarterly CITBA newsletter, please do not hesitate to contact the Chair.</p></>
   },
   {
     title: "Technology Committee",
@@ -99,7 +99,7 @@ class Committees extends Component {
 
     render() {
         return (
-          <React.Fragment>
+          <>
             <Header />
             <Banner
               src={BannerBg}
@@ -119,7 +119,7 @@ class Committees extends Component {
                 </div>
             </div>
             <Footer />
-          </React.Fragment>
+          </>
         );
     }
 }

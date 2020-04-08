@@ -10,7 +10,7 @@ class ByLaws extends Component {
 
     render() {
         return (
-          <React.Fragment>
+          <>
             <Header />
             <Banner
               src={BannerBg}
@@ -588,7 +588,7 @@ class ByLaws extends Component {
             </div>
             </div>
             <Footer />
-          </React.Fragment>
+          </>
         );
     }
 }

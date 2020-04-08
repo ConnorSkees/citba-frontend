@@ -114,7 +114,7 @@ class RenewMembership extends Component {
   render() {
     const { membership_has_changed } = this.state;
     return (
-      <React.Fragment>
+      <>
         <Header />
         <Banner
           text="RENEW YOUR MEMBERSHIP"
@@ -153,7 +153,7 @@ class RenewMembership extends Component {
             </label>
 
             {membership_has_changed ? (
-              <React.Fragment>
+              <>
                 <Input
                   onChange={(event) =>
                     this.setState({ firm: event.target.value })
@@ -190,7 +190,7 @@ class RenewMembership extends Component {
                   }
                   field="Telephone"
                 />
-              </React.Fragment>
+              </>
             ) : (
               ""
             )}
@@ -231,7 +231,7 @@ class RenewMembership extends Component {
           </div>
         </form>
         <Footer />
-      </React.Fragment>
+      </>
     );
   }
 }

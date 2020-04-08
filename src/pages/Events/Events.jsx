@@ -36,7 +36,7 @@ class Events extends Component {
     render() {
         const { upcoming, past } = this.state;
         return (
-          <React.Fragment>
+          <>
             <Header />
             <Banner
               text="Events and Announcements"
@@ -64,7 +64,7 @@ class Events extends Component {
               ))}
             </div>
             <Footer />
-          </React.Fragment>
+          </>
         );
     }
 }

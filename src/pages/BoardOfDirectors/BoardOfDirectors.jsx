@@ -142,7 +142,7 @@ class BoardOfDirectors extends Component {
 
     render() {
         return (
-          <React.Fragment>
+          <>
             <Header />
             <Banner src={BoardRoom} text="Board of Directors" subtitle={[]}/>
             <div className="board">
@@ -158,7 +158,7 @@ class BoardOfDirectors extends Component {
             </div>
             <div className="divider" />
             <Footer />
-          </React.Fragment>
+          </>
         );
     }
 }

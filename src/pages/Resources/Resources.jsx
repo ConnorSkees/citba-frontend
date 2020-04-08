@@ -131,7 +131,7 @@ class Resources extends Component {
 
     render() {
         return (
-          <React.Fragment>
+          <>
             <Header />
             <Banner
               src={BannerBg}
@@ -142,7 +142,7 @@ class Resources extends Component {
             />
             <Tabs tabs={TABS} />
             <Footer />
-          </React.Fragment>
+          </>
         );
     }
 }

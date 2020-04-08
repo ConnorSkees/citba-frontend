@@ -32,7 +32,7 @@ class About extends Component {
 
     render() {
         return (
-          <React.Fragment>
+          <>
             <Header />
             <div className="about-banner-1">
               <img src={scales} alt="scales" />
@@ -75,7 +75,7 @@ class About extends Component {
               ))}
             </div>
             <Footer />
-          </React.Fragment>
+          </>
         );
     }
 }

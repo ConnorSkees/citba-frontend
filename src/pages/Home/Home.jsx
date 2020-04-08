@@ -12,7 +12,7 @@ class Home extends Component {
 
     render() {
         return (
-          <React.Fragment>
+          <>
             <Header />
             <Carousel />
             <div className="home-banner">
@@ -33,7 +33,7 @@ class Home extends Component {
               </p>
             </div>
             <Footer />
-          </React.Fragment>
+          </>
         );
     }
 }

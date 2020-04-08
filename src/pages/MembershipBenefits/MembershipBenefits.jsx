@@ -28,7 +28,7 @@ class MembershipBenefits extends Component {
 
     render() {
         return (
-          <React.Fragment>
+          <>
             <Header />
             <section
               style={{ backgroundImage: `url(${BannerBg})` }}
@@ -87,7 +87,7 @@ class MembershipBenefits extends Component {
               </div>
             </section>
             <Footer />
-          </React.Fragment>
+          </>
         );
     }
 }
