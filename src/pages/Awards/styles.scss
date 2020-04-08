@@ -29,7 +29,8 @@ $small: 400px;
             letter-spacing: .2rem;
             margin: 0;
 
-            @media (min-width: $large) and (max-width: 1300px) {
+            @media (min-width: $large) and (max-width: 1300px),
+            (max-width: 400px) {
                 letter-spacing: normal;
             }
 
