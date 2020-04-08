@@ -246,7 +246,6 @@ class Join extends Component {
               name: this.state.name,
               email: this.state.email,
               phone: this.state.telephone,
-              description: this.state.membership,
             }
           }
         });
