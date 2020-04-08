@@ -3,16 +3,17 @@ import "./styles.scss";
 
 class CountrySelect extends Component {
     state = {
-        country: ""
+        country: "USA"
     };
 
     render() {
         return (
           <select
-            onChange={event => this.props.onChange(event.target.value)}
+            onChange={(event) => this.props.onChange(event.target.value)}
             value={this.props.value}
             className="country"
           >
+            <option value="USA">United States</option>
             <option value="AFG">Afghanistan</option>
             <option value="ALA">Åland Islands</option>
             <option value="ALB">Albania</option>
@@ -254,7 +255,6 @@ class CountrySelect extends Component {
             <option value="UKR">Ukraine</option>
             <option value="ARE">United Arab Emirates</option>
             <option value="GBR">United Kingdom</option>
-            <option value="USA">United States</option>
             <option value="UMI">United States Minor Outlying Islands</option>
             <option value="URY">Uruguay</option>
             <option value="UZB">Uzbekistan</option>
