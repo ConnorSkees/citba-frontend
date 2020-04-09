@@ -1,4 +1,5 @@
 @import "../../components/variables";
+@import "../../components/mixins";
 
 .membership-form {
     display: flex;
@@ -6,7 +7,7 @@
     justify-content: center;
     align-items: center;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 25px;
     max-width: 1500px;
 
     & .form-container {
@@ -18,7 +19,11 @@
         font-family: $open-sans;
 
         @media screen and (max-width: 760px) {
-            font-size: .7rem;
+            width: 80%;
+        }
+
+        @media screen and (max-width: 400px) {
+            font-size: .8rem;
         }
 
         & .red {
@@ -77,25 +82,25 @@
         width: 100%;
 
         & .price {
-            font: 400 19px/60px $open-sans;
+            font: 500 19px/60px $open-sans;
             width: 60%;
-            background-color: rgba(150, 150, 150, 0.1);
-            margin: 10px 0;
+            margin-top: 15px;
             text-align: center;
             padding: 5px 0;
             color: $gray;
         }
 
         & .submit {
+            @include transition(.28s);
             font: 700 1rem/1 $open-sans;
             cursor: pointer;
             display: inline-block;
             border-radius: 4px;
-            margin: 50px 0 35px 0;
+            margin: 25px 0 35px 0;
             -webkit-appearance: none;
             text-align: center;
             padding: 14px 16px;
-            background: #e7e7ec;
+            background: none;
             outline: none;
             border: none;
             color: #6d7680;
@@ -104,7 +109,11 @@
             min-height: 50px;
 
             &:hover {
-                background: #dedee5;
+                background: #eee;
+            }
+            
+            &:active {
+                background: #d7dde6;
             }
         }
     }

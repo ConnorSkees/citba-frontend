@@ -45,7 +45,10 @@ class RenewMembership extends Component {
   };
 
   getPrice() {
-    const { membership } = this.state;
+    return this.priceFromMembership(this.state.membership);
+  }
+
+  priceFromMembership = membership => {
     switch (membership) {
       case "Active":
         return "$125.00";
@@ -112,7 +115,7 @@ class RenewMembership extends Component {
   };
 
   render() {
-    const { membership_has_changed } = this.state;
+    const { membership_has_changed, loading } = this.state;
     return (
       <>
         <Header />
@@ -227,7 +230,12 @@ class RenewMembership extends Component {
           <div className="checkout">
             {/* todo: recaptcha */}
             <div className="price">Total Price: {this.getPrice()}</div>
-            <input type="submit" value="Submit" id="renew-form-submit" className="submit" />
+            <input
+              type="submit"
+              value="Submit"
+              id="renew-form-submit"
+              className="submit"
+            />
           </div>
         </form>
         <Footer />
