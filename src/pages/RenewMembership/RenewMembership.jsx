@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import "./styles.scss";
-import Header from 'components/Header/Header';
-import Footer from 'components/Footer/Footer';
+import Header from "components/Header/Header";
+import Footer from "components/Footer/Footer";
 import Banner from "components/Banner/Banner";
 import Input from "components/Input";
 import BannerBg from "assets/man-writing.jpg";
@@ -15,10 +15,10 @@ const CARD_ELEMENT_OPTIONS = {
       fontSmoothing: "antialiased",
       fontSize: "16px",
       "::placeholder": {
-        color: "#aab7c4"
-      }
-    }
-  }
+        color: "#aab7c4",
+      },
+    },
+  },
 };
 
 class RenewMembership extends Component {
@@ -48,7 +48,7 @@ class RenewMembership extends Component {
     return this.priceFromMembership(this.state.membership);
   }
 
-  priceFromMembership = membership => {
+  priceFromMembership = (membership) => {
     switch (membership) {
       case "Active":
         return "$125.00";
@@ -64,7 +64,7 @@ class RenewMembership extends Component {
       default:
         return "$0.00";
     }
-  }
+  };
 
   handleSubmit = async (event) => {
     event.preventDefault();
@@ -97,7 +97,7 @@ class RenewMembership extends Component {
             },
           },
         });
-        
+
         if (result.error) {
           alert(result.error.message);
           return;
@@ -252,4 +252,4 @@ export default function InjectedJoin() {
       )}
     </ElementsConsumer>
   );
-};
+}

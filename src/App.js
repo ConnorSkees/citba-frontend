@@ -1,18 +1,18 @@
-import React from 'react';
+import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Home from 'pages/Home';
+import Home from "pages/Home";
 
-import About from 'pages/About';
-import BoardOfDirectors from 'pages/BoardOfDirectors';
-import Committees from 'pages/Committees';
-import ByLaws from 'pages/ByLaws';
+import About from "pages/About";
+import BoardOfDirectors from "pages/BoardOfDirectors";
+import Committees from "pages/Committees";
+import ByLaws from "pages/ByLaws";
 
 import Membership from "pages/MembershipBenefits";
 import Join from "pages/Join";
 import RenewMembership from "pages/RenewMembership";
 
-import Calendar from 'pages/Calendar';
-import Events from 'pages/Events';
+import Calendar from "pages/Calendar";
+import Events from "pages/Events";
 import Newsletter from "pages/Newsletter";
 
 import Policy from "pages/Policy";
@@ -22,7 +22,8 @@ import Resources from "pages/Resources";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 
-const stripePromise = loadStripe("pk_live_kQNljkSzU24bpQzZDOPa41JE");
+// const stripePromise = loadStripe("pk_live_kQNljkSzU24bpQzZDOPa41JE");
+const stripePromise = loadStripe("pk_test_Tu9HB2rgbQ1oroTpXx9oT9na");
 
 function App() {
   return (

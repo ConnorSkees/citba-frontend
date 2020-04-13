@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import "./styles.scss";
-import Header from 'components/Header';
-import Footer from 'components/Footer';
-import Banner from 'components/Banner';
+import Header from "components/Header";
+import Footer from "components/Footer";
+import Banner from "components/Banner";
 import CountrySelect from "components/CountrySelect";
 import Input from "components/Input";
 import BannerBg from "assets/man-writing.jpg";
@@ -18,21 +18,20 @@ const CARD_ELEMENT_OPTIONS = {
       fontSmoothing: "antialiased",
       fontSize: "16px",
       "::placeholder": {
-        color: "#aab7c4"
-      }
+        color: "#aab7c4",
+      },
     },
-  }
+  },
 };
 
-
 function CheckBox(props) {
-    const { text, onChange } = props;
-    return (
-      <label htmlFor={text} style={{ cursor: "pointer" }}>
-        <input id={text} type="checkbox" onChange={onChange} />
-        {text}
-      </label>
-    );
+  const { text, onChange } = props;
+  return (
+    <label htmlFor={text} style={{ cursor: "pointer" }}>
+      <input id={text} type="checkbox" onChange={onChange} />
+      {text}
+    </label>
+  );
 }
 
 class Join extends Component {
@@ -69,46 +68,46 @@ class Join extends Component {
     date: "",
     date_admitted: "",
     date_retired: "",
-    graduation_date: ""
+    graduation_date: "",
   };
 
-  changeMembership = event => {
+  changeMembership = (event) => {
     this.setState({ membership: event.target.value });
   };
 
-  changeName = event => {
+  changeName = (event) => {
     this.setState({ name: event.target.value });
   };
 
-  changeFirm = event => {
+  changeFirm = (event) => {
     this.setState({ firm: event.target.value });
   };
 
-  changeCity = event => {
+  changeCity = (event) => {
     this.setState({ city: event.target.value });
   };
 
-  changeState = event => {
+  changeState = (event) => {
     this.setState({ state: event.target.value });
   };
 
-  changeZip = event => {
+  changeZip = (event) => {
     this.setState({ zip: event.target.value });
   };
 
-  changeTelephone = event => {
+  changeTelephone = (event) => {
     this.setState({ telephone: event.target.value });
   };
 
-  changeEmail = event => {
+  changeEmail = (event) => {
     this.setState({ email: event.target.value });
   };
 
-  changeReferrer = event => {
+  changeReferrer = (event) => {
     this.setState({ referrer: event.target.value });
   };
 
-  toggleCommittee = event => {
+  toggleCommittee = (event) => {
     let { committeesSet } = this.state;
     const { id } = event.target;
     if (committeesSet.has(id)) {
@@ -119,16 +118,16 @@ class Join extends Component {
     this.setState({ committeesSet, committees: Array.from(committeesSet) });
   };
 
-  changeDate = date => {
+  changeDate = (date) => {
     this.setState({
       date,
       date_admitted: date,
       date_retired: date,
-      graduation_date: date
+      graduation_date: date,
     });
   };
 
-  changeCountry = country => {
+  changeCountry = (country) => {
     this.setState({ country });
   };
 
@@ -161,7 +160,9 @@ class Join extends Component {
           <>
             <Input
               field="State(s) Where Admitted to the Bar"
-              onChange={event => this.setState({ states: event.target.value })}
+              onChange={(event) =>
+                this.setState({ states: event.target.value })
+              }
             />
             <label htmlFor="">
               Date Admitted to the Bar <span className="red">*</span>
@@ -176,7 +177,7 @@ class Join extends Component {
           <>
             <Input
               field="Foreign Country"
-              onChange={event =>
+              onChange={(event) =>
                 this.setState({ foreign_country: event.target.value })
               }
             />
@@ -184,7 +185,7 @@ class Join extends Component {
             <DatePicker selected={this.state.date} onChange={this.changeDate} />
             <Input
               field="Foreign Country Qualification Details"
-              onChange={event =>
+              onChange={(event) =>
                 this.setState({ qualification_details: event.target.value })
               }
             />
@@ -196,7 +197,7 @@ class Join extends Component {
             <label htmlFor="">Date of Retirement</label>
             <DatePicker selected={this.state.date} onChange={this.changeDate} />
             <Input
-              onChange={event =>
+              onChange={(event) =>
                 this.setState({ prior_membership: event.target.value })
               }
               field="For retirees, please provide specifics regarding prior membership in CITBA"
@@ -208,7 +209,7 @@ class Join extends Component {
           <>
             <Input
               field="What Law School do you attend?"
-              onChange={event =>
+              onChange={(event) =>
                 this.setState({ law_school: event.target.value })
               }
             />
@@ -221,7 +222,7 @@ class Join extends Component {
     }
   };
 
-  handleSubmit = async event => {
+  handleSubmit = async (event) => {
     event.preventDefault();
     let state = JSON.stringify(this.state);
     const { stripe, elements } = this.props;
@@ -234,10 +235,10 @@ class Join extends Component {
       method: "POST",
       mode: "same-origin",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
-      body: state
-    }).then(async res => {
+      body: state,
+    }).then(async (res) => {
       if (res.ok) {
         const result = await stripe.confirmCardPayment(await res.text(), {
           payment_method: {
@@ -246,8 +247,8 @@ class Join extends Component {
               name: this.state.name,
               email: this.state.email,
               phone: this.state.telephone,
-            }
-          }
+            },
+          },
         });
 
         if (result.error) {
@@ -271,7 +272,7 @@ class Join extends Component {
         <Banner
           text="JOIN CITBA"
           subtitle={[
-            "CITBA membership is open to all attorneys admitted to practice in any country and to law students."
+            "CITBA membership is open to all attorneys admitted to practice in any country and to law students.",
           ]}
           src={BannerBg}
         />
@@ -295,7 +296,7 @@ class Join extends Component {
                 type="text"
                 className="address-line"
                 placeholder="Address Line 1"
-                onChange={event =>
+                onChange={(event) =>
                   this.setState({ address_line: event.target.value })
                 }
                 required
@@ -341,7 +342,7 @@ class Join extends Component {
             </label>
             <select
               id="membership"
-              onChange={event =>
+              onChange={(event) =>
                 this.setState({ membership: event.target.value })
               }
               value={this.state.membership}
@@ -415,9 +416,7 @@ class Join extends Component {
 export default function InjectedJoin() {
   return (
     <ElementsConsumer>
-      {({ stripe, elements }) => (
-        <Join stripe={stripe} elements={elements} />
-      )}
+      {({ stripe, elements }) => <Join stripe={stripe} elements={elements} />}
     </ElementsConsumer>
   );
-};
+}
