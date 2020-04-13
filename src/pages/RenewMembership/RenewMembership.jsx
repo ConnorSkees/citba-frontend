@@ -93,7 +93,6 @@ class RenewMembership extends Component {
             billing_details: {
               name: this.state.name,
               email: this.state.email,
-              phone: this.state.telephone,
             },
           },
         });
