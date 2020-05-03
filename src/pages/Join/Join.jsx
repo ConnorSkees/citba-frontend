@@ -71,6 +71,8 @@ class Join extends Component {
     graduation_date: "",
   };
 
+  _element = null;
+
   changeMembership = (event) => {
     this.setState({ membership: event.target.value });
   };
@@ -224,6 +226,7 @@ class Join extends Component {
 
   handleSubmit = async (event) => {
     event.preventDefault();
+    document.getElementById("join-form-submit").disabled = true;
     let state = JSON.stringify(this.state);
     const { stripe, elements } = this.props;
 
@@ -246,13 +249,14 @@ class Join extends Component {
             billing_details: {
               name: this.state.name,
               email: this.state.email,
-              phone: this.state.telephone,
             },
           },
         });
 
         if (result.error) {
           alert(result.error.message);
+          document.getElementById("join-form-submit").disabled = false;
+          this._element.clear();
           return;
         } else if (result.paymentIntent.status === "succeeded") {
           alert("Transaction successful");
@@ -261,7 +265,10 @@ class Join extends Component {
       } else {
         alert("Failed to process request");
       }
+      this._element.clear();
+      document.getElementById("join-form-submit").disabled = false;
     });
+    document.getElementById("join-form-submit").disabled = false;
   };
 
   render() {
@@ -399,12 +406,20 @@ class Join extends Component {
             <label>
               Card information <span className="red">*</span>
             </label>
-            <CardElement options={CARD_ELEMENT_OPTIONS} />
+            <CardElement
+              onReady={(c) => (this._element = c)}
+              options={CARD_ELEMENT_OPTIONS}
+            />
           </div>
           <div className="checkout">
             {/* todo: recaptcha */}
             <div className="price">Total Price: {this.getPrice()}</div>
-            <input type="submit" value="Submit" className="submit" />
+            <input
+              type="submit"
+              value="Submit"
+              id="join-form-submit"
+              className="submit"
+            />
           </div>
         </form>
         <Footer />

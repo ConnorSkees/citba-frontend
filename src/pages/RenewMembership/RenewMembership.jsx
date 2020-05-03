@@ -99,6 +99,8 @@ class RenewMembership extends Component {
 
         if (result.error) {
           alert(result.error.message);
+          document.getElementById("renew-form-submit").disabled = false;
+          this._element.clear();
           return;
         } else if (result.paymentIntent.status === "succeeded") {
           alert("Transaction successful");
@@ -108,8 +110,10 @@ class RenewMembership extends Component {
       } else {
         alert("Failed to process request");
       }
+      this._element.clear();
       document.getElementById("renew-form-submit").disabled = false;
     });
+    this._element.clear();
     document.getElementById("renew-form-submit").disabled = false;
   };
 
