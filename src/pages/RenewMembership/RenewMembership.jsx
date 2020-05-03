@@ -114,7 +114,7 @@ class RenewMembership extends Component {
   };
 
   render() {
-    const { membership_has_changed, loading } = this.state;
+    const { membership_has_changed } = this.state;
     return (
       <>
         <Header />
