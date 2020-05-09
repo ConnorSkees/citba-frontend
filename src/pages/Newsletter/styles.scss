@@ -4,69 +4,69 @@ $medium: 860px;
 $small: 600px;
 
 .current-issue {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 
-    svg {
-        fill: #ad1a1a;
-        height: 60px;
-        padding: 10px;
-    }
+  svg {
+    fill: #ad1a1a;
+    height: 60px;
+    padding: 10px;
+  }
 
-    a {
-        font: 600 28px/1 $open-sans;
-        text-decoration: none;
-        color: $blue;
-    }
+  a {
+    font: 600 28px/1 $open-sans;
+    text-decoration: none;
+    color: $blue;
+  }
 }
 
 .past-issues {
-    position: relative;
-    margin: 20px 20%;
-    border-top: 1px solid black;
-    font-family: $open-sans;
+  position: relative;
+  margin: 20px 20%;
+  border-top: 1px solid black;
+  font-family: $open-sans;
 
-    @media screen and (max-width: $small) {
-        margin: 20px 10%;
+  @media screen and (max-width: $small) {
+    margin: 20px 10%;
+  }
+
+  h2 {
+    font-weight: 600;
+    color: $blue;
+  }
+
+  ul {
+    columns: 4;
+
+    @media screen and (max-width: $medium) {
+      columns: 2;
     }
 
-    h2 {
-        font-weight: 600;
-        color: $blue;
+    li {
+      padding: 1px;
     }
 
-    ul {
-        columns: 4;
+    a {
+      color: #253a64;
+      text-decoration: none;
+      font-weight: 400;
 
-        @media screen and (max-width: $medium) {
-            columns: 2;
-        }
+      @media screen and (max-width: $small) {
+        font-size: 0.8rem;
+      }
 
-        li {
-            padding: 1px;
-        }
-
-        a {
-            color: #253a64;
-            text-decoration: none;
-            font-weight: 400;
-
-            @media screen and (max-width: $small) {
-                font-size: .8rem;
-            }
-
-            &:hover {
-                color: #5e5e5e;
-            }
-        }
+      &:hover {
+        color: #5e5e5e;
+      }
     }
+  }
 }
 
 .bottom {
-    width: 100%;
-    border-bottom: 5px solid $orange;
-    margin-top: 10px;
+  width: 100%;
+  border-bottom: 5px solid $orange;
+  margin-top: 10px;
 }

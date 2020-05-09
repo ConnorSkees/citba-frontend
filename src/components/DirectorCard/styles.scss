@@ -2,42 +2,42 @@
 @import "../mixins";
 
 .director-card {
-    position: relative;
+  position: relative;
 
-    .head-shot {
-        width: 100%;
-        height: auto;
+  .head-shot {
+    width: 100%;
+    height: auto;
+  }
+
+  svg {
+    @include transition(0.3s);
+    position: absolute;
+    bottom: 0;
+    height: 2rem;
+    fill: #102c63;
+
+    &:hover {
+      fill: $orange;
     }
+  }
 
-    svg {
-        @include transition(.3s);
-        position: absolute;
-        bottom: 0;
-        height: 2rem;
-        fill: #102C63;
+  h2 {
+    font: 700 30px/1.2 $open-sans;
+    color: #102c63;
+    text-transform: uppercase;
+    margin: 5px 0;
+  }
 
-        &:hover {
-            fill: $orange;
-        }
+  h4 {
+    font: 400 15px/1rem $playfair-display;
+    color: #7a7a7a;
+    margin: 5px 0px 10px;
+    letter-spacing: 1.3px;
+    margin-bottom: 2.3rem;
+
+    &.major {
+      text-transform: uppercase;
+      font-size: 17px;
     }
-
-    h2 {
-        font: 700 30px/1.2 $open-sans;
-        color: #102C63;
-        text-transform: uppercase;
-        margin: 5px 0;
-    }
-
-    h4 {
-        font: 400 15px/1rem $playfair-display;
-        color: #7A7A7A;
-        margin: 5px 0px 10px;
-        letter-spacing: 1.3px;
-        margin-bottom: 2.3rem;
-
-        &.major {
-            text-transform: uppercase;
-            font-size: 17px;
-        }
-    }
+  }
 }

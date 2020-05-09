@@ -1,50 +1,50 @@
 @import "../variables";
 
 .banner {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 270px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 270px;
+  width: 100%;
+  position: relative;
+
+  display: table;
+
+  .overlay {
+    height: 100%;
     width: 100%;
+    position: absolute;
+    background-color: #172959;
+    opacity: 0.7;
+  }
+
+  .text {
+    color: #fff;
     position: relative;
+    text-align: center;
+    max-width: 80%;
 
-    display: table;
+    display: table-cell;
+    vertical-align: middle;
+    margin-left: auto;
+    margin-right: auto;
 
-    .overlay {
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        background-color: #172959;
-        opacity: .7;
+    .title {
+      font: 700 2.5rem/1.7 $open-sans;
+      text-transform: uppercase;
+
+      @media screen and (max-width: 450px) {
+        font-size: 2rem;
+      }
+
+      @media screen and (max-width: 360px) {
+        font-size: 1.5rem;
+      }
     }
 
-    .text {
-        color: #fff;
-        position: relative;
-        text-align: center;
-        max-width: 80%;
-
-        display: table-cell;
-        vertical-align: middle;
-        margin-left: auto;
-        margin-right: auto;
-
-        .title {
-            font: 700 2.5rem/1.7 $open-sans;
-            text-transform: uppercase;
-
-            @media screen and (max-width: 450px) {
-                font-size: 2rem;
-            }
-
-            @media screen and (max-width: 360px) {
-                font-size: 1.5rem;
-            }
-        }
-
-        .subtitle {
-            font: 400 19px/1 $playfair-display;
-        }
+    .subtitle {
+      font: 400 19px/1 $playfair-display;
     }
+  }
 }

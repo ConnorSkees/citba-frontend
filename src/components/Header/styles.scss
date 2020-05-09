@@ -2,71 +2,71 @@
 @import "src/components/mixins";
 
 nav#header {
-    @include transition(0.5s);
-    font-family: $open-sans;
-    width: 100%;
-    height: 20vh;
-    min-height: 50px;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #fff;
-    z-index: 1;
-    border-top: 5px solid $orange;
+  @include transition(0.5s);
+  font-family: $open-sans;
+  width: 100%;
+  height: 20vh;
+  min-height: 50px;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 1;
+  border-top: 5px solid $orange;
 
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 1072px) {
+    min-height: 180px;
+  }
+
+  @media screen and (max-width: 655px) {
+    min-height: 240px;
+  }
+
+  img {
+    height: auto;
+    width: 285px;
+  }
+
+  .nav-container {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+    font-family: inherit;
 
-    @media screen and (max-width: 1072px) {
-        min-height: 180px;
-    }
+    .nav-item {
+      @include transition(0.4s);
+      color: #2a302f;
+      background-color: #fff;
+      cursor: pointer;
+      padding: 13px 20px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+      font-family: inherit;
+      text-decoration: none;
+      display: block;
 
-    @media screen and (max-width: 655px) {
-        min-height: 240px;
-    }
+      &:hover {
+        color: #fff;
+        background-color: $blue;
+      }
 
-    img {
-        height: auto;
-        width: 285px;
-    }
-
-    .nav-container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
+      a {
         font-family: inherit;
-
-        .nav-item {
-            @include transition(.4s);
-            color: #2a302f;
-            background-color: #fff;
-            cursor: pointer;
-            padding: 13px 20px;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            border: none;
-            outline: none;
-            font-size: 1rem;
-            font-family: inherit;
-            text-decoration: none;
-            display: block;
-
-            &:hover {
-                color: #fff;
-                background-color: $blue;
-            }
-
-            a {
-                font-family: inherit;
-                color: inherit;
-                border-radius: inherit;
-                text-decoration: none;
-                width: 100%;
-                height: 100%;
-            }
-        }
+        color: inherit;
+        border-radius: inherit;
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
+      }
     }
+  }
 }

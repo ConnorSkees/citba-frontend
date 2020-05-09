@@ -4,157 +4,158 @@
 $border: 1px solid #ccc;
 
 .calendar {
-    &-nav {
-        font: 700 1rem/1 $open-sans;
+  &-nav {
+    font: 700 1rem/1 $open-sans;
+    position: relative;
+    margin: 3% 30% 0;
+    text-align: center;
+
+    .year-input,
+    .month-input {
+      font: inherit;
+      color: #fff;
+      background-color: #666;
+      border: none;
+      padding: 0.5rem;
+      margin-bottom: 10px;
+    }
+
+    .year-input {
+      margin-right: 10px;
+    }
+
+    svg {
+      @include transition(0.3s);
+      height: 36px;
+      cursor: pointer;
+      border-radius: 50%;
+      max-width: 40px;
+
+      &:hover {
+        background-color: #eee;
+      }
+    }
+
+    .left {
+      float: left;
+    }
+
+    .right {
+      float: right;
+    }
+  }
+
+  &-days {
+    margin: 5% 10%;
+
+    .weekdays {
+      font: 700 12px/1 $open-sans;
+      display: -ms-grid;
+      display: grid;
+      -ms-grid-columns: calc(100% / 7) calc(100% / 7) calc(100% / 7)
+        calc(100% / 7) calc(100% / 7) calc(100% / 7) calc(100% / 7);
+      grid-template-columns: repeat(7, calc(100% / 7));
+      text-align: center;
+      text-transform: uppercase;
+      background-color: #666;
+      color: #fff;
+      padding: 1em 0;
+      white-space: nowrap;
+      border-left: 1px solid #666;
+      border-right: 1px solid #666;
+    }
+
+    .days {
+      display: -ms-grid;
+      display: grid;
+      -ms-grid-columns: calc(100% / 7) calc(100% / 7) calc(100% / 7)
+        calc(100% / 7) calc(100% / 7) calc(100% / 7) calc(100% / 7);
+      grid-template-columns: repeat(7, calc(100% / 7));
+      border-bottom: $border;
+      border-left: $border;
+
+      .day {
+        @include transition(0.3s);
+        min-height: 150px;
         position: relative;
-        margin: 3% 30% 0;
-        text-align: center;
+        border-top: $border;
+        border-right: $border;
+        background-color: white;
+        cursor: default;
+        font-family: $open-sans;
 
-        .year-input,
-        .month-input {
-            font: inherit;
-            color: #fff;
-            background-color: #666;
-            border: none;
-            padding: .5rem;
-            margin-bottom: 10px;
+        &.not-this-month {
+          pointer-events: none;
+
+          span {
+            color: #ccc;
+            background-color: #fff;
+          }
         }
 
-        .year-input {
-            margin-right: 10px;
-        }
+        &.popped {
+          border: $border;
+          max-height: 70vh;
+          max-width: 60vw;
+          position: fixed;
+          z-index: 2;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          top: 50%;
+          right: 50%;
+          transform: translate(50%, -50%);
+          padding: 25px;
+          cursor: default;
+          overflow-y: scroll;
 
-        svg {
-            @include transition(.3s);
-            height: 36px;
-            cursor: pointer;
-            border-radius: 50%;
-            max-width: 40px;
-
-            &:hover {
-                background-color: #eee;
-            }
-        }
-
-        .left {
-            float: left;
-        }
-
-        .right {
+          svg {
             float: right;
-        }
-    }
+            cursor: pointer;
+          }
 
-    &-days {
-        margin: 5% 10%;
+          &:hover {
+            background-color: #fff;
+          }
 
-        .weekdays {
-            font: 700 12px/1 $open-sans;
-            display: -ms-grid;
-            display: grid;
-            -ms-grid-columns: calc(100% / 7) calc(100% / 7) calc(100% / 7) calc(100% / 7) calc(100% / 7) calc(100% / 7) calc(100% / 7);
-            grid-template-columns: repeat(7, calc(100% / 7));
-            text-align: center;
-            text-transform: uppercase;
-            background-color: #666;
-            color: #fff;
-            padding: 1em 0;
-            white-space: nowrap;
-            border-left: 1px solid #666;
-            border-right: 1px solid #666;
-        }
+          span {
+            font-size: 1rem;
+            background-color: #fff;
 
-        .days {
-            display: -ms-grid;
-            display: grid;
-            -ms-grid-columns: calc(100% / 7) calc(100% / 7) calc(100% / 7) calc(100% / 7) calc(100% / 7) calc(100% / 7) calc(100% / 7);
-            grid-template-columns: repeat(7, calc(100% / 7));
-            border-bottom: $border;
-            border-left: $border;
+            @media screen and (max-width: 400px) {
+              font-size: 0.8rem;
+            }
+          }
 
-            .day {
-                @include transition(.3s);
-                min-height: 150px;
-                position: relative;
-                border-top: $border;
-                border-right: $border;
-                background-color: white;
-                cursor: default;
-                font-family: $open-sans;
+          h1 {
+            font-size: 2rem;
 
-                &.not-this-month {
-                    pointer-events: none;
-
-                    span {
-                        color: #ccc;
-                        background-color: #fff;
-                    }
-                }
-
-                &.popped {
-                    border: $border;
-                    max-height: 70vh;
-                    max-width: 60vw;
-                    position: fixed;
-                    z-index: 2;
-                    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-                    top: 50%;
-                    right: 50%;
-                    transform: translate(50%, -50%);
-                    padding: 25px;
-                    cursor: default;
-                    overflow-y: scroll;
-
-                    svg {
-                        float: right;
-                        cursor: pointer;
-                    }
-
-                    &:hover {
-                        background-color: #fff;
-                    }
-
-                    span {
-                        font-size: 1rem;
-                        background-color: #fff;
-
-                        @media screen and (max-width: 400px) {
-                            font-size: .8rem;
-                        }
-                    }
-
-                    h1 {
-                        font-size: 2rem;
-
-                        @media screen and (max-width: 500px) {
-                            font-size: 1.5rem;
-                        }
-
-                        @media screen and (max-width: 400px) {
-                            font-size: 1rem;
-                        }
-                    }
-                }
-
-                &:hover {
-                    background-color: #f7f7f7;
-                    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-                }
-
-                h1 {
-                    font-size: 1rem;
-                    cursor: pointer;
-                }
-
-                span {
-                    font: 700 .8rem/1.2 $open-sans;
-                    background-color: #f7f7f7;
-                    color: #707070;
-                    padding: 4px 9px 6px;
-                    display: block;
-                }
+            @media screen and (max-width: 500px) {
+              font-size: 1.5rem;
             }
 
+            @media screen and (max-width: 400px) {
+              font-size: 1rem;
+            }
+          }
         }
+
+        &:hover {
+          background-color: #f7f7f7;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+          font-size: 1rem;
+          cursor: pointer;
+        }
+
+        span {
+          font: 700 0.8rem/1.2 $open-sans;
+          background-color: #f7f7f7;
+          color: #707070;
+          padding: 4px 9px 6px;
+          display: block;
+        }
+      }
     }
+  }
 }

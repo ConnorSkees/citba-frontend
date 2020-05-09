@@ -1,31 +1,31 @@
 @import "../../components/variables";
 
 @mixin grid-columns($num) {
-    grid-template-columns: repeat(#{$num}, calc(100% / #{$num}));
-    padding-right: calc(30px * (#{$num} - 1));
+  grid-template-columns: repeat(#{$num}, calc(100% / #{$num}));
+  padding-right: calc(30px * (#{$num} - 1));
 }
 
 .board {
-    @include grid-columns(4);
-    display: grid;
-    grid-column-gap: 30px;
-    grid-row-gap: 30px;
-    position: relative;
-    margin: 5% 10%;
+  @include grid-columns(4);
+  display: grid;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  position: relative;
+  margin: 5% 10%;
 
-    @media screen and (max-width: 1300px) {
-        @include grid-columns(3);
-    }
-    @media screen and (max-width: 900px) {
-        @include grid-columns(2);
-    }
-    @media screen and (max-width: 700px) {
-        @include grid-columns(1);
-    }
+  @media screen and (max-width: 1300px) {
+    @include grid-columns(3);
+  }
+  @media screen and (max-width: 900px) {
+    @include grid-columns(2);
+  }
+  @media screen and (max-width: 700px) {
+    @include grid-columns(1);
+  }
 }
 
 .divider {
-    width: 100%;
-    height: 0;
-    border-bottom: 5px solid $orange;
+  width: 100%;
+  height: 0;
+  border-bottom: 5px solid $orange;
 }

@@ -6,146 +6,146 @@ $large: 1000px;
 .policy-banner,
 .membership-banner,
 .award-banner {
-    color: white;
+  color: white;
+  position: relative;
+  min-height: 270px;
+  text-align: center;
+  font-family: $open-sans;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  .overlay {
+    position: absolute;
+    background-color: #172959;
+    opacity: 0.7;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  h1 {
+    font: 900 40px/1 $open-sans;
+    text-transform: uppercase;
     position: relative;
-    min-height: 270px;
-    text-align: center;
-    font-family: $open-sans;
+  }
 
+  .links {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
 
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+    button {
+      @include transition(0.3s);
+      font: 100 0.8rem/1 $open-sans;
+      color: white;
+      text-decoration: none;
+      position: relative;
+      border: 1px solid white;
+      border-radius: 5px;
+      padding: 7px 5px;
+      margin: 10px;
+      width: 33%;
+      background: none;
+      cursor: pointer;
+      outline: none;
 
-    .overlay {
-        position: absolute;
-        background-color: #172959;
-        opacity: 0.7;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
+      &:hover {
+        background-color: $orange;
+        border: 1px solid $orange;
+      }
     }
-
-    h1 {
-        font: 900 40px/1 $open-sans;
-        text-transform: uppercase;
-        position: relative;
-    }
-
-    .links {
-        display: flex;
-        justify-content: space-evenly;
-
-        button {
-            @include transition(.3s);
-            font: 100 .8rem/1 $open-sans;
-            color: white;
-            text-decoration: none;
-            position: relative;
-            border: 1px solid white;
-            border-radius: 5px;
-            padding: 7px 5px;
-            margin: 10px;
-            width: 33%;
-            background: none;
-            cursor: pointer;
-            outline: none;
-
-            &:hover {
-                background-color: $orange;
-                border: 1px solid $orange;
-            }
-        }
-    }
+  }
 }
 
 .award-banner {
-    p {
-        font-size: 18px;
-        position: relative;
-        margin-top: 0;
-    }
+  p {
+    font-size: 18px;
+    position: relative;
+    margin-top: 0;
+  }
 
-    .links {
-        button {
-            width: 50%;
-        }
+  .links {
+    button {
+      width: 50%;
     }
+  }
 }
 
 .membership-banner {
-    padding: 80px 0 50px;
+  padding: 80px 0 50px;
 
-    p {
-        font-size: 19px;
-        position: relative;
-        margin-top: 0;
-        width: 80%;
-    }
+  p {
+    font-size: 19px;
+    position: relative;
+    margin-top: 0;
+    width: 80%;
+  }
 
-    h1 {
-        margin-bottom: 0;
-    }
+  h1 {
+    margin-bottom: 0;
+  }
 
-    h3 {
-        font-size: 28px;
-        position: relative;
-        width: 80%;
-    }
+  h3 {
+    font-size: 28px;
+    position: relative;
+    width: 80%;
+  }
 }
 
 .policy-section,
 .award-section {
-    display: grid;
-    grid-column-gap: 4%;
-    position: relative;
-    padding: 100px 10%;
+  display: grid;
+  grid-column-gap: 4%;
+  position: relative;
+  padding: 100px 10%;
 
-    h1 {
-        font: 600 30px/1.3em $open-sans;
-        text-transform: uppercase;
-        color: $blue;
-        letter-spacing: 5px;
-        border-top: 1px solid $orange;
-        padding-top: 5%;
+  h1 {
+    font: 600 30px/1.3em $open-sans;
+    text-transform: uppercase;
+    color: $blue;
+    letter-spacing: 5px;
+    border-top: 1px solid $orange;
+    padding-top: 5%;
 
-        @media screen and (max-width: $large) {
-            grid-row: 1;
-        }
+    @media screen and (max-width: $large) {
+      grid-row: 1;
     }
+  }
 
-    p,
-    li {
-        font: 400 1rem/2em $open-sans;
-        color: #000;
-    }
+  p,
+  li {
+    font: 400 1rem/2em $open-sans;
+    color: #000;
+  }
 }
 
 #amicus-briefs,
 #trade-adjustment-assistance {
-    grid-template-columns: 30% 66%;
-    background-color: rgba(16, 44, 99, 0.03);
+  grid-template-columns: 30% 66%;
+  background-color: rgba(16, 44, 99, 0.03);
 
-    @media screen and (max-width: $large) {
-        grid-template-columns: 100%;
-    }
+  @media screen and (max-width: $large) {
+    grid-template-columns: 100%;
+  }
 }
 
 #trade-adjustment-assistance {
-    border-bottom: 5px solid $orange;
+  border-bottom: 5px solid $orange;
 }
 
 #comments {
-    grid-template-columns: 66% 30%;
-    background-color: rgba(248, 178, 38, 0.06);
+  grid-template-columns: 66% 30%;
+  background-color: rgba(248, 178, 38, 0.06);
 
-    @media screen and (max-width: $large) {
-        grid-template-columns: 100%;
-    }
+  @media screen and (max-width: $large) {
+    grid-template-columns: 100%;
+  }
 }

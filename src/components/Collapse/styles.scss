@@ -2,69 +2,69 @@
 @import "../mixins";
 
 .collapse {
-    width: 100%;
-    margin-bottom: 20px;
+  width: 100%;
+  margin-bottom: 20px;
 
-    .title {
-        @include transition(.3s);
-        font: 600 21px/1 $open-sans;
-        background-color: rgba(122, 122, 122, 0.16);
-        padding: 15px 20px;
-        color: $blue;
-        cursor: pointer;
+  .title {
+    @include transition(0.3s);
+    font: 600 21px/1 $open-sans;
+    background-color: rgba(122, 122, 122, 0.16);
+    padding: 15px 20px;
+    color: $blue;
+    cursor: pointer;
 
-        .icon {
-            display: inline-flex;
-            align-self: center;
+    .icon {
+      display: inline-flex;
+      align-self: center;
 
-            svg {
-                height: 1em;
-                width: 1em;
-                fill: currentColor;
-                top: .125em;
-                position: relative;
-            }
-        }
-
-        &:hover {
-            color: white;
-            background-color: $blue;
-        }
-
-        &.active {
-            background-color: $orange;
-            color: $blue;
-        }
+      svg {
+        height: 1em;
+        width: 1em;
+        fill: currentColor;
+        top: 0.125em;
+        position: relative;
+      }
     }
 
-    .content {
-        @include transition(.3s);
-        overflow: hidden;
-        height: auto;
-        border: 1px solid #e8e8f6;
-        border-top: none;
-        border-radius: 0 0 5px 5px;
-
-        .text {
-            padding: 30px;
-        }
-
-        h1,
-        a {
-            font: 700 20px/1.2 $open-sans;
-            color: #3e4349;
-            margin: 0 0 20px;
-            text-decoration: none;
-        }
-
-        p {
-            font-family: $open-sans;
-            color: #0c0c0c;
-        }
-
-        &.collapsed {
-            border: none;
-            max-height: 0;
-        }
+    &:hover {
+      color: white;
+      background-color: $blue;
     }
+
+    &.active {
+      background-color: $orange;
+      color: $blue;
+    }
+  }
+
+  .content {
+    @include transition(0.3s);
+    overflow: hidden;
+    height: auto;
+    border: 1px solid #e8e8f6;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+
+    .text {
+      padding: 30px;
+    }
+
+    h1,
+    a {
+      font: 700 20px/1.2 $open-sans;
+      color: #3e4349;
+      margin: 0 0 20px;
+      text-decoration: none;
+    }
+
+    p {
+      font-family: $open-sans;
+      color: #0c0c0c;
+    }
+
+    &.collapsed {
+      border: none;
+      max-height: 0;
+    }
+  }
 }
