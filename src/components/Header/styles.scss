@@ -27,19 +27,19 @@ nav#header {
         min-height: 240px;
     }
 
-    & img {
+    img {
         height: auto;
         width: 285px;
     }
 
-    & .nav-container {
+    .nav-container {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
         font-family: inherit;
 
-        & .nav-item {
+        .nav-item {
             @include transition(.4s);
             color: #2a302f;
             background-color: #fff;
@@ -59,7 +59,7 @@ nav#header {
                 background-color: $blue;
             }
 
-            & a {
+            a {
                 font-family: inherit;
                 color: inherit;
                 border-radius: inherit;

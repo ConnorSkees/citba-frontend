@@ -10,7 +10,7 @@ $small: 750px;
     position: relative;
     height: 80vh;
 
-    & .slide {
+    .slide {
         // parallax background
         background-attachment: fixed;
         background-position: center;
@@ -28,14 +28,15 @@ $small: 750px;
         transform: translateX(0%);
         transition: transform 1500ms ease 0s;
 
-        &.prev, &.next {
+        &.prev,
+        &.next {
             position: absolute;
         }
 
         &.prev {
             transform: translateX(-100%);
         }
-        
+
         &.next {
             transform: translateX(100%);
         }
@@ -46,12 +47,13 @@ $small: 750px;
 
         // arrows live inside the slide to stay centered
         // with it
-        & .arrow-container {
+        .arrow-container {
             display: table-cell;
             vertical-align: middle;
         }
 
-        & .left, & .right {
+        .left,
+        .right {
             @include transition(.3s);
             cursor: pointer;
             fill: white;
@@ -63,7 +65,7 @@ $small: 750px;
             }
         }
 
-        & .left {
+        .left {
             float: right;
         }
 
@@ -84,7 +86,7 @@ $small: 750px;
                 width: 90%;
             }
 
-            & h1 {
+            h1 {
                 font: 900 3.125rem/1.2 $open-sans;
                 text-transform: uppercase;
                 margin-bottom: 30px;
@@ -98,9 +100,9 @@ $small: 750px;
                 }
             }
 
-            & p {
+            p {
                 font: 400 1.5625rem/1.4 $playfair-display;
-                
+
                 @media screen and (max-width: $medium) {
                     font-size: 1.25rem;
                 }
@@ -111,7 +113,7 @@ $small: 750px;
             }
         }
 
-        & a {
+        a {
             @include transition(.3s);
             font: 500 1rem/1 $open-sans;
             display: inline-block;

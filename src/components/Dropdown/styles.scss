@@ -5,12 +5,12 @@
   cursor: pointer;
   display: inline-block;
   background-color: #fff;
-  
+
   font-size: 1rem;
   font-family: $open-sans;
   color: $blue;
-  
-  & .display {
+
+  .display {
     @include transition(.28s);
     outline: none;
     display: block;
@@ -20,17 +20,19 @@
     color: #2a302f;
     text-decoration: none;
 
-    &:hover, &:focus, &.showing {
+    &:hover,
+    &:focus,
+    &.showing {
       color: #fff;
       background-color: $blue;
     }
-    
-    & .icon {
+
+    .icon {
       display: inline-flex;
       align-self: center;
       margin-left: 4px;
 
-      & svg {
+      svg {
         height: 1em;
         width: 1em;
         fill: currentColor;
@@ -40,7 +42,7 @@
     }
   }
 
-  & .item-container {
+  .item-container {
     // Height is handled in Javascript
     @include transition(.56s);
     overflow: hidden;
@@ -50,7 +52,7 @@
     display: flex;
     flex-direction: column;
 
-    & .item {
+    .item {
       @include transition(.28s);
       margin: 0;
       position: relative;
@@ -66,7 +68,7 @@
       &.active {
         background-color: #f5f5f5;
       }
-      
+
       &:not(:first-of-type) {
         border-top: 1px solid #eee;
       }
@@ -75,7 +77,8 @@
         border-bottom: 1px solid $blue;
       }
 
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         color: $blue;
         background-color: #f1f1f1;
       }

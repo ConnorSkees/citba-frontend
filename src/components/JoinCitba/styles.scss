@@ -2,7 +2,7 @@
 @import "../mixins";
 
 .join-citba-banner {
-    & .background {
+    .background {
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
@@ -13,7 +13,7 @@
         display: table;
         width: 100%;
 
-        & .overlay {
+        .overlay {
             background-color: #172959;
             opacity: 0.7;
             width: 100%;
@@ -21,7 +21,7 @@
             position: absolute;
         }
 
-        & .content {
+        .content {
             text-align: center;
             position: relative;
             z-index: 1;
@@ -32,17 +32,17 @@
             margin-left: auto;
             margin-right: auto;
 
-            & h2 {
+            h2 {
                 font: 900 40px/1.2 $open-sans;
                 text-transform: uppercase;
             }
-    
-            & p {
+
+            p {
                 font: 400 19px/1.7rem $playfair-display;
                 padding: 20px;
             }
-    
-            & a {
+
+            a {
                 @include transition(.3s);
                 font: 700 20px/1 $open-sans;
                 cursor: pointer;
@@ -56,7 +56,8 @@
                 text-decoration: none;
                 display: inline-block;
 
-                &:hover, &:focus {
+                &:hover,
+                &:focus {
                     color: $blue;
                     background-color: $orange;
                 }

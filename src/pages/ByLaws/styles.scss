@@ -11,38 +11,39 @@
     max-width: 1200px;
     margin: auto;
 
-    & h1, & h2 {
+    h1,
+    h2 {
         font: 700 1.5rem/1.2 $open-sans;
         margin: 0 0 20px 0;
         color: #3e4349;
     }
 
-    & p {
+    p {
         width: 80%;
         margin: 0 0 20px 0;
         color: $gray;
     }
 
-    & ul {
+    ul {
         list-style: none;
         color: $gray;
         margin: 0 0 20px 0;
         padding: 0;
     }
 
-    & .divider-small {
+    .divider-small {
         width: 50%;
         height: 0;
         border-bottom: 1px solid $gray;
         margin: 20px 0 40px 0;
     }
 
-    & .footnote {
+    .footnote {
         margin: 0;
         width: 80%;
         text-align: center;
 
-        & p {
+        p {
             width: 100%;
         }
     }

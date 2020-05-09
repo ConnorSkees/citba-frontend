@@ -10,13 +10,13 @@ $small: 600px;
     align-items: center;
     padding: 20px;
 
-    & svg {
+    svg {
         fill: #ad1a1a;
         height: 60px;
         padding: 10px;
     }
 
-    & a {
+    a {
         font: 600 28px/1 $open-sans;
         text-decoration: none;
         color: $blue;
@@ -33,23 +33,23 @@ $small: 600px;
         margin: 20px 10%;
     }
 
-    & h2 {
+    h2 {
         font-weight: 600;
         color: $blue;
     }
 
-    & ul {
+    ul {
         columns: 4;
 
         @media screen and (max-width: $medium) {
             columns: 2;
         }
 
-        & li {
+        li {
             padding: 1px;
         }
 
-        & a {
+        a {
             color: #253a64;
             text-decoration: none;
             font-weight: 400;

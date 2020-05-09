@@ -10,7 +10,7 @@
     margin-top: 25px;
     max-width: 1500px;
 
-    & .form-container {
+    .form-container {
         width: 60%;
         display: grid;
         grid-template-columns: 33.33% 66.66%;
@@ -26,24 +26,25 @@
             font-size: .8rem;
         }
 
-        & .red {
+        .red {
             color: red;
             font-size: 75%;
         }
 
-        & .address {
+        .address {
             display: grid;
             grid-template-columns: 47.5% 47.5%;
             grid-column-gap: 5%;
             grid-row-gap: 10px;
+
             .address-line {
                 grid-column-start: 1;
                 grid-column-end: 3;
             }
         }
-        
-        & input,
-        & select {
+
+        input,
+        select {
             font: inherit;
             border-radius: 6px;
             border: 1px solid #dedee5;
@@ -55,7 +56,7 @@
             width: 100%;
         }
 
-        & input[type=checkbox] {
+        input[type=checkbox] {
             margin: 0 10px 10px 0;
             border-radius: 6px;
             border: 1px solid #ccc;
@@ -66,7 +67,7 @@
             cursor: pointer;
         }
 
-        & .form-divider {
+        .form-divider {
             grid-column-start: 1;
             grid-column-end: 3;
             border-bottom: 1px solid #bbb;
@@ -74,14 +75,14 @@
         }
     }
 
-    & .checkout {
+    .checkout {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 100%;
 
-        & .price {
+        .price {
             font: 500 19px/60px $open-sans;
             width: 60%;
             margin-top: 15px;
@@ -90,7 +91,7 @@
             color: $gray;
         }
 
-        & .submit {
+        .submit {
             @include transition(.28s);
             font: 700 1rem/1 $open-sans;
             cursor: pointer;
@@ -111,7 +112,7 @@
             &:hover {
                 background: #eee;
             }
-            
+
             &:active {
                 background: #d7dde6;
             }

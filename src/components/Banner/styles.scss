@@ -11,7 +11,7 @@
 
     display: table;
 
-    & .overlay {
+    .overlay {
         height: 100%;
         width: 100%;
         position: absolute;
@@ -19,7 +19,7 @@
         opacity: .7;
     }
 
-    & .text {
+    .text {
         color: #fff;
         position: relative;
         text-align: center;
@@ -30,18 +30,20 @@
         margin-left: auto;
         margin-right: auto;
 
-        & .title {
+        .title {
             font: 700 2.5rem/1.7 $open-sans;
             text-transform: uppercase;
+
             @media screen and (max-width: 450px) {
                 font-size: 2rem;
             }
+
             @media screen and (max-width: 360px) {
                 font-size: 1.5rem;
             }
         }
 
-        & .subtitle {
+        .subtitle {
             font: 400 19px/1 $playfair-display;
         }
     }

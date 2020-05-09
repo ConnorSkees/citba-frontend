@@ -30,15 +30,17 @@ $border: 1px solid #ccc;
             cursor: pointer;
             border-radius: 50%;
             max-width: 40px;
+
             &:hover {
                 background-color: #eee;
             }
         }
 
-        & .left {
+        .left {
             float: left;
         }
-        & .right {
+
+        .right {
             float: right;
         }
     }
@@ -82,7 +84,8 @@ $border: 1px solid #ccc;
 
                 &.not-this-month {
                     pointer-events: none;
-                    & span {
+
+                    span {
                         color: #ccc;
                         background-color: #fff;
                     }
@@ -102,7 +105,7 @@ $border: 1px solid #ccc;
                     cursor: default;
                     overflow-y: scroll;
 
-                    & svg {
+                    svg {
                         float: right;
                         cursor: pointer;
                     }
@@ -111,7 +114,7 @@ $border: 1px solid #ccc;
                         background-color: #fff;
                     }
 
-                    & span {
+                    span {
                         font-size: 1rem;
                         background-color: #fff;
 
@@ -120,12 +123,13 @@ $border: 1px solid #ccc;
                         }
                     }
 
-                    & h1 {
+                    h1 {
                         font-size: 2rem;
 
                         @media screen and (max-width: 500px) {
                             font-size: 1.5rem;
                         }
+
                         @media screen and (max-width: 400px) {
                             font-size: 1rem;
                         }
@@ -137,12 +141,12 @@ $border: 1px solid #ccc;
                     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
                 }
 
-                & h1 {
+                h1 {
                     font-size: 1rem;
                     cursor: pointer;
                 }
 
-                & span {
+                span {
                     font: 700 .8rem/1.2 $open-sans;
                     background-color: #f7f7f7;
                     color: #707070;

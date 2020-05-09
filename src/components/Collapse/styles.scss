@@ -5,7 +5,7 @@
     width: 100%;
     margin-bottom: 20px;
 
-    & .title {
+    .title {
         @include transition(.3s);
         font: 600 21px/1 $open-sans;
         background-color: rgba(122, 122, 122, 0.16);
@@ -17,7 +17,7 @@
             display: inline-flex;
             align-self: center;
 
-            & svg {
+            svg {
                 height: 1em;
                 width: 1em;
                 fill: currentColor;
@@ -37,26 +37,27 @@
         }
     }
 
-    & .content {
-        @include transition(.3s); 
+    .content {
+        @include transition(.3s);
         overflow: hidden;
         height: auto;
         border: 1px solid #e8e8f6;
         border-top: none;
         border-radius: 0 0 5px 5px;
 
-        & .text {
+        .text {
             padding: 30px;
         }
 
-        & h1, & a {
+        h1,
+        a {
             font: 700 20px/1.2 $open-sans;
             color: #3e4349;
             margin: 0 0 20px;
             text-decoration: none;
         }
 
-        & p {
+        p {
             font-family: $open-sans;
             color: #0c0c0c;
         }
