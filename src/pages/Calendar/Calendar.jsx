@@ -1,69 +1,82 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import "./styles.scss";
-import Header from 'components/Header';
-import Footer from 'components/Footer';
+import Header from "components/Header";
+import Footer from "components/Footer";
 import SVG from "react-inlinesvg";
 import ArrowRight from "assets/arrow-right.svg";
 import ArrowLeft from "assets/arrow-left.svg";
 import Close from "assets/minus.svg";
 
-const WEEKDAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+const WEEKDAYS = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
 
-const monthAsString = month => {
-    switch (month) {
-      case 0:
-      case "0":
-        return "January";
-      case 1:
-      case "1":
-        return "February";
-      case 2:
-      case "2":
-        return "March";
-      case 3:
-      case "3":
-        return "April";
-      case 4:
-      case "4":
-        return "May";
-      case 5:
-      case "5":
-        return "June";
-      case 6:
-      case "6":
-        return "July";
-      case 7:
-      case "7":
-        return "August";
-      case 8:
-      case "8":
-        return "September";
-      case 9:
-      case "9":
-        return "October";
-      case 10:
-      case "10":
-        return "November";
-      case 11:
-      case "11":
-        return "December";
-      default:
-        console.error("unkown month", month);
-        return "January";
-    }
-  };
+const monthAsString = (month) => {
+  switch (month) {
+    case 0:
+    case "0":
+      return "January";
+    case 1:
+    case "1":
+      return "February";
+    case 2:
+    case "2":
+      return "March";
+    case 3:
+    case "3":
+      return "April";
+    case 4:
+    case "4":
+      return "May";
+    case 5:
+    case "5":
+      return "June";
+    case 6:
+    case "6":
+      return "July";
+    case 7:
+    case "7":
+      return "August";
+    case 8:
+    case "8":
+      return "September";
+    case 9:
+    case "9":
+      return "October";
+    case 10:
+    case "10":
+      return "November";
+    case 11:
+    case "11":
+      return "December";
+    default:
+      console.error("unkown month", month);
+      return "January";
+  }
+};
 
 class Weekday extends Component {
   state = {
     poppedOut: false,
-  }
+  };
 
   render() {
     const { poppedOut } = this.state;
     let { month, day, events, not, row, col } = this.props;
     events = events || [];
     return (
-      <div style={{ msGridColumn: col, msGridRow: row }} className={`day${poppedOut ? " popped" : ""}${not ? " not-this-month" : "" }`}>
+      <div
+        style={{ msGridColumn: col, msGridRow: row }}
+        className={`day${poppedOut ? " popped" : ""}${
+          not ? " not-this-month" : ""
+        }`}
+      >
         {poppedOut ? (
           <SVG
             src={Close}
@@ -75,7 +88,7 @@ class Weekday extends Component {
         <span className="number">
           {poppedOut ? `${monthAsString(month)} ${day}` : day}
         </span>
-        {events.map(event => {
+        {events.map((event) => {
           return (
             <React.Fragment key={`Weekday-${month}-${day}`}>
               <h1 onClick={() => this.setState({ poppedOut: true })}>
@@ -105,7 +118,7 @@ class Pos {
     } else {
       this.col += 1;
     }
-  }
+  };
 }
 
 class Calendar extends Component {
@@ -113,13 +126,13 @@ class Calendar extends Component {
     year: new Date().getFullYear(),
     month: new Date().getMonth(),
     days: [],
-    events: {}
+    events: {},
   };
 
   minYear = 2015;
   maxYear = new Date().getFullYear() + 3;
 
-  getKey = date => {
+  getKey = (date) => {
     let month = `${date.getMonth() + 1}`.padStart(2, "0");
     let day = `${date.getDate()}`.padStart(2, "0");
     return `${date.getFullYear()}-${month}-${day}`;
@@ -197,10 +210,10 @@ class Calendar extends Component {
     const { year } = this.state;
     let events = {};
     await fetch(`/api/events/year/${year}`)
-      .then(res => res.json())
-      .then(data => {
+      .then((res) => res.json())
+      .then((data) => {
         data = data || [];
-        data.map(el => {
+        data.map((el) => {
           if (typeof events[el.day] === "undefined") {
             events[el.day] = [el];
           } else {
@@ -239,7 +252,7 @@ class Calendar extends Component {
     this.setState({ year, month }, this.getEvents);
   };
 
-  setYear = event => {
+  setYear = (event) => {
     const year = parseInt(event.target.value);
     if (year > this.maxYear || year < this.minYear) return;
     this.setState({ year }, this.getEvents);
@@ -264,9 +277,9 @@ class Calendar extends Component {
               <select
                 className="month-input"
                 value={month}
-                onChange={event => {
+                onChange={(event) => {
                   this.setState({
-                    month: parseInt(event.target.value)
+                    month: parseInt(event.target.value),
                   });
                 }}
               >
@@ -300,7 +313,11 @@ class Calendar extends Component {
             <div className="weekdays">
               {WEEKDAYS.map((day, idx) => (
                 // we must set `msGridColumn` here for compatibility with ie11
-                <div key={day} className="weekday" style={{ msGridColumn: `${idx+1}` }}>
+                <div
+                  key={day}
+                  className="weekday"
+                  style={{ msGridColumn: `${idx + 1}` }}
+                >
                   {day}
                 </div>
               ))}

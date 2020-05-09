@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import "./styles.scss"
+import "./styles.scss";
 
 class Item extends Component {
   state = {};
@@ -12,12 +12,12 @@ class Item extends Component {
   }
 
   focus() {
-   this.display.current.focus();
+    this.display.current.focus();
   }
 
   handleKeyPress = (e) => {
     let { children } = this.props;
-    switch(e.charCode){
+    switch (e.charCode) {
       case 13:
       case 32:
         this.props.onClick(children);
@@ -26,8 +26,8 @@ class Item extends Component {
         break;
       default:
         break;
-      }
-  }
+    }
+  };
 
   render() {
     const { path, text, cursorPos, index } = this.props;
@@ -47,7 +47,7 @@ class Item extends Component {
         {text}
       </Link>
     );
-  };
+  }
 }
 
 export default Item;

@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import SVG from "react-inlinesvg";
 import "./styles.scss";
 
 function calculateSize(activeTab) {
   Array.from(document.getElementsByClassName("inner-tab-content")).forEach(
-    element => {
+    (element) => {
       element.style.maxHeight = 0;
     }
   );
@@ -14,16 +14,16 @@ function calculateSize(activeTab) {
 
 class Tabs extends Component {
   state = {
-    activeTab: 0
+    activeTab: 0,
   };
 
-  changeTab = activeTab => {
-      calculateSize(activeTab);
-      this.setState({ activeTab });
+  changeTab = (activeTab) => {
+    calculateSize(activeTab);
+    this.setState({ activeTab });
   };
 
   componentDidMount() {
-      calculateSize(this.state.activeTab);
+    calculateSize(this.state.activeTab);
   }
 
   render() {

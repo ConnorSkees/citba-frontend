@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import Item from './Item';
+import React, { Component } from "react";
+import Item from "./Item";
 import ArrowDown from "assets/arrow-down.svg";
 import SVG from "react-inlinesvg";
-import "./styles.scss"
+import "./styles.scss";
 
 class Dropdown extends Component {
   constructor(props) {
@@ -22,19 +22,19 @@ class Dropdown extends Component {
   }
 
   focus() {
-   this.display.current.focus();
+    this.display.current.focus();
   }
 
   toggleShowItems = () => {
     let { showItems } = this.state;
-    this.setState({ showItems:!showItems });
-  }
+    this.setState({ showItems: !showItems });
+  };
 
   handleKeyDown = (e) => {
     let { cursorPos } = this.state;
     let { items } = this.props;
     // console.log(e.key, e.keyCode);
-    switch(e.keyCode){
+    switch (e.keyCode) {
       case 13:
       case 32:
         this.toggleShowItems();
@@ -44,7 +44,7 @@ class Dropdown extends Component {
         if (cursorPos < 0) {
           cursorPos = 0;
         }
-        this.setState({ cursorPos })
+        this.setState({ cursorPos });
         // console.log(cursorPos);
         break;
       case 40: // down arrow
@@ -52,18 +52,18 @@ class Dropdown extends Component {
         if (cursorPos > items.length) {
           cursorPos = 0;
         }
-        this.setState({ cursorPos })
+        this.setState({ cursorPos });
         // console.log(cursorPos);
         break;
       default:
         break;
-      }
-  }
+    }
+  };
 
   render() {
     let { cursorPos, showItems } = this.state;
     let { text, items } = this.props;
-    let height = items.length*36;
+    let height = items.length * 36;
     return (
       <div className={`dropdown-wrapper ${this.props.className || ""}`}>
         <div
@@ -71,7 +71,7 @@ class Dropdown extends Component {
           tabIndex={0}
           ref={this.display}
           title={text}
-          onKeyDown={e => this.handleKeyDown(e)}
+          onKeyDown={(e) => this.handleKeyDown(e)}
           onMouseEnter={this.toggleShowItems}
           onClick={this.toggleShowItems}
           className={`display ${showItems ? "showing" : ""}`}
@@ -99,7 +99,7 @@ class Dropdown extends Component {
         </div>
       </div>
     );
-  };
+  }
 }
 
 export default Dropdown;

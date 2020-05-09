@@ -1,29 +1,29 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import Plus from "assets/plus.svg";
 import Minus from "assets/minus.svg";
 import SVG from "react-inlinesvg";
 import "./styles.scss";
 
 function calculateSize(title) {
-    const el = document.getElementById(title);
-    if (el.style.maxHeight) {
-        el.style.maxHeight = null;
-    } else {
-        el.style.maxHeight = el.scrollHeight + "px";
-    } 
+  const el = document.getElementById(title);
+  if (el.style.maxHeight) {
+    el.style.maxHeight = null;
+  } else {
+    el.style.maxHeight = el.scrollHeight + "px";
+  }
 }
 
 class Collapse extends Component {
   state = {
-    isCollapsed: true
+    isCollapsed: true,
   };
 
   toggleCollapse = () => {
-      const { isCollapsed } = this.state;
-      const { title } = this.props;
-      calculateSize(title);
-      this.setState({ isCollapsed: !isCollapsed });
-  }
+    const { isCollapsed } = this.state;
+    const { title } = this.props;
+    calculateSize(title);
+    this.setState({ isCollapsed: !isCollapsed });
+  };
 
   render() {
     const { title, chair, cochairs, description, emails } = this.props;

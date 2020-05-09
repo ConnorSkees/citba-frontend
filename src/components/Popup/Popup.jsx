@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import "./styles.scss";
 import SVG from "react-inlinesvg";
 import CloseSVG from "assets/minus.svg";
@@ -11,32 +11,31 @@ const CARD_ELEMENT_OPTIONS = {
       fontSmoothing: "antialiased",
       fontSize: "16px",
       "::placeholder": {
-        color: "#aab7c4"
-      }
-    }
-  }
+        color: "#aab7c4",
+      },
+    },
+  },
 };
 
-
 function Input(props) {
-    const { field, onChange } = props;
-    let type = props.type || "text";
-    let pattern = props.pattern || ".*";
-    return (
-      <>
-        <label htmlFor={field}>
-          <span>{field}</span>
-          <input
-            type={type}
-            id={field}
-            name={field}
-            pattern={pattern}
-            onChange={onChange}
-            required
-          />
-        </label>
-      </>
-    );
+  const { field, onChange } = props;
+  let type = props.type || "text";
+  let pattern = props.pattern || ".*";
+  return (
+    <>
+      <label htmlFor={field}>
+        <span>{field}</span>
+        <input
+          type={type}
+          id={field}
+          name={field}
+          pattern={pattern}
+          onChange={onChange}
+          required
+        />
+      </label>
+    </>
+  );
 }
 
 class Popup extends Component {
@@ -44,7 +43,7 @@ class Popup extends Component {
     visible: false,
     amount: "$",
     name: "",
-    email: ""
+    email: "",
   };
 
   show = () => {
@@ -55,20 +54,20 @@ class Popup extends Component {
     this.setState({ visible: false });
   };
 
-  changeAmount = event => {
+  changeAmount = (event) => {
     let amount = `$${event.target.value.replace(/\D/g, "")}`;
     this.setState({ amount });
   };
 
-  changeName = event => {
+  changeName = (event) => {
     this.setState({ name: event.target.value });
   };
 
-  changeEmail = event => {
+  changeEmail = (event) => {
     this.setState({ email: event.target.value });
   };
 
-  handleSubmit = async event => {
+  handleSubmit = async (event) => {
     event.preventDefault();
     const { name, email, amount } = this.state;
     if (amount === "$") {
@@ -89,18 +88,18 @@ class Popup extends Component {
       method: "POST",
       mode: "same-origin",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
-      body: state
-    }).then(async res => {
+      body: state,
+    }).then(async (res) => {
       if (res.ok) {
         const result = await stripe.confirmCardPayment(await res.text(), {
           payment_method: {
             card: elements.getElement(CardElement),
             billing_details: {
-              name: this.state.name
-            }
-          }
+              name: this.state.name,
+            },
+          },
         });
 
         if (result.error) {
@@ -139,7 +138,12 @@ class Popup extends Component {
           <div className="content">
             <label>
               <span>Amount</span>
-              <input type="text" onChange={this.changeAmount} value={amount} required />
+              <input
+                type="text"
+                onChange={this.changeAmount}
+                value={amount}
+                required
+              />
             </label>
             <div className="row">
               <Input field="Name" onChange={this.changeName} />
@@ -171,4 +175,4 @@ export default function InjectedPopup(props) {
       )}
     </ElementsConsumer>
   );
-};
+}

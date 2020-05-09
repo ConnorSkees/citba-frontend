@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import Header from "components/Header";
 import "./styles.scss";
-import Footer from 'components/Footer/Footer';
-import DirectorCard from 'components/DirectorCard/DirectorCard';
+import Footer from "components/Footer/Footer";
+import DirectorCard from "components/DirectorCard/DirectorCard";
 import placeholder from "assets/board-of-directors/placeholder.png";
 import Frances_Hadfield from "assets/board-of-directors/Frances Hadfield.JPG";
 import Deanna_Okun from "assets/board-of-directors/Okun - Color Photo for Print.jpg";
@@ -12,7 +12,7 @@ import Emily_Beline from "assets/board-of-directors/E Beline.jpg";
 import Kathleen_Cannon from "assets/board-of-directors/cannon_k.jpg";
 import Dan_Pickard from "assets/board-of-directors/Pickard-Dan-Hero-1140px.jpg";
 import BoardRoom from "assets/board-room.jpg";
-import Banner from 'components/Banner/Banner';
+import Banner from "components/Banner/Banner";
 
 const DIRECTORS = [
   {
@@ -134,33 +134,33 @@ const DIRECTORS = [
     name: "LAWRENCE M. FRIEDMAN",
     position: "Past President",
     src: placeholder,
-  }
+  },
 ];
 
 class BoardOfDirectors extends Component {
-    state = {};
+  state = {};
 
-    render() {
-        return (
-          <>
-            <Header />
-            <Banner src={BoardRoom} text="Board of Directors" subtitle={[]}/>
-            <div className="board">
-              {DIRECTORS.map(dir => (
-                <DirectorCard
-                  name={dir.name}
-                  position={dir.position}
-                  major={dir.major}
-                  src={dir.src}
-                  key={dir.name+dir.position}
-                />
-              ))}
-            </div>
-            <div className="divider" />
-            <Footer />
-          </>
-        );
-    }
+  render() {
+    return (
+      <>
+        <Header />
+        <Banner src={BoardRoom} text="Board of Directors" subtitle={[]} />
+        <div className="board">
+          {DIRECTORS.map((dir) => (
+            <DirectorCard
+              name={dir.name}
+              position={dir.position}
+              major={dir.major}
+              src={dir.src}
+              key={dir.name + dir.position}
+            />
+          ))}
+        </div>
+        <div className="divider" />
+        <Footer />
+      </>
+    );
+  }
 }
 
 export default BoardOfDirectors;

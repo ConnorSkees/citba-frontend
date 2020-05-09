@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import "./styles.scss";
 import Header from "components/Header";
 import Footer from "components/Footer";
-import Tabs from 'components/Tabs';
+import Tabs from "components/Tabs";
 import Home from "assets/home.svg";
 import TwitterLogo from "assets/twitter-logo.svg";
-import Banner from 'components/Banner/Banner';
+import Banner from "components/Banner/Banner";
 import BannerBg from "assets/woman-typing.jpg";
 
 const TABS = [
@@ -72,7 +72,7 @@ const TABS = [
           </a>
         </li>
       </ul>
-    )
+    ),
   },
   {
     title: "Twitter Feeds",
@@ -122,29 +122,29 @@ const TABS = [
           <a href="http://twitter.com/TradeUnderSec">@TradeUnderSec</a>
         </li>
       </ul>
-    )
-  }
+    ),
+  },
 ];
 
 class Resources extends Component {
-    state = {};
+  state = {};
 
-    render() {
-        return (
-          <>
-            <Header />
-            <Banner
-              src={BannerBg}
-              text="Resources"
-              subtitle={[
-                "Useful resources for practitioners in customs and international trade law, and other interested persons."
-              ]}
-            />
-            <Tabs tabs={TABS} />
-            <Footer />
-          </>
-        );
-    }
+  render() {
+    return (
+      <>
+        <Header />
+        <Banner
+          src={BannerBg}
+          text="Resources"
+          subtitle={[
+            "Useful resources for practitioners in customs and international trade law, and other interested persons.",
+          ]}
+        />
+        <Tabs tabs={TABS} />
+        <Footer />
+      </>
+    );
+  }
 }
 
 export default Resources;

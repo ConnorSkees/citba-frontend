@@ -1,29 +1,29 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import "./styles.scss";
-import Header from 'components/Header/Header';
-import Footer from 'components/Footer/Footer';
+import Header from "components/Header/Header";
+import Footer from "components/Footer/Footer";
 import Recipient from "assets/richard-belanger-2019.jpg";
 import BannerBg from "assets/awards.jpg";
-import Popup from 'components/Popup';
+import Popup from "components/Popup";
 
 class Awards extends Component {
   state = {
-    showing: false
+    showing: false,
   };
 
-  scroll = event => {
+  scroll = (event) => {
     document.querySelector(event.target.getAttribute("href")).scrollIntoView({
-      behavior: "smooth"
+      behavior: "smooth",
     });
   };
 
   showPopup = () => {
-    this.setState({ showing: true })
-  }
-  
+    this.setState({ showing: true });
+  };
+
   hidePopup = () => {
-    this.setState({ showing: false })
-  }
+    this.setState({ showing: false });
+  };
 
   render() {
     return (
@@ -52,15 +52,33 @@ class Awards extends Component {
           <div className="recipients">
             <h1>Barbara S. Williams Lifetime Achievement Award</h1>
             <h2>Past Winners</h2>
-            <p>RICHARD M. BELANGER <span>2019</span></p>
-            <p>DONALD B. CAMERON, JR. <span>2018</span></p>
-            <p>JEANNE E. DAVIDSON <span>2018</span></p>
-            <p>TINA P. KIMBLE <span>2017</span></p>
-            <p>DAVID M. COHEN <span>2016</span></p>
-            <p>GAIL T. CUMINS <span>2016</span></p>
-            <p>WILLIAM D. OUTMAN III <span>2016</span></p>
-            <p>VALERIE A. SLATER <span>2016</span></p>
-            <p>TERENCE P. STEWART <span>2016</span></p>
+            <p>
+              RICHARD M. BELANGER <span>2019</span>
+            </p>
+            <p>
+              DONALD B. CAMERON, JR. <span>2018</span>
+            </p>
+            <p>
+              JEANNE E. DAVIDSON <span>2018</span>
+            </p>
+            <p>
+              TINA P. KIMBLE <span>2017</span>
+            </p>
+            <p>
+              DAVID M. COHEN <span>2016</span>
+            </p>
+            <p>
+              GAIL T. CUMINS <span>2016</span>
+            </p>
+            <p>
+              WILLIAM D. OUTMAN III <span>2016</span>
+            </p>
+            <p>
+              VALERIE A. SLATER <span>2016</span>
+            </p>
+            <p>
+              TERENCE P. STEWART <span>2016</span>
+            </p>
           </div>
           <div className="content">
             <div className="recipient-container">

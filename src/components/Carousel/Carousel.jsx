@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./styles.scss";
 
@@ -55,7 +55,7 @@ const SLIDES = [
     image_path: slidebg3,
     title: "Customs and International Trade Bar Association",
     text:
-      "Customs law, international trade law, and related matters since 1926."
+      "Customs law, international trade law, and related matters since 1926.",
   },
   {
     image_path: slidebg2,
@@ -66,111 +66,113 @@ const SLIDES = [
       <a href="https://www.law360.com/articles/1048428/new-citba-head-eager-to-lead-with-trade-in-spotlight">
         Read More
       </a>
-    )
+    ),
   },
   {
     image_path: slidebg1,
     title: "Join CITBA",
     text:
       "Membership is open to all attorneys admitted to practice in any country and law students",
-    extra: <Link to="/benefits/">Join Today!</Link>
-  }
+    extra: <Link to="/benefits/">Join Today!</Link>,
+  },
 ];
 
 const directions = {
   INCREMENT: 1,
   NONE: 0,
   DECREMENT: -1,
-}
+};
 
 class Carousel extends Component {
-    state = {
-        currentSlide: 0,
-        direction: directions.NONE,
-    };
+  state = {
+    currentSlide: 0,
+    direction: directions.NONE,
+  };
 
-    incrementSlide = () => {
-        let { currentSlide } = this.state;
-        if (currentSlide === SLIDES.length - 1) {
-          currentSlide = 0;
-        } else {
-          currentSlide++;
-        }
-        this.setState({
-          currentSlide,
-          direction: directions.INCREMENT
-        });
+  incrementSlide = () => {
+    let { currentSlide } = this.state;
+    if (currentSlide === SLIDES.length - 1) {
+      currentSlide = 0;
+    } else {
+      currentSlide++;
     }
+    this.setState({
+      currentSlide,
+      direction: directions.INCREMENT,
+    });
+  };
 
-    decrementSlide = () => {
-        let { currentSlide } = this.state;
-        if (currentSlide === 0) {
-            currentSlide = SLIDES.length - 1;
-        } else {
-            currentSlide--;
-        }
-        this.setState({ currentSlide, direction: directions.DECREMENT });
+  decrementSlide = () => {
+    let { currentSlide } = this.state;
+    if (currentSlide === 0) {
+      currentSlide = SLIDES.length - 1;
+    } else {
+      currentSlide--;
     }
+    this.setState({ currentSlide, direction: directions.DECREMENT });
+  };
 
-    prevSlideIdx = () => {
-        let { currentSlide } = this.state;
-        if (currentSlide === 0) {
-            currentSlide = SLIDES.length - 1;
-        } else {
-            currentSlide--;
-        }
-        return currentSlide;
+  prevSlideIdx = () => {
+    let { currentSlide } = this.state;
+    if (currentSlide === 0) {
+      currentSlide = SLIDES.length - 1;
+    } else {
+      currentSlide--;
     }
+    return currentSlide;
+  };
 
-    nextSlideIdx = () => {
-        let { currentSlide } = this.state;
-        if (currentSlide === SLIDES.length-1) {
-          currentSlide = 0;
-        } else {
-          currentSlide++;
-        }
-        return currentSlide;
+  nextSlideIdx = () => {
+    let { currentSlide } = this.state;
+    if (currentSlide === SLIDES.length - 1) {
+      currentSlide = 0;
+    } else {
+      currentSlide++;
     }
+    return currentSlide;
+  };
 
-    render() {
-        const prevSlideIdx = this.prevSlideIdx();
-        const currentSlideIdx = this.state.currentSlide;
-        const nextSlideIdx = this.nextSlideIdx();
-        const { direction } = this.state;
+  render() {
+    const prevSlideIdx = this.prevSlideIdx();
+    const currentSlideIdx = this.state.currentSlide;
+    const nextSlideIdx = this.nextSlideIdx();
+    const { direction } = this.state;
 
-        return (
-          <div className="carousel">
-            {SLIDES.map((s, idx) => {
-              switch (idx) {
-                case prevSlideIdx:
-                  return (
-                    <Slide
-                      slide={s}
-                      key={`${idx}`}
-                      carousel={this}
-                      className={`prev${direction === directions.DECREMENT ? " moving" : ""}`}
-                    />
-                  );
-                case currentSlideIdx:
-                  return <Slide slide={s} carousel={this} key={`${idx}`} />;
-                case nextSlideIdx:
-                  return (
-                    <Slide
-                      slide={s}
-                      carousel={this}
-                      key={`${idx}`}
-                      className={`next${
-                        direction === directions.INCREMENT ? " moving" : ""
-                      }`}
-                    />
-                  );
-                default:
-                  return "";
-              }
-            })}
-          </div>
-        );
-    }
+    return (
+      <div className="carousel">
+        {SLIDES.map((s, idx) => {
+          switch (idx) {
+            case prevSlideIdx:
+              return (
+                <Slide
+                  slide={s}
+                  key={`${idx}`}
+                  carousel={this}
+                  className={`prev${
+                    direction === directions.DECREMENT ? " moving" : ""
+                  }`}
+                />
+              );
+            case currentSlideIdx:
+              return <Slide slide={s} carousel={this} key={`${idx}`} />;
+            case nextSlideIdx:
+              return (
+                <Slide
+                  slide={s}
+                  carousel={this}
+                  key={`${idx}`}
+                  className={`next${
+                    direction === directions.INCREMENT ? " moving" : ""
+                  }`}
+                />
+              );
+            default:
+              return "";
+          }
+        })}
+      </div>
+    );
+  }
 }
 
 export default Carousel;
