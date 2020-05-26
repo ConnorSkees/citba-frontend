@@ -161,6 +161,14 @@ class Awards extends Component {
               regarding the requirements of the competition, please click here.
             </p>
             <p>
+            Mello, Jr., Daniel (2018, First Prize) – “TRIPs &amp; the Apparel Value Chain: 
+            Implications of Recent US Copyright Law Developments for International Trade”
+            </p>
+            <p>
+            Brewer, Elliott (2018, Second Prize) – “Closed Loophole: Investigating Forced 
+            Labor in Corporate Supply Chains Following the Repeal of the Consumptive Demand Exception”
+            </p>
+            <p>
               Carr, Kaitlyn (2017, First Prize) – “The International Enforcement
               of Mediated Settlement Agreements”
             </p>
