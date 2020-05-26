@@ -4,6 +4,10 @@ $large: 1000px;
 $medium: 600px;
 $small: 400px;
 
+* {
+  color: red !important;
+}
+
 #barbara-s-williams {
   grid-template-columns: 30% 66%;
   background-color: rgba(16, 44, 99, 0.03);
@@ -29,7 +33,8 @@ $small: 400px;
       letter-spacing: 0.2rem;
       margin: 0;
 
-      @media (min-width: $large) and (max-width: 1300px), (max-width: 400px) {
+      @media (min-width: $large) and (max-width: 1300px),
+      (max-width: 400px) {
         letter-spacing: normal;
       }
 
