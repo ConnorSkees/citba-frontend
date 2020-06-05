@@ -10,8 +10,8 @@ const COMMITTEES = [
   {
     title:
       "Continuing Legal Education and Professional Responsibility Committee",
-    emails: ["claudia.burke@usdoj.gov"],
-    cochair: "Claudia Burke",
+    emails: [""],
+    cochairs: ["Devin Sikes", "Mary Janes Alves"],
     description: (
       <p>
         The CLE/Professional Responsibility Committee fosters and promotes the
@@ -45,8 +45,8 @@ const COMMITTEES = [
   },
   {
     title: "International Trade Committee",
-    emails: ["okun@adduci.com", "Elizabeth Drake"],
-    cochairs: ["Deanna Okun", ""],
+    emails: ["okun@adduci.com", ""],
+    cochairs: ["Deanna Okun", "Elizabeth Drake"],
     description: (
       <p>
         The International Trade Committee monitors and obtains information
@@ -149,8 +149,8 @@ const COMMITTEES = [
   },
   {
     title: "Publications Committee",
-    emails: ["Christine_Henry@msn.com"],
-    chair: "Christine Martinez",
+    emails: ["Christine_Henry@msn.com", ""],
+    cochairs: ["Christine Martinez", "Stephanie Bell"],
     description: (
       <>
         <p>
@@ -180,7 +180,7 @@ const COMMITTEES = [
   {
     title: "Technology Committee",
     emails: [""],
-    chair: "Joshua E. Kurland",
+    cochairs: ["Joshua E. Kurland", ""],
     description: (
       <p>
         The Committee is responsible for maintenance and continuous improvement
