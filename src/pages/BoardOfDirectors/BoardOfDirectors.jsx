@@ -23,6 +23,7 @@ import Banner from "components/Banner/Banner";
 const DIRECTORS = [
   {
     name: "MATTHEW R. NICELY",
+    company: "Hughes Hubbard & Reed LLP",
     position: "president",
     major: true,
     src: Matthew_Nicely,
@@ -176,6 +177,7 @@ class BoardOfDirectors extends Component {
           {DIRECTORS.map((dir) => (
             <DirectorCard
               name={dir.name}
+              company={dir.company}
               position={dir.position}
               major={dir.major}
               src={dir.src}
