@@ -11,7 +11,7 @@ const COMMITTEES = [
     title:
       "Continuing Legal Education and Professional Responsibility Committee",
     emails: ["claudia.burke@usdoj.gov"],
-    chair: "Claudia Burke",
+    cochair: "Claudia Burke",
     description: (
       <p>
         The CLE/Professional Responsibility Committee fosters and promotes the
@@ -28,8 +28,8 @@ const COMMITTEES = [
   },
   {
     title: "Customs Committee",
-    emails: ["lwhanson@lwhansonassociates.com", "alexandra.b.hess@gmail.com"],
-    cochairs: ["Larry Hanson", "Alexandra Hess"],
+    emails: ["alexandra.b.hess@gmail.com", ""],
+    cochairs: ["Alexandra Hess", "John M. Peterson"],
     description: (
       <p>
         The Customs Committee monitors (1) the policies, procedures, and
@@ -45,8 +45,8 @@ const COMMITTEES = [
   },
   {
     title: "International Trade Committee",
-    emails: ["dpickard@wileyrein.com", "okun@adduci.com"],
-    cochairs: ["Daniel B. Pickard", "Deanna Okun"],
+    emails: ["okun@adduci.com", "Elizabeth Drake"],
+    cochairs: ["Deanna Okun", ""],
     description: (
       <p>
         The International Trade Committee monitors and obtains information
@@ -70,8 +70,8 @@ const COMMITTEES = [
   },
   {
     title: "Export Control Committee",
-    emails: ["rshapiro@thompsoncoburn.com", "spatari@barnesrichardson.com"],
-    cochairs: ["Robert Shapiro", "Shama K. Patari"],
+    emails: ["spatari@barnesrichardson.com", ""],
+    cochairs: ["Shama K. Patari", "Andrew Caridas"],
     description: (
       <p>
         The Export Control Committee (i) monitors and obtains information
@@ -89,8 +89,8 @@ const COMMITTEES = [
   },
   {
     title: "Judicial Selection Committee",
-    emails: ["wsjoberg@porterwright.com"],
-    chair: "William C. Sjoberg",
+    emails: [""],
+    chair: "Nancy Noonan",
     description: (
       <p>
         The Judicial Selection Committee inquires into the qualifications of
@@ -104,8 +104,8 @@ const COMMITTEES = [
   },
   {
     title: "Membership Committee",
-    emails: ["wmaloney@strtrade.com"],
-    chair: "William J. Maloney",
+    emails: [""],
+    chair: "Kristin Mowry",
     description: (
       <p>
         The Membership Committee ascertains the existence of the prescribed
@@ -136,8 +136,8 @@ const COMMITTEES = [
   },
   {
     title: "Liaison With Other Bar Associations Committee",
-    emails: ["joshua.e.kurland@usdoj.gov"],
-    chair: "Joshua E. Kurland",
+    emails: [""],
+    chair: "Rishi Gupta",
     description: (
       <p>
         The Committee helps to manage CITBA's collaboration with other
@@ -179,8 +179,8 @@ const COMMITTEES = [
   },
   {
     title: "Technology Committee",
-    emails: ["vmroczka@yahoo.com"],
-    chair: "Alice A. Kipel",
+    emails: [""],
+    chair: "Joshua E. Kurland",
     description: (
       <p>
         The Committee is responsible for maintenance and continuous improvement
@@ -210,8 +210,8 @@ const COMMITTEES = [
   },
   {
     title: "Young Lawyers Committee",
-    emails: ["emily.beline@fedex.com", "rrgupta@gmail.com"],
-    cochairs: ["Emily Beline", "Rishi Gupta"],
+    emails: ["", ""],
+    cochairs: ["Barbara Broussard", "Stephanie Hartman"],
     description: (
       <p>
         The Young Lawyers Committee provides opportunities for associates and

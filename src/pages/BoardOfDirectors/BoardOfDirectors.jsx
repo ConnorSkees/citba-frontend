@@ -4,50 +4,57 @@ import "./styles.scss";
 import Footer from "components/Footer/Footer";
 import DirectorCard from "components/DirectorCard/DirectorCard";
 import placeholder from "assets/board-of-directors/placeholder.png";
-import Frances_Hadfield from "assets/board-of-directors/Frances Hadfield.JPG";
-import Deanna_Okun from "assets/board-of-directors/Okun - Color Photo for Print.jpg";
-import Joshua_Kurland from "assets/board-of-directors/J Kurland.jpg";
-import Rishi_Gupta from "assets/board-of-directors/Gupta_Rishi.jpg";
-import Emily_Beline from "assets/board-of-directors/E Beline.jpg";
-import Kathleen_Cannon from "assets/board-of-directors/cannon_k.jpg";
-import Dan_Pickard from "assets/board-of-directors/Pickard-Dan-Hero-1140px.jpg";
+import Frances_Hadfield from "assets/board-of-directors/Hadfield.JPG";
+import Deanna_Okun from "assets/board-of-directors/Okun.jpg";
+import Joshua_Kurland from "assets/board-of-directors/Kurland.jpg";
+import Rishi_Gupta from "assets/board-of-directors/Gupta.jpg";
+import Emily_Beline from "assets/board-of-directors/Beline.jpg";
+import Kathleen_Cannon from "assets/board-of-directors/Cannon.jpg";
+import Matthew_Nicely from "assets/board-of-directors/Nicely.jpg";
+import Mark_Ludwikowski from "assets/board-of-directors/Ludwikowski.jpg";
+import Devin_Sikes from "assets/board-of-directors/Sikes.jpg";
+import Nancy_Noonan from "assets/board-of-directors/Noonan.jpg";
+import Andrew_Caridas from "assets/board-of-directors/Caridas.jpg";
+import Claudia_Burke from "assets/board-of-directors/Burke.jpg";
+import Elizabeth_Drake from "assets/board-of-directors/Drake.jpg";
 import BoardRoom from "assets/board-room.jpg";
 import Banner from "components/Banner/Banner";
 
 const DIRECTORS = [
   {
-    name: "KATHLEEN W. CANNON",
+    name: "MATTHEW R. NICELY",
     position: "president",
     major: true,
-    src: Kathleen_Cannon,
+    src: Matthew_Nicely,
   },
   {
-    name: "MATTHEW R. NICELY",
+    name: "MICHELE LYNCH",
     position: "vice president",
     major: true,
     src: placeholder,
   },
   {
-    name: "MICHELE LYNCH",
+    name: "EMILY BELINE",
     position: "secretary",
     major: true,
-    src: placeholder,
+    src: Emily_Beline,
   },
   {
-    name: "JOHN M. PETERSON",
+    name: "ALICE A. KIPEL",
     position: "treasurer",
     major: true,
     src: placeholder,
   },
   {
-    name: "CLAUDIA BURKE",
+    name: "DEVIN SIKES",
     position:
-      "Chair, Continuing Legal Education And Professional Responsibility Committee",
-    src: placeholder,
+      "Co-Chair, Continuing Legal Education And Professional Responsibility Committee",
+    src: Devin_Sikes,
   },
   {
-    name: "LARRY HANSON",
-    position: "Co-Chair, Customs Committee",
+    name: "MARY JANES ALVES",
+    position:
+      "Co-Chair, Continuing Legal Education And Professional Responsibility Committee",
     src: placeholder,
   },
   {
@@ -56,9 +63,9 @@ const DIRECTORS = [
     src: placeholder,
   },
   {
-    name: "DANIEL B. PICKARD",
-    position: "Co-Chair, International Trade Committee",
-    src: Dan_Pickard,
+    name: "JOHN M. PETERSON",
+    position: "Co-Chair, Customs Committee",
+    src: placeholder,
   },
   {
     name: "DEANNA OKUN",
@@ -66,44 +73,54 @@ const DIRECTORS = [
     src: Deanna_Okun,
   },
   {
-    name: "ROBERT SHAPIRO",
+    name: "ELIZABETH DRAKE",
+    position: "Co-Chair, International Trade Committee",
+    src: Elizabeth_Drake,
+  },
+  {
+    name: "SHARMA K. PATARI",
     position: "Co-Chair, Export Committee",
     src: placeholder,
   },
   {
-    name: "SHAMA K. PATARI",
+    name: "ANDREW CARIDAS",
     position: "Co-Chair, Export Committee",
-    src: placeholder,
+    src: Andrew_Caridas,
   },
   {
-    name: "WILLIAM C. SJOBERG",
+    name: "NANCY NOONAN",
     position: "Chair, Judicial Selection Committee",
-    src: placeholder,
+    src: Nancy_Noonan,
   },
   {
-    name: "JOSHUA E. KURLAND",
+    name: "RISHI GUPTA",
     position: "Chair, Liaison With Other Bar Associations Committee",
-    src: Joshua_Kurland,
+    src: Rishi_Gupta,
   },
   {
     name: "MARK LUDWIKOWSKI",
     position: "Chair, Meetings And Special Events Committee",
-    src: placeholder,
+    src: Mark_Ludwikowski,
   },
   {
-    name: "WILLIAM J. MALONEY",
+    name: "KRISTIN MOWRY",
     position: "Chair, Membership Committee",
     src: placeholder,
   },
   {
     name: "CHRISTINE MARTINEZ",
-    position: "Chair, Publications Committee",
+    position: "Co-Chair, Publications Committee",
     src: placeholder,
   },
   {
-    name: "ALICE A. KIPEL",
-    position: "Chair, Technology Committee",
+    name: "STEPHANIE BELL",
+    position: "Co-Chair, Publications Committee",
     src: placeholder,
+  },
+  {
+    name: "JOSHUA E. KURLAND",
+    position: "Co-Chair, Technology Committee",
+    src: Joshua_Kurland,
   },
   {
     name: "FRANCES P. HADFIELD",
@@ -116,24 +133,34 @@ const DIRECTORS = [
     src: placeholder,
   },
   {
-    name: "EMILY BELINE",
+    name: "BARBARA BROUSSARD",
     position: "Co-Chair, Young Lawyers Committee",
-    src: Emily_Beline,
+    src: placeholder,
   },
   {
-    name: "RISHI GUPTA",
+    name: "STEPHANIE HARTMAN",
     position: "Co-Chair, Young Lawyers Committee",
-    src: Rishi_Gupta,
+    src: placeholder,
   },
   {
-    name: "VACANT",
+    name: "TINA KIMBLE",
     position: "At Large Member",
     src: placeholder,
   },
   {
-    name: "LAWRENCE M. FRIEDMAN",
-    position: "Past President",
+    name: "CLAUDIA BURKE",
+    position: "At Large Member",
+    src: Claudia_Burke,
+  },
+  {
+    name: "JANE DEMPSEY",
+    position: "At Large Member",
     src: placeholder,
+  },
+  {
+    name: "KATHLEEN W. CANNON",
+    position: "Past President",
+    src: Kathleen_Cannon,
   },
 ];
 
