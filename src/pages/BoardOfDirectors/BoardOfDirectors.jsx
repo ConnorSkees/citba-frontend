@@ -53,7 +53,7 @@ const DIRECTORS = [
     src: Devin_Sikes,
   },
   {
-    name: "MARY JANES ALVES",
+    name: "MARY JANE ALVES",
     position:
       "Co-Chair, Continuing Legal Education And Professional Responsibility Committee",
     src: placeholder,

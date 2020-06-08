@@ -11,7 +11,7 @@ const COMMITTEES = [
     title:
       "Continuing Legal Education and Professional Responsibility Committee",
     emails: [""],
-    cochairs: ["Devin Sikes", "Mary Janes Alves"],
+    cochairs: ["Devin Sikes", "Mary Jane Alves"],
     description: (
       <p>
         The CLE/Professional Responsibility Committee fosters and promotes the
