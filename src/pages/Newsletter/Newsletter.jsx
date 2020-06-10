@@ -89,7 +89,7 @@ class Newsletter extends Component {
         <div className="current-issue">
           <SVG src={PDF} />
           <a href={`/newsletters/${r[0]}-${r[1]}.pdf`}>
-            Download the current CITBA Newsletter: {season(r[1])} {r[0]}
+            Download the current CITBA Newsletter: {season(r)}
           </a>
         </div>
         <div className="past-issues">
