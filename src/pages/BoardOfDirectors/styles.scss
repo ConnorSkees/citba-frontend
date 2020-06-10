@@ -6,7 +6,9 @@
 }
 
 .board {
+  -ms-grid-column: 25% 25% 25% 25%;
   @include grid-columns(4);
+  display: -ms-grid;
   display: grid;
   grid-column-gap: 30px;
   grid-row-gap: 30px;
@@ -14,12 +16,17 @@
   margin: 5% 10%;
 
   @media screen and (max-width: 1300px) {
+    -ms-grid-column: calc(100% / 3) calc(100% / 3) calc(100% / 3);
     @include grid-columns(3);
   }
+
   @media screen and (max-width: 900px) {
+    -ms-grid-column: 50% 50%;
     @include grid-columns(2);
   }
+
   @media screen and (max-width: 700px) {
+    -ms-grid-column: 100%;
     @include grid-columns(1);
   }
 }

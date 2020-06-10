@@ -165,26 +165,49 @@ const DIRECTORS = [
   },
 ];
 
+class Pos {
+  col = 1;
+  row = 1;
+
+  nextPos = () => {
+    if (this.col >= 4) {
+      this.col = 1;
+      this.row += 1;
+    } else {
+      this.col += 1;
+    }
+  };
+}
+
 class BoardOfDirectors extends Component {
   state = {};
+
+  renderDirectors() {
+    let directors = [];
+    let pos = new Pos();
+    for (const dir of DIRECTORS) {
+      directors.push(
+        <DirectorCard
+          style={{ msGridColumn: pos.col, msGridRow: pos.row }}
+          name={dir.name}
+          company={dir.company}
+          position={dir.position}
+          major={dir.major}
+          src={dir.src}
+          key={dir.name + dir.position}
+        />
+      );
+      pos.nextPos();
+    }
+    return directors;
+  }
 
   render() {
     return (
       <>
         <Header />
         <Banner src={BoardRoom} text="Board of Directors" subtitle={[]} />
-        <div className="board">
-          {DIRECTORS.map((dir) => (
-            <DirectorCard
-              name={dir.name}
-              company={dir.company}
-              position={dir.position}
-              major={dir.major}
-              src={dir.src}
-              key={dir.name + dir.position}
-            />
-          ))}
-        </div>
+        <div className="board">{this.renderDirectors()}</div>
         <div className="divider" />
         <Footer />
       </>

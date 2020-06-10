@@ -6,9 +6,9 @@ class DirectorCard extends Component {
   state = {};
 
   render() {
-    const { src, name, company, position, major } = this.props;
+    const { src, name, company, position, major, style } = this.props;
     return (
-      <section className="director-card">
+      <section className="director-card" style={style}>
         <img src={src} alt={name} className="head-shot" />
         <h2>{name}</h2>
         <h4 className="company">{company}</h4>

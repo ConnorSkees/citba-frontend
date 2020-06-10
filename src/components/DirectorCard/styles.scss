@@ -4,6 +4,12 @@
 .director-card {
   position: relative;
 
+  @media all and (-ms-high-contrast:none) {
+    &:not(:last-of-type) {
+      padding-right: 30px;
+    }
+  }
+
   .head-shot {
     width: 100%;
     height: auto;
@@ -45,7 +51,7 @@
   }
 
   .company {
-  margin-bottom: 0;
-  font-style: italic;
-}
+    margin-bottom: 0;
+    font-style: italic;
   }
+}
