@@ -10,8 +10,8 @@ const COMMITTEES = [
   {
     title:
       "Continuing Legal Education and Professional Responsibility Committee",
-    emails: [""],
-    cochairs: ["Devin Sikes", "Mary Jane Alves"],
+    emails: ["", ""],
+    chairs: ["Devin Sikes", "Mary Jane Alves"],
     description: (
       <p>
         The CLE/Professional Responsibility Committee fosters and promotes the
@@ -29,7 +29,7 @@ const COMMITTEES = [
   {
     title: "Customs Committee",
     emails: ["alexandra.b.hess@gmail.com", ""],
-    cochairs: ["Alexandra Hess", "John M. Peterson"],
+    chairs: ["Alexandra Hess", "John M. Peterson"],
     description: (
       <p>
         The Customs Committee monitors (1) the policies, procedures, and
@@ -46,7 +46,7 @@ const COMMITTEES = [
   {
     title: "International Trade Committee",
     emails: ["okun@adduci.com", ""],
-    cochairs: ["Deanna Okun", "Elizabeth Drake"],
+    chairs: ["Deanna Okun", "Elizabeth Drake"],
     description: (
       <p>
         The International Trade Committee monitors and obtains information
@@ -71,7 +71,7 @@ const COMMITTEES = [
   {
     title: "Export Control Committee",
     emails: ["spatari@barnesrichardson.com", ""],
-    cochairs: ["Shama K. Patari", "Andrew Caridas"],
+    chairs: ["Shama K. Patari", "Andrew Caridas"],
     description: (
       <p>
         The Export Control Committee (i) monitors and obtains information
@@ -90,7 +90,7 @@ const COMMITTEES = [
   {
     title: "Judicial Selection Committee",
     emails: [""],
-    chair: "Nancy Noonan",
+    chairs: ["Nancy Noonan"],
     description: (
       <p>
         The Judicial Selection Committee inquires into the qualifications of
@@ -105,7 +105,7 @@ const COMMITTEES = [
   {
     title: "Membership Committee",
     emails: [""],
-    chair: "Kristin Mowry",
+    chairs: ["Kristin Mowry"],
     description: (
       <p>
         The Membership Committee ascertains the existence of the prescribed
@@ -122,7 +122,7 @@ const COMMITTEES = [
   {
     title: "Meetings and Special Events Committee",
     emails: ["mludwikowski@ClarkHill.com"],
-    chair: "Mark Ludwikowski",
+    chairs: ["Mark Ludwikowski"],
     description: (
       <p>
         The Meetings and Special Events Committee arranges a suitable place for
@@ -137,7 +137,7 @@ const COMMITTEES = [
   {
     title: "Liaison With Other Bar Associations Committee",
     emails: [""],
-    chair: "Rishi Gupta",
+    chairs: ["Rishi Gupta"],
     description: (
       <p>
         The Committee helps to manage CITBA's collaboration with other
@@ -150,7 +150,7 @@ const COMMITTEES = [
   {
     title: "Publications Committee",
     emails: ["Christine_Henry@msn.com", ""],
-    cochairs: ["Christine Martinez", "Stephanie Bell"],
+    chairs: ["Christine Martinez", "Stephanie Bell"],
     description: (
       <>
         <p>
@@ -180,7 +180,7 @@ const COMMITTEES = [
   {
     title: "Technology Committee",
     emails: [""],
-    cochairs: ["Joshua E. Kurland", ""],
+    chairs: ["Joshua E. Kurland"],
     description: (
       <p>
         The Committee is responsible for maintenance and continuous improvement
@@ -193,7 +193,7 @@ const COMMITTEES = [
   {
     title: "Trial and Appellate Practice Committee",
     emails: ["FrancesPHadfield@gmail.com", "Justin.R.Miller@usdoj.gov"],
-    cochairs: ["Frances P. Hadfield", "Justin R. Miller"],
+    chairs: ["Frances P. Hadfield", "Justin R. Miller"],
     description: (
       <p>
         The Trial and Appellate Practice Committee monitors and obtains
@@ -211,7 +211,7 @@ const COMMITTEES = [
   {
     title: "Young Lawyers Committee",
     emails: ["", ""],
-    cochairs: ["Barbara Broussard", "Stephanie Hartman"],
+    chairs: ["Barbara Broussard", "Stephanie Hartman"],
     description: (
       <p>
         The Young Lawyers Committee provides opportunities for associates and
@@ -245,9 +245,8 @@ class Committees extends Component {
             {COMMITTEES.map((el) => (
               <Collapse
                 title={el.title}
-                chair={el.chair}
                 emails={el.emails}
-                cochairs={el.cochairs}
+                chairs={el.chairs}
                 description={el.description}
                 key={el.title}
               />

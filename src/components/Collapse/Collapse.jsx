@@ -25,8 +25,36 @@ class Collapse extends Component {
     this.setState({ isCollapsed: !isCollapsed });
   };
 
+  renderChairs() {
+    const { chairs, emails } = this.props;
+    if (chairs.length === 1) {
+      return (
+        <h1>
+          Chair: <a href={`mailto:${emails[0]}`}>{chairs[0]}</a>
+        </h1>
+      );
+    } else {
+      return (
+        <h1>
+          Co-Chairs:{" "}
+          {chairs
+            .map((chair, idx) => (
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href={`mailto:${emails[idx]}`}
+              >
+                {chair}
+              </a>
+            ))
+            .reduce((prev, curr) => [prev, " and ", curr])}
+        </h1>
+      );
+    }
+  }
+
   render() {
-    const { title, chair, cochairs, description, emails } = this.props;
+    const { title, description } = this.props;
     const { isCollapsed } = this.state;
     return (
       <div className="collapse">
@@ -41,16 +69,7 @@ class Collapse extends Component {
         </div>
         <div id={title} className={`content${isCollapsed ? " collapsed" : ""}`}>
           <div className="text">
-            {cochairs ? (
-              <h1>
-                Co-Chairs: <a href={`mailto:${emails[0]}`}>{cochairs[0]}</a> and{" "}
-                <a href={`mailto:${emails[1]}`}>{cochairs[1]}</a>
-              </h1>
-            ) : (
-              <h1>
-                Chair: <a href={`mailto:${emails[0]}`}>{chair}</a>
-              </h1>
-            )}
+            {this.renderChairs()}
             {description}
           </div>
         </div>
