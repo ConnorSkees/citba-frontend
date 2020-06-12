@@ -17,6 +17,8 @@ import Nancy_Noonan from "assets/board-of-directors/Noonan.jpg";
 import Andrew_Caridas from "assets/board-of-directors/Caridas.jpg";
 import Claudia_Burke from "assets/board-of-directors/Burke.jpg";
 import Elizabeth_Drake from "assets/board-of-directors/Drake.jpg";
+import Mary_Alves from "assets/board-of-directors/Alves.jpg";
+import Alex_Hess from "assets/board-of-directors/Hess.JPG";
 import BoardRoom from "assets/board-room.jpg";
 import Banner from "components/Banner/Banner";
 
@@ -30,136 +32,162 @@ const DIRECTORS = [
   },
   {
     name: "MICHELE LYNCH",
+    company: "U.S. Department of Commerce",
     position: "vice president",
     major: true,
     src: placeholder,
   },
   {
     name: "EMILY BELINE",
+    company: "FedEx",
     position: "secretary",
     major: true,
     src: Emily_Beline,
   },
   {
     name: "ALICE A. KIPEL",
+    company: "U.S. Customs and Border Protection",
     position: "treasurer",
     major: true,
     src: placeholder,
   },
   {
     name: "DEVIN SIKES",
+    company: "Akin Gump Strauss Hauer & Feld LLP",
     position:
       "Co-Chair, Continuing Legal Education And Professional Responsibility Committee",
     src: Devin_Sikes,
   },
   {
     name: "MARY JANE ALVES",
+    company: "Cassidy Levy Kent LLP",
     position:
       "Co-Chair, Continuing Legal Education And Professional Responsibility Committee",
-    src: placeholder,
+    src: Mary_Alves,
   },
   {
     name: "ALEXANDRA HESS",
+    company: "U.S. Customs and Border Protection",
     position: "Co-Chair, Customs Committee",
-    src: placeholder,
+    src: Alex_Hess,
   },
   {
     name: "JOHN M. PETERSON",
+    company: "Neville Peterson LLP",
     position: "Co-Chair, Customs Committee",
     src: placeholder,
   },
   {
     name: "DEANNA OKUN",
+    company: "Adduci Mastriani & Schaumberg LLP",
     position: "Co-Chair, International Trade Committee",
     src: Deanna_Okun,
   },
   {
     name: "ELIZABETH DRAKE",
+    company: "Schagrin Associates",
     position: "Co-Chair, International Trade Committee",
     src: Elizabeth_Drake,
   },
   {
     name: "SHARMA K. PATARI",
+    company: "Lenovo",
     position: "Co-Chair, Export Committee",
     src: placeholder,
   },
   {
     name: "ANDREW CARIDAS",
+    company: "Perkins Coie LLP",
     position: "Co-Chair, Export Committee",
     src: Andrew_Caridas,
   },
   {
     name: "NANCY NOONAN",
+    company: "Arent Fox LLP",
     position: "Chair, Judicial Selection Committee",
     src: Nancy_Noonan,
   },
   {
     name: "RISHI GUPTA",
+    company: "Covington & Burling LLP",
     position: "Chair, Liaison With Other Bar Associations Committee",
     src: Rishi_Gupta,
   },
   {
     name: "MARK LUDWIKOWSKI",
+    company: "Clark Hill PLC",
     position: "Chair, Meetings And Special Events Committee",
     src: Mark_Ludwikowski,
   },
   {
     name: "KRISTIN MOWRY",
+    company: "Mowry & Grimson, PLLC",
     position: "Chair, Membership Committee",
     src: placeholder,
   },
   {
     name: "CHRISTINE MARTINEZ",
+    company: "Precision Castparts Corp.",
     position: "Co-Chair, Publications Committee",
     src: placeholder,
   },
   {
     name: "STEPHANIE BELL",
+    company: "Wiley Rein LLP",
     position: "Co-Chair, Publications Committee",
     src: placeholder,
   },
   {
     name: "JOSHUA E. KURLAND",
+    company: "U.S. Department of Justice",
     position: "Co-Chair, Technology Committee",
     src: Joshua_Kurland,
   },
   {
     name: "FRANCES P. HADFIELD",
+    company: "Crowell & Moring LLP",
     position: "Co-Chair, Trial And Appellate Practice Committee",
     src: Frances_Hadfield,
   },
   {
     name: "JUSTIN R. MILLER",
+    company: "U.S. Department of Justice",
     position: "Co-Chair, Trial And Appellate Practice Committee",
     src: placeholder,
   },
   {
     name: "BARBARA BROUSSARD",
+    company: "Sidley Austin LLP",
     position: "Co-Chair, Young Lawyers Committee",
     src: placeholder,
   },
   {
     name: "STEPHANIE HARTMAN",
+    company: "Wilmer Hale LLP",
     position: "Co-Chair, Young Lawyers Committee",
     src: placeholder,
   },
   {
     name: "TINA KIMBLE",
+    company: "Tata Steel",
     position: "At Large Member",
     src: placeholder,
   },
   {
     name: "CLAUDIA BURKE",
+    company: "U.S. Department of Justice",
     position: "At Large Member",
     src: Claudia_Burke,
   },
   {
     name: "JANE DEMPSEY",
+    company: "U.S. International Trade Commission",
     position: "At Large Member",
     src: placeholder,
   },
   {
     name: "KATHLEEN W. CANNON",
+    company: "Kelley Drye & Warren LLP",
     position: "Past President",
     src: Kathleen_Cannon,
   },
