@@ -17,7 +17,6 @@ import Nancy_Noonan from "assets/board-of-directors/Noonan.jpg";
 import Andrew_Caridas from "assets/board-of-directors/Caridas.jpg";
 import Claudia_Burke from "assets/board-of-directors/Burke.jpg";
 import Elizabeth_Drake from "assets/board-of-directors/Drake.jpg";
-import Mary_Alves from "assets/board-of-directors/Alves.jpg";
 import Alex_Hess from "assets/board-of-directors/Hess.JPG";
 import BoardRoom from "assets/board-room.jpg";
 import Banner from "components/Banner/Banner";
@@ -63,7 +62,7 @@ const DIRECTORS = [
     company: "Cassidy Levy Kent LLP",
     position:
       "Co-Chair, Continuing Legal Education And Professional Responsibility Committee",
-    src: Mary_Alves,
+    src: placeholder,
   },
   {
     name: "ALEXANDRA HESS",
