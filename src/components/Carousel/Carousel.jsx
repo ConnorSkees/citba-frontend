@@ -59,11 +59,12 @@ const SLIDES = [
   },
   {
     image_path: slidebg2,
-    title: "Interview with Incoming President Kathleen Cannon",
+    title: "Interview with Incoming President Matthew R. Nicely",
     text:
-      "Incoming President Kathleen Cannon recently sat down with Alex Lawson and Law360 to discuss the prominent role that trade has had in the headlines recently and what her plans are for CITBA during her tenure.",
+      "Incoming President Matthew R. Nicely recently sat down with Alex Lawson and Law360 to discuss the prominent role that trade has had in the headlines recently and what his plans are for CITBA during his tenure.",
     extra: (
-      <a href="https://www.law360.com/articles/1048428/new-citba-head-eager-to-lead-with-trade-in-spotlight">
+      <a href="https://www.law360.com/internationaltrade/articles/1282417/new-trade-bar-chief-aims-for-unity-in-trump-era?nl_pk=c5b66db7-a8f0-4831-868b-4e21011c3775&utm_source=newsletter&utm_medium=email&utm_campaign=internationaltrade
+      ">
         Read More
       </a>
     ),

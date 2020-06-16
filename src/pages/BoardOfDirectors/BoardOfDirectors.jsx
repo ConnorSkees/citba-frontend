@@ -18,6 +18,8 @@ import Andrew_Caridas from "assets/board-of-directors/Caridas.jpg";
 import Claudia_Burke from "assets/board-of-directors/Burke.jpg";
 import Elizabeth_Drake from "assets/board-of-directors/Drake.jpg";
 import Alex_Hess from "assets/board-of-directors/Hess.JPG";
+import Kristin_Mowry from "assets/board-of-directors/Mowry.jpg";
+import Mary_Alves from "assets/board-of-directors/Alves.jpg";
 import BoardRoom from "assets/board-room.jpg";
 import Banner from "components/Banner/Banner";
 
@@ -62,7 +64,7 @@ const DIRECTORS = [
     company: "Cassidy Levy Kent LLP",
     position:
       "Co-Chair, Continuing Legal Education And Professional Responsibility Committee",
-    src: placeholder,
+    src: Mary_Alves,
   },
   {
     name: "ALEXANDRA HESS",
@@ -122,7 +124,7 @@ const DIRECTORS = [
     name: "KRISTIN MOWRY",
     company: "Mowry & Grimson, PLLC",
     position: "Chair, Membership Committee",
-    src: placeholder,
+    src: Kristin_Mowry,
   },
   {
     name: "CHRISTINE MARTINEZ",
