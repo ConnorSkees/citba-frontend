@@ -52,7 +52,7 @@ const NAV_ITEMS = [
     path: "/awards/",
   },
   {
-    text: "News & Events",
+    text: "Events & Newsletters",
     els: [
       {
         text: "Calendar",

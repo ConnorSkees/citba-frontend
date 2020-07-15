@@ -114,8 +114,8 @@ const TABS = [
           <a href="http://twitter.com/USTreasury">@USTreasury</a>
         </li>
         <li>
-          U.S. Secretary of State John Kerry –{" "}
-          <a href="http://twitter.com/JohnKerry">@JohnKerry</a>
+          U.S. Secretary of State Mike Pompeo –{" "}
+          <a href="https://twitter.com/SecPompeo">@SecPompeo</a>
         </li>
         <li>
           Under Secretary of Commerce for International Trade –{" "}
