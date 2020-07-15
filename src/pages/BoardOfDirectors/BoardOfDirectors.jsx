@@ -20,6 +20,7 @@ import Elizabeth_Drake from "assets/board-of-directors/Drake.jpg";
 import Alex_Hess from "assets/board-of-directors/Hess.JPG";
 import Kristin_Mowry from "assets/board-of-directors/Mowry.jpg";
 import Mary_Alves from "assets/board-of-directors/Alves.jpg";
+import Stepanie_Bell from "assets/board-of-directors/Bell.jpeg";
 import BoardRoom from "assets/board-room.jpg";
 import Banner from "components/Banner/Banner";
 
@@ -136,7 +137,7 @@ const DIRECTORS = [
     name: "STEPHANIE BELL",
     company: "Wiley Rein LLP",
     position: "Co-Chair, Publications Committee",
-    src: placeholder,
+    src: Stephanie_Bell,
   },
   {
     name: "JOSHUA E. KURLAND",
