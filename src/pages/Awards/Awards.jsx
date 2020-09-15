@@ -164,7 +164,7 @@ class Awards extends Component {
               Rotenberg, Julian (2020, First Prize) – “Privacy Before Trade: Assessing the WTO-Consistency of Privacy-Based Cross-Border Data Flows”
             </p>
             <p>
-              Whittington, Ryan (2020, Second Prize) – “Backdoor Mercantilism:  The Use and Abuse of National Security at the World Trade Organization”
+              Whittington, Ryan (2020, Second Prize) – “Backdoor Mercantilism: The Use and Abuse of National Security at the World Trade Organization”
             </p>
             <p>
             Mello, Jr., Daniel (2018, First Prize) – “TRIPs &amp; the Apparel Value Chain: 
