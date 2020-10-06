@@ -146,6 +146,12 @@ const DIRECTORS = [
     src: Joshua_Kurland,
   },
   {
+    name: "NAVPREET K. MOONGA",
+    company: "Barnes, Richardson & Colburn LLP",
+    position: "Co-Chair, Technology Committee",
+    src: placeholder,
+  }
+  {
     name: "FRANCES P. HADFIELD",
     company: "Crowell & Moring LLP",
     position: "Co-Chair, Trial And Appellate Practice Committee",
