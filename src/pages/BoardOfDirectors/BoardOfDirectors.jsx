@@ -150,7 +150,7 @@ const DIRECTORS = [
     company: "Barnes, Richardson & Colburn LLP",
     position: "Co-Chair, Technology Committee",
     src: placeholder,
-  }
+  },
   {
     name: "FRANCES P. HADFIELD",
     company: "Crowell & Moring LLP",
