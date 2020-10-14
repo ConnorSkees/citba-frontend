@@ -54,7 +54,7 @@ const DIRECTORS = [
     src: placeholder,
   },
   {
-    name: "DEVIN SIKES",
+    name: "DEVIN S. SIKES",
     company: "Akin Gump Strauss Hauer & Feld LLP",
     position:
       "Co-Chair, Continuing Legal Education And Professional Responsibility Committee",
