@@ -48,8 +48,6 @@ const COMMITTEES = [
     emails: ["okun@adduci.com", ""],
     chairs: ["Deanna Okun", "Elizabeth Drake"],
     description: (
-      <p>Vice-Chairs: Nithya Nagarajan (Husch Blackwell LLP), Heather Doherty (Nidec Motor Corporation), Melissa Brewer (Kelley Drye &amp; Warren LLP), 
-        Jay Campbell (White &amp; Case LLP)</p>
       <p>
         The International Trade Committee monitors and obtains information
         respecting the policies, procedures, and practices of federal agencies,
