@@ -48,6 +48,9 @@ const COMMITTEES = [
     emails: ["okun@adduci.com", ""],
     chairs: ["Deanna Okun", "Elizabeth Drake"],
     description: (
+      <p>Vice-Chairs: Nithya Nagarajan (Husch Blackwell LLP), Heather Doherty (Nidec Motor Corporation), Melissa Brewer (Kelley Drye &amp; Warren LLP), 
+        Jay Campbell (White &amp; Case LLP)
+      </p>
       <p>
         The International Trade Committee monitors and obtains information
         respecting the policies, procedures, and practices of federal agencies,
@@ -70,7 +73,7 @@ const COMMITTEES = [
   },
   {
     title: "Export Control Committee",
-    emails: ["spatari@barnesrichardson.com", ""],
+    emails: ["", ""],
     chairs: ["Shama K. Patari", "Andrew Caridas"],
     description: (
       <p>
@@ -180,7 +183,7 @@ const COMMITTEES = [
   {
     title: "Technology Committee",
     emails: [""],
-    chairs: ["Joshua E. Kurland"],
+    chairs: ["Joshua E. Kurland", "Navpreet K. Moonga"],
     description: (
       <p>
         The Committee is responsible for maintenance and continuous improvement
