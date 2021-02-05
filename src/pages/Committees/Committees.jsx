@@ -32,7 +32,7 @@ const COMMITTEES = [
     chairs: ["Alexandra Hess", "John M. Peterson"],
     description: (
       <>
-      <p>Vice-Chairs: Tesby Paul (Akin Gump LLP), Lydia Pardini (Adduci Mastriani &amp; Schaumberg LLP)
+      <p><strong>Vice-Chairs:</strong> Tesby Paul (Akin Gump LLP), Lydia Pardini (Adduci Mastriani &amp; Schaumberg LLP)
       </p>
       <p>
         The Customs Committee monitors (1) the policies, procedures, and
@@ -54,7 +54,7 @@ const COMMITTEES = [
     description: (
       <>
       <p>
-        Vice-Chairs: Nithya Nagarajan (Husch Blackwell LLP), Heather Doherty (Nidec Motor Corporation), Melissa Brewer (Kelley Drye &amp; Warren LLP), 
+      <strong>Vice-Chairs:</strong> Nithya Nagarajan (Husch Blackwell LLP), Heather Doherty (Nidec Motor Corporation), Melissa Brewer (Kelley Drye &amp; Warren LLP), 
         Jay Campbell (White &amp; Case LLP)
         </p>
       <p>
@@ -205,6 +205,9 @@ const COMMITTEES = [
     emails: ["FrancesPHadfield@gmail.com", "Justin.R.Miller@usdoj.gov"],
     chairs: ["Frances P. Hadfield", "Justin R. Miller"],
     description: (
+      <>
+      <p><strong>Vice-Chairs:</strong> Stephanie Hartman (Wilmer Hale LLP), Emma T. Hunter (U.S. Department of Commerce)
+      </p>
       <p>
         The Trial and Appellate Practice Committee monitors and obtains
         information respecting the policies, procedures, and practices of all
@@ -216,6 +219,7 @@ const COMMITTEES = [
         settlement proceedings in which presentations of the views of CITBA or
         participation of CITBA as <em>amicus curiae </em>might be warranted.
       </p>
+      </>
     ),
   },
   {
