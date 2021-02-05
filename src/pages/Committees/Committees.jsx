@@ -31,6 +31,9 @@ const COMMITTEES = [
     emails: ["alexandra.b.hess@gmail.com", ""],
     chairs: ["Alexandra Hess", "John M. Peterson"],
     description: (
+      <>
+      <p>Vice-Chairs: Tesby Paul (Akin Gump LLP), Lydia Pardini (Adduci Mastriani &amp; Schaumberg LLP)
+      </p>
       <p>
         The Customs Committee monitors (1) the policies, procedures, and
         practices of U.S. Customs and Border Protection and other federal
@@ -41,6 +44,7 @@ const COMMITTEES = [
         the World Customs Organization), in international agreements or in
         pending international negotiations.
       </p>
+      <>
     ),
   },
   {
@@ -48,6 +52,11 @@ const COMMITTEES = [
     emails: ["okun@adduci.com", ""],
     chairs: ["Deanna Okun", "Elizabeth Drake"],
     description: (
+      <>
+      <p>
+        Vice-Chairs: Nithya Nagarajan (Husch Blackwell LLP), Heather Doherty (Nidec Motor Corporation), Melissa Brewer (Kelley Drye &amp; Warren LLP), 
+        Jay Campbell (White &amp; Case LLP)
+        </p>
       <p>
         The International Trade Committee monitors and obtains information
         respecting the policies, procedures, and practices of federal agencies,
@@ -66,6 +75,7 @@ const COMMITTEES = [
         not limited to the World Trade Organization) in international agreements
         or in pending international negotiations.
       </p>
+      <>
     ),
   },
   {
