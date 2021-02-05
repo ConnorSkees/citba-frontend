@@ -44,7 +44,7 @@ const COMMITTEES = [
         the World Customs Organization), in international agreements or in
         pending international negotiations.
       </p>
-      <>
+      </>
     ),
   },
   {
@@ -75,7 +75,7 @@ const COMMITTEES = [
         not limited to the World Trade Organization) in international agreements
         or in pending international negotiations.
       </p>
-      <>
+      </>
     ),
   },
   {
