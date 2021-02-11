@@ -83,6 +83,10 @@ const COMMITTEES = [
     emails: ["", ""],
     chairs: ["Shama K. Patari", "Andrew Caridas"],
     description: (
+      <>
+      <p><strong>Vice-Chairs:</strong> Stephana J. Henry (Akin Gump LLP), Jamila Cambridge (Akin Gump LLP), Aman Kakar (Arent Fox LLP), 
+      Ulrika K. Swanson (Cassidy Levy Kent)
+      </p>
       <p>
         The Export Control Committee (i) monitors and obtains information
         regarding the policies, procedures, and practices of those federal
@@ -95,6 +99,7 @@ const COMMITTEES = [
         (iv) organizes seminars and meetings for members of the bar at which
         speakers discuss topics of export control interest.
       </p>
+      </>
     ),
   },
   {

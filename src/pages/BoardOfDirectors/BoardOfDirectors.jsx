@@ -21,7 +21,7 @@ import Alex_Hess from "assets/board-of-directors/Hess.JPG";
 import Kristin_Mowry from "assets/board-of-directors/Mowry.jpg";
 import Mary_Alves from "assets/board-of-directors/Alves.jpg";
 import Stephanie_Bell from "assets/board-of-directors/Bell.jpeg";
-import Justin_Miller from "assets/board-of-directors/Miller.jpg";
+import Justin_Miller from "assets/board-of-directors/JMiller.jpg";
 import BoardRoom from "assets/board-room.jpg";
 import Banner from "components/Banner/Banner";
 
