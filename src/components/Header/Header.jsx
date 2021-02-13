@@ -24,6 +24,10 @@ const NAV_ITEMS = [
         text: "By-laws",
         path: "/by-laws/",
       },
+      {
+        text: "Diversity Pledge",
+        path: "/diversitypledge/",
+      },
     ],
   },
   {

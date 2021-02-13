@@ -1,0 +1,50 @@
+@import "../../components/variables";
+
+.diversitypledge {
+  font-family: $open-sans;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 40px 0;
+  border-bottom: 5px solid $orange;
+  max-width: 1200px;
+  margin: auto;
+
+  h1,
+  h2 {
+    font: 700 1.5rem/1.2 $open-sans;
+    margin: 0 0 20px 0;
+    color: #3e4349;
+  }
+
+  p {
+    width: 80%;
+    margin: 0 0 20px 0;
+    color: $gray;
+  }
+
+  ul {
+    list-style: none;
+    color: $gray;
+    margin: 0 0 20px 0;
+    padding: 0;
+  }
+
+  .divider-small {
+    width: 50%;
+    height: 0;
+    border-bottom: 1px solid $gray;
+    margin: 20px 0 40px 0;
+  }
+
+  .footnote {
+    margin: 0;
+    width: 80%;
+    text-align: center;
+
+    p {
+      width: 100%;
+    }
+  }
+}

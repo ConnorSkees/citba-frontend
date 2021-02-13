@@ -6,6 +6,7 @@ import About from "pages/About";
 import BoardOfDirectors from "pages/BoardOfDirectors";
 import Committees from "pages/Committees";
 import ByLaws from "pages/ByLaws";
+import DiversityPledge from "pages/DiversityPledge";
 
 import Membership from "pages/MembershipBenefits";
 import Join from "pages/Join";
@@ -35,6 +36,7 @@ function App() {
           <Route path="/board-of-directors/" component={BoardOfDirectors} />
           <Route path="/committees/" component={Committees} />
           <Route path="/by-laws/" component={ByLaws} />
+          <Route path="/diversitypledge/" component={DiversityPledge} />
 
           <Route path="/benefits/" component={Membership} />
           <Route path="/join/" component={Join} />
