@@ -28,7 +28,7 @@ import Banner from "components/Banner/Banner";
 const DIRECTORS = [
   {
     name: "MATTHEW R. NICELY",
-    company: "Hughes Hubbard & Reed LLP",
+    company: "Akin Gump Strauss Hauer & Feld LLP",
     position: "president",
     major: true,
     src: Matthew_Nicely,
