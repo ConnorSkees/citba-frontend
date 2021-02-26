@@ -93,7 +93,7 @@ const DIRECTORS = [
     src: Elizabeth_Drake,
   },
   {
-    name: "SHARMA K. PATARI",
+    name: "SHAMA K. PATARI",
     company: "Lenovo",
     position: "Co-Chair, Export Committee",
     src: placeholder,

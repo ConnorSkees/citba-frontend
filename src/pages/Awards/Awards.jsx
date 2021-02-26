@@ -145,7 +145,7 @@ class Awards extends Component {
             </ul>
             <p>
               Nominees may be CITBA members or nonmembers. Sitting members of
-              the CITBA Nomination Committee or CITBA Board may not be nominated
+              the CITBA Nomination Committee or CITBA Board may not be nominated.
             </p>
           </div>
         </section>
@@ -158,7 +158,8 @@ class Awards extends Component {
               and international trade law. The competition honors the memory of
               Andrew Vance, past president of CITBA and a distinguished
               practitioner and public servant. To get additional information
-              regarding the requirements of the competition, please click here.
+              regarding the requirements of the competition, please click <a href="https://www.law.miami.edu/vance-memorial-writing-competition
+"><strong>here.</strong></a> 
             </p>
             <p>
               Rotenberg, Julian (2020, First Prize) – “Privacy Before Trade: Assessing the WTO-Consistency of Privacy-Based Cross-Border Data Flows”
