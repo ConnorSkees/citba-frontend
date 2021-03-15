@@ -9,7 +9,7 @@ function Event(props) {
   const { title, subtitle, content } = props;
   return (
     <div className="event">
-      <h1>{title}</h1>
+      <h1 id={title}>{title}</h1>
       <h2>{subtitle}</h2>
       <div
         dangerouslySetInnerHTML={{ __html: content }}

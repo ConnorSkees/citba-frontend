@@ -76,7 +76,7 @@ class DiversityPledge extends Component {
             <p>Join our next panel discussion on <a href="https://www.eventbrite.com/e/careers-internships-in-international-trade-customs-and-export-controls-tickets-140311566673">
               <strong>Careers &amp; Internships in International Trade, Customs, and Export Controls Law</strong></a> and access bios of all our speakers <a href="/citba-static/CITBA-ASIL - Speakers for Careers in Trade.pdf">here</a>.</p>
 
-            <p>Access information regarding our Diversity Scholarship with ASIL <a href="/citba-static/Diversity Scholarship ASIL CITBA March 20213.docx">here</a>.</p>
+            <p>Access information regarding our Diversity Scholarship with ASIL <a href="/citba-static/Diversity Scholarship ASIL CITBA March 20213.docx">here</a>, and for additional materials visit our <a href="/events#Diversity%20Scholarship%20with%20CITBA%20and%20ASIL">Events and Announcements page</a>.</p>
           </div>
         </div>
         <Footer />
