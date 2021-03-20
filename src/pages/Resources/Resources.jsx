@@ -71,6 +71,11 @@ const TABS = [
             Congress web site
           </a>
         </li>
+        <li>
+          <a href="/citba-static/Trade Practice Areas.pdf">
+            CITBA’s summary of International Trade practice areas for young lawyers and law students
+          </a>
+        </li>
       </ul>
     ),
   },
