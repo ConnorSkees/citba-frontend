@@ -5,8 +5,7 @@ import Footer from "components/Footer";
 import Banner from "components/Banner";
 import BannerBg from "assets/man-writing.jpg";
 
-function Event(props) {
-  const { title, subtitle, content } = props;
+function Event({ title, subtitle, content }) {
   return (
     <div className="event">
       <h1 id={title}>{title}</h1>

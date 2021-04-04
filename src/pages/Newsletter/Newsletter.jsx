@@ -52,6 +52,7 @@ const NEWSLETTERS = [
   [2020, 2],
   [2020, 3],
   [2020, 4],
+  [2021, 1],
 ];
 
 const season = (date) => {

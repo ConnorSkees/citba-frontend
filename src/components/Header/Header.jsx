@@ -67,6 +67,10 @@ const NAV_ITEMS = [
         path: "/events/",
       },
       {
+        text: "Past Event Recordings",
+        path: "/past-event-recordings/",
+      },
+      {
         text: "CITBA Newsletter",
         path: "/newsletter/",
       },
@@ -74,7 +78,16 @@ const NAV_ITEMS = [
   },
   {
     text: "Resources",
-    path: "/resources/",
+    els: [
+      {
+        text: "Resources",
+        path: "/resources/"
+      },
+      {
+        text: "Careers in International Trade",
+        path: "/careers-in-international-trade/"
+      }
+    ],
   },
 ];
 

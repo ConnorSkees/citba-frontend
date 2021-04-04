@@ -14,11 +14,13 @@ import RenewMembership from "pages/RenewMembership";
 
 import Calendar from "pages/Calendar";
 import Events from "pages/Events";
+import PastEventRecordings from "pages/PastEventRecordings";
 import Newsletter from "pages/Newsletter";
 
 import Policy from "pages/Policy";
 import Awards from "pages/Awards";
 import Resources from "pages/Resources";
+import CareersInInternationalTrade from "pages/CareersInInternationalTrade";
 
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
@@ -49,8 +51,10 @@ function App() {
           <Route path="/calendar/" component={Calendar} />
           <Route path="/events/" component={Events} />
           <Route path="/newsletter/" component={Newsletter} />
+          <Route path="/past-event-recordings/" component={PastEventRecordings} />
 
           <Route path="/resources/" component={Resources} />
+          <Route path="/careers-in-international-trade/" component={CareersInInternationalTrade} />
         </Router>
       </div>
     </Elements>

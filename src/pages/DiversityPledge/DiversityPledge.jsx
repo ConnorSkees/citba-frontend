@@ -69,8 +69,8 @@ class DiversityPledge extends Component {
           <div className="divider-small" />
           <div className="footnote">
             <p>
-              Watch our event from 2020 promoting racial justice through opportunity and advancement in our Industry:
-              <a href="https://www.youtube.com/watch?v=wnrdDABh17U"><strong>{ }Black Voices in Trade.</strong></a>
+              Watch our event from 2020 promoting racial justice through opportunity and advancement in our Industry:{' '}
+              <a href="https://www.youtube.com/watch?v=wnrdDABh17U"><strong>Black Voices in Trade.</strong></a>
             </p>
 
             <p>Watch our recent event on <a href="https://www.youtube.com/watch?v=sTBqaWia9vs">
