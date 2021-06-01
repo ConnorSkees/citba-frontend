@@ -148,7 +148,7 @@ const DIRECTORS = [
   },
   {
     name: "NAVPREET K. MOONGA",
-    company: "Barnes, Richardson & Colburn LLP",
+    company: "Dechert LLP",
     position: "Co-Chair, Technology Committee",
     src: placeholder,
   },
