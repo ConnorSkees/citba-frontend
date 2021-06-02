@@ -46,6 +46,9 @@ class Awards extends Component {
             <button href="#andrew-p-vance" onClick={this.scroll}>
               Andrew P. Vance Memorial Writing Competition
             </button>
+            <button href="#summer-fellowship" onClick={this.scroll}>
+              CITBA/ASIL Summer Fellowship Awards
+            </button>
           </div>
         </section>
         <section id="barbara-s-williams" className="award-section">
@@ -159,7 +162,7 @@ class Awards extends Component {
               Andrew Vance, past president of CITBA and a distinguished
               practitioner and public servant. To get additional information
               regarding the requirements of the competition, please click <a href="https://www.law.miami.edu/vance-memorial-writing-competition
-"><strong>here.</strong></a> 
+"><strong>here.</strong></a>
             </p>
             <p>
               Rotenberg, Julian (2020, First Prize) – “Privacy Before Trade: Assessing the WTO-Consistency of Privacy-Based Cross-Border Data Flows”
@@ -168,12 +171,12 @@ class Awards extends Component {
               Whittington, Ryan (2020, Second Prize) – “Backdoor Mercantilism: The Use and Abuse of National Security at the World Trade Organization”
             </p>
             <p>
-            Mello, Jr., Daniel (2018, First Prize) – “TRIPs &amp; the Apparel Value Chain: 
-            Implications of Recent US Copyright Law Developments for International Trade”
+              Mello, Jr., Daniel (2018, First Prize) – “TRIPs &amp; the Apparel Value Chain:
+              Implications of Recent US Copyright Law Developments for International Trade”
             </p>
             <p>
-            Brewer, Elliott (2018, Second Prize) – “Closed Loophole: Investigating Forced 
-            Labor in Corporate Supply Chains Following the Repeal of the Consumptive Demand Exception”
+              Brewer, Elliott (2018, Second Prize) – “Closed Loophole: Investigating Forced
+              Labor in Corporate Supply Chains Following the Repeal of the Consumptive Demand Exception”
             </p>
             <p>
               Carr, Kaitlyn (2017, First Prize) – “The International Enforcement
@@ -372,6 +375,33 @@ class Awards extends Component {
             </div>
           </div>
         </section>
+
+        <section id="summer-fellowship" className="barbara-s-williams award-section">
+          <div className="recipients">
+            <h1>RECIPIENTS OF CITBA/ASIL FIRST SUMMER FELLOWSHIP AWARDS</h1>
+          </div>
+          <div className="content">
+            <p>
+              The Customs and international Trade Bar Association (CITBA) is
+              honored to announce the three recipients of its Summer Fellowship
+              Awards.  The Summer Fellowship Awards program is a new program
+              cosponsored by the Diversity, Equity &amp; Inclusion Committee of
+              CITBA and the International Economic Law Interest Group of the American
+              Society of International Law (ASIL).  The fellowships provide financial
+              support for law students from underrepresented groups to enable them to
+              acquire summer work experience practicing international trade and economic
+              law with a government agency, public interest organization, or
+              international organization.  This year's inaugural winners are <strong>Cheyenne
+              Kleinberg</strong> of the Michigan Law, <strong>Julio Ruiz-Gomez</strong> of
+              Fordham Law, and <strong>William White</strong> of Brooklyn Law. Congratulations to all three winners!
+              We look forward to welcoming these students to the field.  Kleinberg will
+              intern with CIT Judge Katzmann, White with CIT Judge Kelly, and Ruiz-Gomez
+              with the DOJ International Trade Field Office in New York.
+            </p>
+          </div>
+        </section>
+
+
         <Footer />
       </>
     );
