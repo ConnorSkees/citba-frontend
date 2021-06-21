@@ -1,2 +1,18 @@
 @import "../../components/variables";
 
+.careers-in-international-trade {
+  font-family: $open-sans;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 40px 0;
+  border-bottom: 5px solid $orange;
+  max-width: 1200px;
+  margin: auto;
+
+  p {
+    font: 400 1rem/1.7 $open-sans;
+    color: #000000;
+  }
+}

@@ -32,18 +32,20 @@ const COMMITTEES = [
     chairs: ["Alexandra Hess", "John M. Peterson"],
     description: (
       <>
-      <p><strong>Vice-Chairs:</strong> Tesby Paul (Akin Gump LLP), Lydia Pardini (Adduci Mastriani &amp; Schaumberg LLP)
-      </p>
-      <p>
-        The Customs Committee monitors (1) the policies, procedures, and
-        practices of U.S. Customs and Border Protection and other federal
-        agencies involved in regulating imports, (2) proposed legislation and
-        regulations affecting the administration of the customs and tariff laws
-        and regulations, and (3) customs and tariff matters raised under the
-        auspices of international organizations (including but not limited to
-        the World Customs Organization), in international agreements or in
-        pending international negotiations.
-      </p>
+        <p>
+          <strong>Vice-Chairs:</strong> Tesby Paul (Akin Gump LLP), Lydia
+          Pardini (Adduci Mastriani &amp; Schaumberg LLP)
+        </p>
+        <p>
+          The Customs Committee monitors (1) the policies, procedures, and
+          practices of U.S. Customs and Border Protection and other federal
+          agencies involved in regulating imports, (2) proposed legislation and
+          regulations affecting the administration of the customs and tariff
+          laws and regulations, and (3) customs and tariff matters raised under
+          the auspices of international organizations (including but not limited
+          to the World Customs Organization), in international agreements or in
+          pending international negotiations.
+        </p>
       </>
     ),
   },
@@ -53,28 +55,29 @@ const COMMITTEES = [
     chairs: ["Deanna Okun", "Elizabeth Drake"],
     description: (
       <>
-      <p>
-      <strong>Vice-Chairs:</strong> Nithya Nagarajan (Husch Blackwell LLP), Heather Doherty (Nidec Motor Corporation), Melissa Brewer (Kelley Drye &amp; Warren LLP), 
-        Jay Campbell (White &amp; Case LLP)
+        <p>
+          <strong>Vice-Chairs:</strong> Nithya Nagarajan (Husch Blackwell LLP),
+          Heather Doherty (Nidec Motor Corporation), Melissa Brewer (Kelley Drye
+          &amp; Warren LLP), Jay Campbell (White &amp; Case LLP)
         </p>
-      <p>
-        The International Trade Committee monitors and obtains information
-        respecting the policies, procedures, and practices of federal agencies,
-        as well as proposed legislation and regulations, affecting the
-        administration of the international trade laws and regulations, with
-        special emphasis on trade rules and remedies (e.g., antidumping,
-        countervailing duty, and other unfair trade remedies, safeguards or
-        escape clause provisions, and trade adjustment assistance) and
-        international dispute resolution in trade matters. These administrative
-        agencies include, but are not limited to, the United States
-        International Trade Commission, the International Trade Administration
-        of the U.S. Department of Commerce, the United States Trade
-        Representative, and United States Customs and Border Protection. The
-        Committee also monitors and obtains information respecting the foregoing
-        matters under the auspices of international organizations (including but
-        not limited to the World Trade Organization) in international agreements
-        or in pending international negotiations.
-      </p>
+        <p>
+          The International Trade Committee monitors and obtains information
+          respecting the policies, procedures, and practices of federal
+          agencies, as well as proposed legislation and regulations, affecting
+          the administration of the international trade laws and regulations,
+          with special emphasis on trade rules and remedies (e.g., antidumping,
+          countervailing duty, and other unfair trade remedies, safeguards or
+          escape clause provisions, and trade adjustment assistance) and
+          international dispute resolution in trade matters. These
+          administrative agencies include, but are not limited to, the United
+          States International Trade Commission, the International Trade
+          Administration of the U.S. Department of Commerce, the United States
+          Trade Representative, and United States Customs and Border Protection.
+          The Committee also monitors and obtains information respecting the
+          foregoing matters under the auspices of international organizations
+          (including but not limited to the World Trade Organization) in
+          international agreements or in pending international negotiations.
+        </p>
       </>
     ),
   },
@@ -84,21 +87,23 @@ const COMMITTEES = [
     chairs: ["Shama K. Patari", "Andrew Caridas"],
     description: (
       <>
-      <p><strong>Vice-Chairs:</strong> Stephana J. Henry (Akin Gump LLP), Jamila Cambridge (Akin Gump LLP), Aman Kakar (Arent Fox LLP), 
-      Ulrika K. Swanson (Cassidy Levy Kent)
-      </p>
-      <p>
-        The Export Control Committee (i) monitors and obtains information
-        regarding the policies, procedures, and practices of those federal
-        agencies administering U.S. export controls, including the U.S.
-        Department of Commerce - Bureau of Industry and Security, U.S.
-        Department of State - Directorate of Defense Trade Controls, and U.S.
-        Department of Treasury - Office of Foreign Assets Control, (ii) follows
-        proposed legislation and regulations affecting U.S. export control
-        requirements, (iii) submits comments on such proposed regulations, and
-        (iv) organizes seminars and meetings for members of the bar at which
-        speakers discuss topics of export control interest.
-      </p>
+        <p>
+          <strong>Vice-Chairs:</strong> Stephana J. Henry (Akin Gump LLP),
+          Jamila Cambridge (Akin Gump LLP), Aman Kakar (Arent Fox LLP), Ulrika
+          K. Swanson (Cassidy Levy Kent)
+        </p>
+        <p>
+          The Export Control Committee (i) monitors and obtains information
+          regarding the policies, procedures, and practices of those federal
+          agencies administering U.S. export controls, including the U.S.
+          Department of Commerce - Bureau of Industry and Security, U.S.
+          Department of State - Directorate of Defense Trade Controls, and U.S.
+          Department of Treasury - Office of Foreign Assets Control, (ii)
+          follows proposed legislation and regulations affecting U.S. export
+          control requirements, (iii) submits comments on such proposed
+          regulations, and (iv) organizes seminars and meetings for members of
+          the bar at which speakers discuss topics of export control interest.
+        </p>
       </>
     ),
   },
@@ -211,19 +216,22 @@ const COMMITTEES = [
     chairs: ["Frances P. Hadfield", "Justin R. Miller"],
     description: (
       <>
-      <p><strong>Vice-Chairs:</strong> Stephanie Hartman (Wilmer Hale LLP), Emma T. Hunter (U.S. Department of Commerce)
-      </p>
-      <p>
-        The Trial and Appellate Practice Committee monitors and obtains
-        information respecting the policies, procedures, and practices of all
-        federal and state courts affecting the administration of the trade and
-        tariff laws. These courts shall include, but not be limited to, the
-        United States Court of International Trade, the United States Court of
-        Appeals for the Court the Federal Circuit, and the United States Supreme
-        Court. This Committee also identifies pending judicial or dispute
-        settlement proceedings in which presentations of the views of CITBA or
-        participation of CITBA as <em>amicus curiae </em>might be warranted.
-      </p>
+        <p>
+          <strong>Vice-Chairs:</strong> Stephanie Hartman (Wilmer Hale LLP),
+          Emma T. Hunter (U.S. Department of Commerce)
+        </p>
+        <p>
+          The Trial and Appellate Practice Committee monitors and obtains
+          information respecting the policies, procedures, and practices of all
+          federal and state courts affecting the administration of the trade and
+          tariff laws. These courts shall include, but not be limited to, the
+          United States Court of International Trade, the United States Court of
+          Appeals for the Court the Federal Circuit, and the United States
+          Supreme Court. This Committee also identifies pending judicial or
+          dispute settlement proceedings in which presentations of the views of
+          CITBA or participation of CITBA as <em>amicus curiae </em>might be
+          warranted.
+        </p>
       </>
     ),
   },
@@ -240,6 +248,28 @@ const COMMITTEES = [
         engaged in CITBA initiatives that give younger CITBA members guidance in
         pursuing their careers in customs and international trade.
       </p>
+    ),
+  },
+  {
+    title: "Diversity, Equity & Inclusion Committee",
+    emails: ["", ""],
+    chairs: ["Irving A. Williamson", "Mikki Cottet"],
+    description: (
+      <>
+        <p>
+          <strong>Vice-Chairs:</strong> Derick G. Holt (Wiley Rein LLP) and Roop
+          K. Bhatti (U.S. International Trade Commission)
+        </p>
+        <p>
+          The Diversity, Equity and Inclusion Committee, consistent with CITBA’s
+          Diversity Pledge, fosters community and promotes involvement in CITBA
+          among attorneys of underrepresented groups. The Committee organizes
+          substantive panel discussions and hosts networking and outreach events
+          that are geared toward increasing membership and opportunities for
+          attorneys of underrepresented groups in the practice of customs and
+          international trade law.
+        </p>
+      </>
     ),
   },
 ];

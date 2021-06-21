@@ -173,10 +173,7 @@ class ByLaws extends Component {
             <em>Section 2. Secretary.</em> The Secretary of the Association
             shall keep the minutes of all meetings of the Association and of the
             Board of Directors, shall conduct such correspondence and keep such
-            records of the Association as may be assigned to him or her. He or
-            she shall maintain the membership list of the Association and
-            perform such other duties as the Association or the Board of
-            Directors may from time to time assign.
+            records of the Association as may be assigned to him or her.
           </p>
           <p>
             <em>Section 3. Treasurer.</em> The Treasurer shall collect the dues
@@ -210,6 +207,7 @@ class ByLaws extends Component {
             <li>Trial and Appellate Practice Committee</li>
             <li>International Trade Committee</li>
             <li>Young Lawyers Committee</li>
+            <li>Diversity, Equity &amp; Inclusion Committee</li>
           </ul>
           <p>
             <em>Section 2.</em> The standing committees, except as otherwise
@@ -459,19 +457,19 @@ class ByLaws extends Component {
             position.
           </p>
           <h1>ARTICLE XVIII.</h1>
-          <h2>Election of Members</h2>
+          <h2>Diversity, Equity &amp; Inclusion Committee</h2>
           <p>
-            <em>Section 1.</em> The Board of Directors shall act upon the
-            receipt of any report of the Membership Committee upon an
-            application for membership. If the candidate shall receive a
-            majority vote of the Directors present at a duly constituted meeting
-            of the Board of Directors, the candidate shall thereupon become a
-            Member of the Association.
+            <em>Section 1.</em> It shall be the duty of this Committee to foster
+            community and to promote involvement in CITBA among attorneys of
+            underrepresented groups. The Committee will do so by organizing
+            substantive panel discussions and hosting networking and outreach
+            events that are geared toward increasing membership and
+            opportunities for attorneys of underrepresented groups in the
+            practice of customs and international trade law.
           </p>
           <p>
-            <em>Section 2.</em> Upon an applicant becoming a Member of the
-            Association, the Secretary shall promptly give notice thereof to the
-            applicant and to the Treasurer.
+            <em>Section 2.</em> The Committee chairs should include members of
+            underrepresented groups.
           </p>
           <h1>ARTICLE XIX.</h1>
           <h2>Dues</h2>

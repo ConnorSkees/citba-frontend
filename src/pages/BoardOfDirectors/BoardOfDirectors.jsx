@@ -22,6 +22,7 @@ import Kristin_Mowry from "assets/board-of-directors/Mowry.jpg";
 import Mary_Alves from "assets/board-of-directors/Alves.jpg";
 import Stephanie_Bell from "assets/board-of-directors/Bell.jpeg";
 import Justin_Miller from "assets/board-of-directors/JMiller (1).jpg";
+import Irving_Williamson from "assets/board-of-directors/irving-williamson.jpg";
 import BoardRoom from "assets/board-room.jpg";
 import Banner from "components/Banner/Banner";
 
@@ -199,6 +200,18 @@ const DIRECTORS = [
     company: "Kelley Drye & Warren LLP",
     position: "Past President",
     src: Kathleen_Cannon,
+  },
+  {
+    name: "Irving A. Williamson",
+    company: "U.S. International Trade Commission (Retired)",
+    position: "Co-Chair, Diversity, Equity & Inclusion Committee",
+    src: Irving_Williamson,
+  },
+  {
+    name: "Mikki Cottet",
+    company: "U.S. Department of Justice",
+    position: "Co-Chair, Diversity, Equity & Inclusion Committee",
+    src: placeholder,
   },
 ];
 
